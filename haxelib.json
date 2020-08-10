@@ -1,0 +1,11 @@
+{
+	"name": "pixi",
+	"url": "https://github.com/VolkovRA/HaxePixiJS/blob/master/README.md",
+	"license": "MIT",
+	"tags": ["pixi", "pixijs", "js", "web", "game", "sound", "html5"],
+	"description": "The Haxe high quality definitions to PixiJS and libraries",
+	"version": "1.0.0",
+	"releasenote": "Release",
+	"contributors": ["VolkovRA"],
+	"classPath": "lib"
+}

@@ -1,0 +1,8 @@
+--class-path lib/core 
+--class-path lib/filters 
+--class-path lib/sound 
+--class-path src 
+-main Main
+-js "bin/index.js"
+#-dce full
+#-debug
