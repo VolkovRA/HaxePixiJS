@@ -16,7 +16,7 @@
 |3|Звук|sound|[pixi-sound.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-sound.js "pixi-sound.js")|https://github.com/pixijs/pixi-sound|
 
 - *п.с. Пополняется и обновляется по мере необходимости.*
-- *п.с.2* В core и filters надо провести тотальную ревизию, так как core взят из стороннего репо и содержит ошибки.
+- *п.с.2 В core и filters надо провести тотальную ревизию, так как core взят из стороннего репо и содержит ошибки.*
 
 Добавление библиотеки
 ------------------------------
