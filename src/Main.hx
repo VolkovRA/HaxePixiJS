@@ -1,6 +1,6 @@
 package;
 
-import pixi.core.display.Container;
+import pixi.Pixi;
 
 class Main
 {
@@ -8,6 +8,6 @@ class Main
      * Точка входа.
      */
     public static function main() {
-        trace(Container);
+        trace(Pixi.VERSION);
     }
 }
