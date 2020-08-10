@@ -9,11 +9,11 @@
 
 Определения
 ------------------------------
-||Название|Папка|Бинарник|Репо|
-|:-|:-|:-:|:-:|:-|
-|1|Ядро PixiJS|core|[pixi.min.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi.min.js "pixi.min.js")|https://github.com/pixijs/pixi.js|
-|2|Фильтры|filters|[pixi-filters.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-filters.js "pixi-filters.js")|https://github.com/pixijs/pixi-filters|
-|3|Звук|sound|[pixi-sound.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-sound.js "pixi-sound.js")|https://github.com/pixijs/pixi-sound|
+||Название|Бинарник|Репо|
+|:-|:-|:-:|:-|
+|1|Ядро PixiJS|[pixi.min.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi.min.js "pixi.min.js")|https://github.com/pixijs/pixi.js|
+|2|Фильтры|[pixi-filters.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-filters.js "pixi-filters.js")|https://github.com/pixijs/pixi-filters|
+|3|Звук|[pixi-sound.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-sound.js "pixi-sound.js")|https://github.com/pixijs/pixi-sound|
 
 - *п.с. Пополняется и обновляется по мере необходимости.*
 - *п.с.2 В core и filters надо провести тотальную ревизию, так как core взят из стороннего репо и содержит ошибки.*
