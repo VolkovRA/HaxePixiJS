@@ -5,6 +5,7 @@ import pixi.events.EventEmitter;
 import pixi.geom.Point;
 import pixi.geom.ObservablePoint;
 import pixi.geom.Circle;
+import pixi.geom.Rectangle;
 
 class Main
 {
@@ -25,5 +26,6 @@ class Main
         trace(new Point());
         trace(new ObservablePoint(null, null));
         trace(new Circle());
+        trace(new Rectangle());
     }
 }
