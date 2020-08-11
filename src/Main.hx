@@ -4,6 +4,7 @@ import pixi.Pixi;
 import pixi.events.EventEmitter;
 import pixi.geom.Point;
 import pixi.geom.ObservablePoint;
+import pixi.geom.Circle;
 
 class Main
 {
@@ -23,5 +24,6 @@ class Main
 
         trace(new Point());
         trace(new ObservablePoint(null, null));
+        trace(new Circle());
     }
 }

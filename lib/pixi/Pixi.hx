@@ -720,27 +720,27 @@ typedef Shapes =
     /**
      * Polygon.
      */
-    var POLY:Float;
+    var POLY:Int;
 
     /**
      * Rectangle.
      */
-    var RECT:Float;
+    var RECT:Int;
 
     /**
      * Circle.
      */
-    var CIRC:Float;
+    var CIRC:Int;
 
     /**
      * Ellipse.
      */
-    var ELIP:Float;
+    var ELIP:Int;
 
     /**
      * Rounded Rectangle.
      */
-    var RREC:Float;
+    var RREC:Int;
 }
 
 /**
