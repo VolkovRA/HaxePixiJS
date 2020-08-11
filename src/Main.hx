@@ -8,6 +8,7 @@ import pixi.geom.Circle;
 import pixi.geom.Rectangle;
 import pixi.geom.Ellipse;
 import pixi.geom.RoundedRectangle;
+import pixi.geom.Polygon;
 
 class Main
 {
@@ -31,5 +32,6 @@ class Main
         trace(new Rectangle());
         trace(new Ellipse());
         trace(new RoundedRectangle());
+        trace(new Polygon([0.0,0.0]));
     }
 }
