@@ -2,6 +2,7 @@ package;
 
 import pixi.Pixi;
 import pixi.events.EventEmitter;
+import pixi.geom.Point;
 
 class Main
 {
@@ -18,5 +19,7 @@ class Main
         trace(ee.listeners("Yo!"));
         trace(ee.listenerCount("Yo!"));
         trace(ee.emit("Yo!", "Hi!", 1, 0));
+
+        trace(new Point());
     }
 }
