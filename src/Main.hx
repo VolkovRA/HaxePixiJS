@@ -9,6 +9,9 @@ import pixi.geom.Rectangle;
 import pixi.geom.Ellipse;
 import pixi.geom.RoundedRectangle;
 import pixi.geom.Polygon;
+import pixi.geom.Bounds;
+import pixi.geom.Matrix;
+import pixi.geom.Transform;
 
 class Main
 {
@@ -33,5 +36,8 @@ class Main
         trace(new Ellipse());
         trace(new RoundedRectangle());
         trace(new Polygon([0.0,0.0]));
+        trace(new Bounds());
+        trace(new Matrix());
+        trace(new Transform());
     }
 }
