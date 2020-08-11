@@ -4,6 +4,7 @@ package pixi.geom;
  * Interface for classes that represent a hit area.
  * 
  * It is implemented by the following classes:
+ * - Rectangle
  * - Circle
  * - Ellipse
  * - Polygon

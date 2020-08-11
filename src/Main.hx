@@ -7,6 +7,7 @@ import pixi.geom.ObservablePoint;
 import pixi.geom.Circle;
 import pixi.geom.Rectangle;
 import pixi.geom.Ellipse;
+import pixi.geom.RoundedRectangle;
 
 class Main
 {
@@ -29,5 +30,6 @@ class Main
         trace(new Circle());
         trace(new Rectangle());
         trace(new Ellipse());
+        trace(new RoundedRectangle());
     }
 }
