@@ -3,6 +3,7 @@ package;
 import pixi.Pixi;
 import pixi.events.EventEmitter;
 import pixi.geom.Point;
+import pixi.geom.ObservablePoint;
 
 class Main
 {
@@ -21,5 +22,6 @@ class Main
         trace(ee.emit("Yo!", "Hi!", 1, 0));
 
         trace(new Point());
+        trace(new ObservablePoint(null, null));
     }
 }

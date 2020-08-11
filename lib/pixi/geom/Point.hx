@@ -26,6 +26,8 @@ extern class Point implements IPoint
 
     /**
      * Position of the point on the y axis.
+     * 
+     * Default: `0`
      */
     public var y:Float;
 
