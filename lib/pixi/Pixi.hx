@@ -704,12 +704,12 @@ typedef ScaleModes =
     /**
      * Smooth scaling.
      */
-    var LINEAR:Float;
+    var LINEAR:Int;
 
     /**
      * Pixelating scaling.
      */
-    var NEAREST:Float;
+    var NEAREST:Int;
 }
 
 /**
