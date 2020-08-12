@@ -1,6 +1,7 @@
 package;
 
 import pixi.Pixi;
+import pixi.render.State;
 import pixi.events.EventEmitter;
 import pixi.geom.Point;
 import pixi.geom.ObservablePoint;
@@ -12,6 +13,9 @@ import pixi.geom.Polygon;
 import pixi.geom.Bounds;
 import pixi.geom.Matrix;
 import pixi.geom.Transform;
+import pixi.filters.Program;
+import pixi.filters.Shader;
+import pixi.display.BlendMode;
 
 class Main
 {
@@ -39,5 +43,9 @@ class Main
         trace(new Bounds());
         trace(new Matrix());
         trace(new Transform());
+        trace(BlendMode.DARKEN);
+        trace(new State());
+        //trace(new Program());
+        //trace(new Shader());
     }
 }
