@@ -5,7 +5,7 @@ package pixi.render;
  * 
  * *This enum contains values from: `Pixi.CLEAR_MODES` for more convenient use.*
  */
-enum abstract ClearModes(Int) to Int from Int
+enum abstract ClearMode(Int) to Int from Int
 {
     /**
      * Preserve the information in the texture, blend above.
