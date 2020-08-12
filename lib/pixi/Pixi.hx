@@ -678,17 +678,17 @@ typedef RendererType =
     /**
      * Unknown render type.
      */
-    var UNKNOWN:Float;
+    var UNKNOWN:Int;
 
     /**
      * WebGL render type.
      */
-    var WEBGL:Float;
+    var WEBGL:Int;
 
     /**
      * Canvas render type.
      */
-    var CANVAS:Float;
+    var CANVAS:Int;
 }
 
 /**
