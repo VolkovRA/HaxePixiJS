@@ -3,7 +3,7 @@ package pixi.render;
 /**
  * Constant to identify the Renderer Type.
  * 
- * *This enum contains values  from: `Pixi.RENDERER_TYPE` for more convenient use.*
+ * *This enum contains values from: `Pixi.RENDERER_TYPE` for more convenient use.*
  */
 enum abstract RendererType(Int) to Int from Int
 {
