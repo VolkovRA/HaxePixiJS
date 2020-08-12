@@ -3,6 +3,8 @@ package pixi;
 import haxe.extern.EitherType;
 import js.html.CanvasElement;
 import js.lib.RegExp;
+import pixi.render.CanvasRenderer;
+import pixi.render.Renderer;
 
 /**
  * Contains all of the functionality for using the pixi-sound library.
@@ -23,7 +25,7 @@ extern class Pixi
     /**
      * How to treat textures with premultiplied alpha.
      */
-    static public var ALPHA_MODES(default, null):AlphaModes;
+    static public var ALPHA_MODES(default, null):AlphaModesEnum;
 
     /**
      * Various blend modes supported by PIXI.
@@ -31,17 +33,17 @@ extern class Pixi
      * IMPORTANT - The WebGL renderer only supports the NORMAL, ADD, MULTIPLY
      * and SCREEN blend modes. Anything else will silently act like NORMAL.
      */
-    static public var BLEND_MODES(default, null):BlendModes;
+    static public var BLEND_MODES(default, null):BlendModesEnum;
 
     /**
      * Bitwise OR of masks that indicate the buffers to be cleared.
      */
-    static public var BUFFER_BITS(default, null):BufferBits;
+    static public var BUFFER_BITS(default, null):BufferBitsEnum;
 
     /**
      * How to clear renderTextures in filter.
      */
-    static public var CLEAR_MODES(default, null):ClearModes;
+    static public var CLEAR_MODES(default, null):ClearModesEnum;
 
     /**
      * Regexp for data URI. Based on: https://github.com/ragingwind/data-uri-regex
@@ -78,17 +80,17 @@ extern class Pixi
      * 
      * These can be used to specify which GL drawMode to use under certain situations and renderers.
      */
-    static public var DRAW_MODES(default, null):DrawModes;
+    static public var DRAW_MODES(default, null):DrawModesEnum;
 
     /**
      * Different types of environments for WebGL.
      */
-    static public var ENV(default, null):Env;
+    static public var ENV(default, null):EnvEnum;
 
     /**
      * Various GL texture/resources formats.
      */
-    static public var FORMATS(default, null):Formats;
+    static public var FORMATS(default, null):FormatsEnum;
 
     /**
      * The gc modes that are supported by pixi.
@@ -101,7 +103,7 @@ extern class Pixi
      * 
      * Handy for mobile devices! This property only affects WebGL.
      */
-    static public var GC_MODES(default, null):GCModes;
+    static public var GC_MODES(default, null):GCModesEnum;
 
     /**
      * Graphics curves resolution settings.
@@ -116,7 +118,7 @@ extern class Pixi
      * 
      * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
      */
-    static public var LINE_CAP(default, null):LineCap;
+    static public var LINE_CAP(default, null):LineCapEnum;
 
     /**
      * Supported line joints in `LineStyle` for graphics.
@@ -124,14 +126,14 @@ extern class Pixi
      * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
      * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
      */
-    static public var LINE_JOIN(default ,null):LineJoin;
+    static public var LINE_JOIN(default ,null):LineJoinEnum;
 
     /**
      * Constants for mask implementations.
      * 
      * We use `type` suffix because it leads to very different behaviours.
      */
-    static public var MASK_TYPES(default, null):MaskTypes;
+    static public var MASK_TYPES(default, null):MaskTypesEnum;
 
     /**
      * Mipmap filtering modes that are supported by pixi.
@@ -142,12 +144,12 @@ extern class Pixi
      * 
      * This property only affects WebGL.
      */
-    static public var MIPMAP_MODES(default, null):MipmapModes;
+    static public var MIPMAP_MODES(default, null):MipmapModesEnum;
 
     /**
      * Constants for multi-sampling antialiasing.
      */
-    static public var MSAA_QUALITY(default, null):MSAAQuality;
+    static public var MSAA_QUALITY(default, null):MSAAQualityEnum;
 
     /**
      * Two Pi.
@@ -157,12 +159,12 @@ extern class Pixi
     /**
      * Constants that specify float precision in shaders.
      */
-    static public var PRECISION(default, null):Precision;
+    static public var PRECISION(default, null):PrecisionEnum;
 
     /**
      * Constant to identify the Renderer Type.
      */
-    static public var RENDERER_TYPE(default, null):RendererType;
+    static public var RENDERER_TYPE(default, null):RendererTypeEnum;
 
     /**
      * The scale modes that are supported by pixi.
@@ -172,27 +174,27 @@ extern class Pixi
      * 
      * @see https://pixijs.download/dev/docs/PIXI.settings.html#.SCALE_MODE
      */
-    static public var SCALE_MODES(default, null):ScaleModes;
+    static public var SCALE_MODES(default, null):ScaleModesEnum;
 
     /**
      * Constants that identify shapes, mainly to prevent `instanceof` calls.
      */
-    static public var SHAPES(default, null):Shapes;
+    static public var SHAPES(default, null):ShapesEnum;
 
     /**
      * Various GL target types.
      */
-    static public var TARGETS(default, null):Targets;
+    static public var TARGETS(default, null):TargetsEnum;
 
     /**
      * Constants that define the type of gradient on text.
      */
-    static public var TEXT_GRADIENT(default, null):TextGradient;
+    static public var TEXT_GRADIENT(default, null):TextGradientEnum;
 
     /**
      * Various GL data format types.
      */
-    static public var TYPES(default, null):Types;
+    static public var TYPES(default, null):TypesEnum;
 
     /**
      * Represents the update priorities used by internal PIXI classes when registered with the
@@ -201,7 +203,7 @@ extern class Pixi
      * 
      * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html
      */
-    static public var UPDATE_PRIORITY(default, null):UpdatePriority;
+    static public var UPDATE_PRIORITY(default, null):UpdatePriorityEnum;
 
     /**
      * The wrap modes that are supported by pixi.
@@ -215,7 +217,7 @@ extern class Pixi
      * 
      * @see https://pixijs.download/dev/docs/PIXI.settings.html#.WRAP_MODE
      */
-    static public var WRAP_MODES(default, null):WrapModes;
+    static public var WRAP_MODES(default, null):WrapModesEnum;
 
     /**
      * This helper function will automatically detect which renderer you should be using.
@@ -245,39 +247,39 @@ extern class Pixi
 /**
  * How to treat textures with premultiplied alpha.
  */
-typedef AlphaModes =
+typedef AlphaModesEnum =
 {
     /**
      * Source is not premultiplied, leave it like that.
      * 
      * Option for compressed and data textures that are created from typed arrays.
      */
-    var NO_PREMULTIPLIED_ALPHA:Float;
+    var NO_PREMULTIPLIED_ALPHA:Int;
 
     /**
      * Source is not premultiplied, premultiply on upload. Default option, used for all loaded images.
      */
-    var PREMULTIPLY_ON_UPLOAD:Float;
+    var PREMULTIPLY_ON_UPLOAD:Int;
 
     /**
      * Source is already premultiplied Example: spine atlases with `_pma` suffix.
      */
-    var PREMULTIPLIED_ALPHA:Float;
+    var PREMULTIPLIED_ALPHA:Int;
 
     /**
      * Alias for NO_PREMULTIPLIED_ALPHA.
      */
-    var NPM:Float;
+    var NPM:Int;
 
     /**
      * Default option, alias for PREMULTIPLY_ON_UPLOAD.
      */
-    var UNPACK:Float;
+    var UNPACK:Int;
 
     /**
      * Alias for PREMULTIPLIED_ALPHA.
      */
-    var PMA:Float;
+    var PMA:Int;
 }
 
 /**
@@ -286,7 +288,7 @@ typedef AlphaModes =
  * IMPORTANT - The WebGL renderer only supports the NORMAL, ADD, MULTIPLY and SCREEN
  * blend modes. Anything else will silently act like NORMAL.
  */
-typedef BlendModes =
+typedef BlendModesEnum =
 {
     var NORMAL:Int;
     var ADD:Int;
@@ -325,58 +327,58 @@ typedef BlendModes =
 /**
  * Bitwise OR of masks that indicate the buffers to be cleared.
  */
-typedef BufferBits =
+typedef BufferBitsEnum =
 {
     /**
      * Indicates the buffers currently enabled for color writing.
      */
-    var COLOR:Float;
+    var COLOR:Int;
 
     /**
      * Indicates the depth buffer.
      */
-    var DEPTH:Float;
+    var DEPTH:Int;
 
     /**
      * Indicates the stencil buffer.
      */
-    var STENCIL:Float;
+    var STENCIL:Int;
 }
 
 /**
  * How to clear renderTextures in filter.
  */
-typedef ClearModes =
+typedef ClearModesEnum =
 {
     /**
      * Preserve the information in the texture, blend above.
      */
-    var BLEND:Float;
+    var BLEND:Int;
 
     /**
      * Must use gl.clear operation.
      */
-    var CLEAR:Float;
+    var CLEAR:Int;
 
     /**
      * Clear or blit it, depends on device and level of paranoia.
      */
-    var BLIT:Float;
+    var BLIT:Int;
 
     /**
      * Alias for BLEND, same as false in earlier versions.
      */
-    var NO:Float;
+    var NO:Int;
 
     /**
      * Alias for CLEAR, same as true in earlier versions.
      */
-    var YES:Float;
+    var YES:Int;
 
     /**
      * Alias for BLIT.
      */
-    var AUTO:Float;
+    var AUTO:Int;
 }
 
 /**
@@ -384,21 +386,21 @@ typedef ClearModes =
  * 
  * These can be used to specify which GL drawMode to use under certain situations and renderers.
  */
-typedef DrawModes =
+typedef DrawModesEnum =
 {
-    var POINTS:Float;
-    var LINES:Float;
-    var LINE_LOOP:Float;
-    var LINE_STRIP:Float;
-    var TRIANGLES:Float;
-    var TRIANGLE_STRIP:Float;
-    var TRIANGLE_FAN:Float;
+    var POINTS:Int;
+    var LINES:Int;
+    var LINE_LOOP:Int;
+    var LINE_STRIP:Int;
+    var TRIANGLES:Int;
+    var TRIANGLE_STRIP:Int;
+    var TRIANGLE_FAN:Int;
 }
 
 /**
  * Different types of environments for WebGL.
  */
-typedef Env =
+typedef EnvEnum =
 {
     /**
      * Used for older v1 WebGL devices.
@@ -406,58 +408,58 @@ typedef Env =
      * PixiJS will aim to ensure compatibility with older / less advanced devices.
      * If you experience unexplained flickering prefer this environment.
      */
-    var WEBGL_LEGACY:Float;
+    var WEBGL_LEGACY:Int;
 
     /**
      * Version 1 of WebGL.
      */
-    var WEBGL:Float;
+    var WEBGL:Int;
 
     /**
      * Version 2 of WebGL.
      */
-    var WEBGL2:Float;
+    var WEBGL2:Int;
 }
 
 /**
  * Various GL texture/resources formats.
  */
-typedef Formats =
+typedef FormatsEnum =
 {
     /**
      * Default: `6408`
      */
-    var RGBA:Float;
+    var RGBA:Int;
 
     /**
      * Default: `6407`
      */
-    var RGB:Float;
+    var RGB:Int;
 
     /**
      * Default: `6406`
      */
-    var ALPHA:Float;
+    var ALPHA:Int;
 
     /**
      * Default: `6409`
      */
-    var LUMINANCE:Float;
+    var LUMINANCE:Int;
 
     /**
      * Default: `6410`
      */
-    var LUMINANCE_ALPHA:Float;
+    var LUMINANCE_ALPHA:Int;
 
     /**
      * Default: `6402`
      */
-    var DEPTH_COMPONENT:Float;
+    var DEPTH_COMPONENT:Int;
 
     /**
      * Default: `34041`
      */
-    var DEPTH_STENCIL:Float;
+    var DEPTH_STENCIL:Int;
 }
 
 /**
@@ -471,17 +473,17 @@ typedef Formats =
  * 
  * Handy for mobile devices! This property only affects WebGL.
  */
-typedef GCModes =
+typedef GCModesEnum =
 {
     /**
      * Garbage collection will happen periodically automatically.
      */
-    var AUTO:Float;
+    var AUTO:Int;
 
     /**
      * Garbage collection will need to be called manually.
      */
-    var MANUAL:Float;
+    var MANUAL:Int;
 }
 
 /**
@@ -526,7 +528,7 @@ typedef GraphicsCurves =
  * 
  * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
  */
-typedef LineCap =
+typedef LineCapEnum =
 {
     /**
      * 'butt': don't add any cap at line ends (leaves orthogonal edges)
@@ -550,7 +552,7 @@ typedef LineCap =
  * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
  * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
  */
-typedef LineJoin =
+typedef LineJoinEnum =
 {
     /**
      * 'miter': make a sharp corner where outer part of lines meet
@@ -573,27 +575,27 @@ typedef LineJoin =
  * 
  * We use `type` suffix because it leads to very different behaviours.
  */
-typedef MaskTypes =
+typedef MaskTypesEnum =
 {
     /**
      * Mask is ignored.
      */
-    var NONE:Float;
+    var NONE:Int;
 
     /**
      * Scissor mask, rectangle on screen, cheap.
      */
-    var SCISSOR:Float;
+    var SCISSOR:Int;
 
     /**
      * Stencil mask, 1-bit, medium, works only if renderer supports stencil.
      */
-    var STENCIL:Float;
+    var STENCIL:Int;
 
     /**
      * Mask that uses SpriteMaskFilter, uses temporary RenderTexture.
      */
-    var SPRITE:Float;
+    var SPRITE:Int;
 }
 
 /**
@@ -605,54 +607,54 @@ typedef MaskTypes =
  * 
  * This property only affects WebGL.
  */
-typedef MipmapModes =
+typedef MipmapModesEnum =
 {
     /**
      * No mipmaps.
      */
-    var OFF:Float;
+    var OFF:Int;
 
     /**
      * Generate mipmaps if texture dimensions are pow2.
      */
-    var POW2:Float;
+    var POW2:Int;
 
     /**
      * Always generate mipmaps.
      */
-    var ON:Float;
+    var ON:Int;
 }
 
 /**
  * Constants for multi-sampling antialiasing.
  */
-typedef MSAAQuality =
+typedef MSAAQualityEnum =
 {
     /**
      * No multisampling for this renderTexture.
      */
-    var NONE:Float;
+    var NONE:Int;
 
     /**
      * Try 2 samples.
      */
-    var LOW:Float;
+    var LOW:Int;
 
     /**
      * Try 4 samples.
      */
-    var MEDIUM:Float;
+    var MEDIUM:Int;
 
     /**
      * Try 8 samples.
      */
-    var HIGH:Float;
+    var HIGH:Int;
 }
 
 /**
  * Constants that specify float precision in shaders.
  */
-typedef Precision =
+typedef PrecisionEnum =
 {
     /**
      * Default: `lowp`
@@ -673,7 +675,7 @@ typedef Precision =
 /**
  * Constant to identify the Renderer Type.
  */
-typedef RendererType =
+typedef RendererTypeEnum =
 {
     /**
      * Unknown render type.
@@ -699,7 +701,7 @@ typedef RendererType =
  * 
  * @see https://pixijs.download/dev/docs/PIXI.settings.html#.SCALE_MODE
  */
-typedef ScaleModes =
+typedef ScaleModesEnum =
 {
     /**
      * Smooth scaling.
@@ -715,7 +717,7 @@ typedef ScaleModes =
 /**
  * Constants that identify shapes, mainly to prevent `instanceof` calls.
  */
-typedef Shapes =
+typedef ShapesEnum =
 {
     /**
      * Polygon.
@@ -746,109 +748,109 @@ typedef Shapes =
 /**
  * Various GL target types.
  */
-typedef Targets =
+typedef TargetsEnum =
 {
     /**
      * Default: `3553`
      */
-    var TEXTURE_2D:Float;
+    var TEXTURE_2D:Int;
 
     /**
      * Default: `34067`
      */
-    var TEXTURE_CUBE_MAP:Float;
+    var TEXTURE_CUBE_MAP:Int;
 
     /**
      * Default: `35866`
      */
-    var TEXTURE_2D_ARRAY:Float;
+    var TEXTURE_2D_ARRAY:Int;
 
     /**
      * Default: `34069`
      */
-    var TEXTURE_CUBE_MAP_POSITIVE_X:Float;
+    var TEXTURE_CUBE_MAP_POSITIVE_X:Int;
 
     /**
      * Default: `34070`
      */
-    var TEXTURE_CUBE_MAP_NEGATIVE_X:Float;
+    var TEXTURE_CUBE_MAP_NEGATIVE_X:Int;
 
     /**
      * Default: `34071`
      */
-    var TEXTURE_CUBE_MAP_POSITIVE_Y:Float;
+    var TEXTURE_CUBE_MAP_POSITIVE_Y:Int;
 
     /**
      * Default: `34072`
      */
-    var TEXTURE_CUBE_MAP_NEGATIVE_Y:Float;
+    var TEXTURE_CUBE_MAP_NEGATIVE_Y:Int;
 
     /**
      * Default: `34073`
      */
-    var TEXTURE_CUBE_MAP_POSITIVE_Z:Float;
+    var TEXTURE_CUBE_MAP_POSITIVE_Z:Int;
 
     /**
      * Default: `34074`
      */
-    var TEXTURE_CUBE_MAP_NEGATIVE_Z:Float;
+    var TEXTURE_CUBE_MAP_NEGATIVE_Z:Int;
 }
 
 /**
  * Constants that define the type of gradient on text.
  */
-typedef TextGradient =
+typedef TextGradientEnum =
 {
     /**
      * Vertical gradient.
      */
-    var LINEAR_VERTICAL:Float;
+    var LINEAR_VERTICAL:Int;
 
     /**
      * Linear gradient.
      */
-    var LINEAR_HORIZONTAL:Float;
+    var LINEAR_HORIZONTAL:Int;
 }
 
 /**
  * Various GL data format types.
  */
-typedef Types =
+typedef TypesEnum =
 {
     /**
      * Default: `5121`
      */
-    var UNSIGNED_BYTE:Float;
+    var UNSIGNED_BYTE:Int;
 
     /**
      * Default: `5123`
      */
-    var UNSIGNED_SHORT:Float;
+    var UNSIGNED_SHORT:Int;
 
     /**
      * Default: `33635`
      */
-    var UNSIGNED_SHORT_5_6_5:Float;
+    var UNSIGNED_SHORT_5_6_5:Int;
 
     /**
      * Default: `32819`
      */
-    var UNSIGNED_SHORT_4_4_4_4:Float;
+    var UNSIGNED_SHORT_4_4_4_4:Int;
 
     /**
      * Default: `32820`
      */
-    var UNSIGNED_SHORT_5_5_5_1:Float;
+    var UNSIGNED_SHORT_5_5_5_1:Int;
 
     /**
      * Default: `5126`
      */
-    var FLOAT:Float;
+    var FLOAT:Int;
     
     /**
      * Default: `36193`
      */
-    var HALF_FLOAT:Float;
+    var HALF_FLOAT:Int;
 }
 
 /**
@@ -858,7 +860,7 @@ typedef Types =
  * 
  * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html
  */
-typedef UpdatePriority =
+typedef UpdatePriorityEnum =
 {
     /**
      * Highest priority, used for PIXI.InteractionManager
@@ -867,7 +869,7 @@ typedef UpdatePriority =
      * 
      * @see https://pixijs.download/dev/docs/PIXI.InteractionManager.html
      */
-    var INTERACTION:Float;
+    var INTERACTION:Int;
 
     /**
      * High priority updating, PIXI.VideoBaseTexture and PIXI.AnimatedSprite
@@ -876,7 +878,7 @@ typedef UpdatePriority =
      * 
      * @see https://pixijs.download/dev/docs/PIXI.AnimatedSprite.html
      */
-    var HIGH:Float;
+    var HIGH:Int;
 
     /**
      * Default priority for ticker events, see PIXI.Ticker#add.
@@ -885,7 +887,7 @@ typedef UpdatePriority =
      * 
      * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html#add
      */
-    var NORMAL:Float;
+    var NORMAL:Int;
 
     /**
      * Low priority used for PIXI.Application rendering.
@@ -894,7 +896,7 @@ typedef UpdatePriority =
      * 
      * @see https://pixijs.download/dev/docs/PIXI.Application.html
      */
-    var LOW:Float;
+    var LOW:Int;
 
     /**
      * Lowest priority used for PIXI.BasePrepare utility.
@@ -903,7 +905,7 @@ typedef UpdatePriority =
      * 
      * @see https://pixijs.download/dev/docs/PIXI.BasePrepare.html
      */
-    var UTILITY:Float;
+    var UTILITY:Int;
 }
 
 /**
@@ -918,22 +920,22 @@ typedef UpdatePriority =
  * 
  * @see https://pixijs.download/dev/docs/PIXI.settings.html#.WRAP_MODE
  */
-typedef WrapModes =
+typedef WrapModesEnum =
 {
     /**
      * The textures uvs are clamped.
      */
-    var CLAMP:Float;
+    var CLAMP:Int;
 
     /**
      * The texture uvs tile and repeat.
      */
-    var REPEAT:Float;
+    var REPEAT:Int;
 
     /**
      * The texture uvs tile and repeat with mirroring.
      */
-    var MIRRORED_REPEAT:Float;
+    var MIRRORED_REPEAT:Int;
 }
 
 /**
