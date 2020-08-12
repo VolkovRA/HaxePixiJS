@@ -14,10 +14,10 @@ import pixi.textures.RenderTexture;
  * Sprite Batches or Sprite Clouds. Don't forget to add the view to your DOM or
  * you will not see anything!
  * 
- * @event RendererEvent.CONTEXT Fired when the WebGL context is set.
- * @event RendererEvent.POSTRENDER Fired after rendering finishes.
- * @event RendererEvent.PRERENDER Fired before rendering starts.
- * @event RendererEvent.RESIZE Fired after view has been resized.
+ * @event RenderEvent.CONTEXT Fired when the WebGL context is set.
+ * @event RenderEvent.PRERENDER Fired before rendering starts.
+ * @event RenderEvent.POSTRENDER Fired after rendering finishes.
+ * @event RenderEvent.RESIZE Fired after view has been resized.
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Renderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_Renderer.js.html

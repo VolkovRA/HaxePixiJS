@@ -1,11 +1,12 @@
 package pixi.events;
 
 /**
- * The events of Renderer object.
+ * The events of rendering.
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Renderer.html#event
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.CanvasRenderer.html#event
  */
-enum abstract RendererEvent(String) to String from String
+enum abstract RenderEvent(String) to String from String
 {
     /**
      * Fired when the WebGL context is set.
