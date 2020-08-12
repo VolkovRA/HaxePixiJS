@@ -6,7 +6,7 @@ package pixi.display;
  * IMPORTANT - The WebGL renderer only supports the NORMAL, ADD, MULTIPLY and
  * SCREEN blend modes. Anything else will silently act like NORMAL.
  * 
- * *This enum contains values  from: `Pixi.BLEND_MODES` for more convenient use.*
+ * *This enum contains values from: `Pixi.BLEND_MODES` for more convenient use.*
  */
 enum abstract BlendMode(Int) to Int from Int
 {
