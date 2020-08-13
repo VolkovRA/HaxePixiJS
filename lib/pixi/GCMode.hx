@@ -1,11 +1,11 @@
-package pixi.render;
+package pixi;
 
 /**
  * The Garbage Collection mode.
  * 
  * *This enum contains values from: `Pixi.GC_MODES` for more convenient use.*
  */
-enum abstract GCModes(Int) to Int from Int
+enum abstract GCMode(Int) to Int from Int
 {
     /**
      * Garbage collection will happen periodically automatically.
