@@ -17,7 +17,7 @@ import pixi.render.Renderer;
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_VideoResource.js.html
  */
 @:native("PIXI.resources.VideoResource")
-extern class VideoResource extends Resource
+extern class VideoResource extends BaseImageResource
 {
     /**
      * Create a new VideoResource instance.
