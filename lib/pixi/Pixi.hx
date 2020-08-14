@@ -7,12 +7,12 @@ import pixi.render.CanvasRenderer;
 import pixi.render.Renderer;
 
 /**
- * Contains all of the functionality for using the pixi-sound library.
- * 
+ * Contains all of the functionality for using the pixi-sound library.  
  * This is deisnged to play audio with WebAudio and fallback to HTML5.
- * 
  * @see Documentation: https://pixijs.download/dev/docs/PIXI.html
  * @see Source code: https://github.com/pixijs/pixi-sound/tree/main/src
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI")
 extern class Pixi
@@ -46,8 +46,7 @@ extern class Pixi
     static public var CLEAR_MODES(default, null):ClearModesEnum;
 
     /**
-     * Regexp for data URI. Based on: https://github.com/ragingwind/data-uri-regex
-     * 
+     * Regexp for data URI. Based on: https://github.com/ragingwind/data-uri-regex  
      * Example:
      * ```
      * data:image/png;base64
@@ -76,8 +75,7 @@ extern class Pixi
     static public var RAD_TO_DEG(default, null):Float;
 
     /**
-     * Various webgl draw modes.
-     * 
+     * Various webgl draw modes.  
      * These can be used to specify which GL drawMode to use under certain situations and renderers.
      */
     static public var DRAW_MODES(default, null):DrawModesEnum;
@@ -115,22 +113,19 @@ extern class Pixi
 
     /**
      * Support line caps in `LineStyle` for graphics.
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
      */
     static public var LINE_CAP(default, null):LineCapEnum;
 
     /**
      * Supported line joints in `LineStyle` for graphics.
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
      * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
      */
     static public var LINE_JOIN(default ,null):LineJoinEnum;
 
     /**
-     * Constants for mask implementations.
-     * 
+     * Constants for mask implementations.  
      * We use `type` suffix because it leads to very different behaviours.
      */
     static public var MASK_TYPES(default, null):MaskTypesEnum;
@@ -200,7 +195,6 @@ extern class Pixi
      * Represents the update priorities used by internal PIXI classes when registered with the
      * PIXI.Ticker object. Higher priority items are updated first and lower priority items,
      * such as render, should go later.
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html
      */
     static public var UPDATE_PRIORITY(default, null):UpdatePriorityEnum;
@@ -214,7 +208,6 @@ extern class Pixi
      * is po2.
      * 
      * This property only affects WebGL.
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.settings.html#.WRAP_MODE
      */
     static public var WRAP_MODES(default, null):WrapModesEnum;
@@ -224,7 +217,6 @@ extern class Pixi
      * 
      * WebGL is the preferred renderer as it is a lot faster. If WebGL is not supported by the browser
      * then this function will return a canvas renderer.
-     * 
      * @param options The optional renderer parameters.
      * @return Returns WebGL renderer if available, otherwise CanvasRenderer.
      */
@@ -233,8 +225,7 @@ extern class Pixi
     /**
      * Deprecations (backward compatibilities) are automatically applied for browser bundles in the UMD
      * module format. If using Webpack or Rollup, you'll need to apply these deprecations manually by
-     * doing something like this:
-     * 
+     * doing something like this:  
      * Example:
      * ```
      * import * as PIXI from 'pixi.js';
@@ -246,12 +237,13 @@ extern class Pixi
 
 /**
  * How to treat textures with premultiplied alpha.
+ * ***
+ * Library: **core** 
  */
 typedef AlphaModesEnum =
 {
     /**
-     * Source is not premultiplied, leave it like that.
-     * 
+     * Source is not premultiplied, leave it like that.  
      * Option for compressed and data textures that are created from typed arrays.
      */
     var NO_PREMULTIPLIED_ALPHA:Int;
@@ -283,10 +275,11 @@ typedef AlphaModesEnum =
 }
 
 /**
- * Various blend modes supported by PIXI.
- * 
+ * Various blend modes supported by PIXI.  
  * IMPORTANT - The WebGL renderer only supports the NORMAL, ADD, MULTIPLY and SCREEN
  * blend modes. Anything else will silently act like NORMAL.
+ * ***
+ * Library: **core** 
  */
 typedef BlendModesEnum =
 {
@@ -326,6 +319,8 @@ typedef BlendModesEnum =
 
 /**
  * Bitwise OR of masks that indicate the buffers to be cleared.
+ * ***
+ * Library: **core** 
  */
 typedef BufferBitsEnum =
 {
@@ -347,6 +342,8 @@ typedef BufferBitsEnum =
 
 /**
  * How to clear renderTextures in filter.
+ * ***
+ * Library: **core** 
  */
 typedef ClearModesEnum =
 {
@@ -382,9 +379,10 @@ typedef ClearModesEnum =
 }
 
 /**
- * Various webgl draw modes.
- * 
+ * Various webgl draw modes.  
  * These can be used to specify which GL drawMode to use under certain situations and renderers.
+ * ***
+ * Library: **core** 
  */
 typedef DrawModesEnum =
 {
@@ -399,12 +397,13 @@ typedef DrawModesEnum =
 
 /**
  * Different types of environments for WebGL.
+ * ***
+ * Library: **core** 
  */
 typedef EnvEnum =
 {
     /**
-     * Used for older v1 WebGL devices.
-     * 
+     * Used for older v1 WebGL devices.  
      * PixiJS will aim to ensure compatibility with older / less advanced devices.
      * If you experience unexplained flickering prefer this environment.
      */
@@ -423,6 +422,8 @@ typedef EnvEnum =
 
 /**
  * Various GL texture/resources formats.
+ * ***
+ * Library: **core** 
  */
 typedef FormatsEnum =
 {
@@ -472,6 +473,8 @@ typedef FormatsEnum =
  * get filled up.
  * 
  * Handy for mobile devices! This property only affects WebGL.
+ * ***
+ * Library: **core** 
  */
 typedef GCModesEnum =
 {
@@ -487,37 +490,35 @@ typedef GCModesEnum =
 }
 
 /**
- * Graphics curves resolution settings.
+ * Graphics curves resolution settings. 
  * 
  * If `adaptive` flag is set to `true`, the resolution is calculated based on the curve's length to
  * ensure better visual quality. Adaptive draw works with `bezierCurveTo` and `quadraticCurveTo`.
+ * ***
+ * Library: **core** 
  */
 typedef GraphicsCurves =
 {
     /**
-     * Flag indicating if the resolution should be adaptive.
-     * 
+     * Flag indicating if the resolution should be adaptive.  
      * Default: `false`
      */
     var adaptive:Bool;
 
     /**
-     * Maximal length of a single segment of the curve (if adaptive = false, ignored).
-     * 
+     * Maximal length of a single segment of the curve (if adaptive = false, ignored).  
      * Default: `10`
      */
     var maxLength:Float;
 
     /**
-     * Minimal number of segments in the curve (if adaptive = false, ignored)
-     * 
+     * Minimal number of segments in the curve (if adaptive = false, ignored)  
      * Default: `8`
      */
     var minSegments:Float;
 
     /**
-     * maximal number of segments in the curve (if adaptive = false, ignored)
-     * 
+     * maximal number of segments in the curve (if adaptive = false, ignored)  
      * Default: `2048`
      */
     var maxSegments:Float;
@@ -525,8 +526,9 @@ typedef GraphicsCurves =
 
 /**
  * Support line caps in `LineStyle` for graphics.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
+ * ***
+ * Library: **core** 
  */
 typedef LineCapEnum =
 {
@@ -548,32 +550,34 @@ typedef LineCapEnum =
 
 /**
  * Supported line joints in `LineStyle` for graphics.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Graphics.html#lineStyle
  * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
+ * ***
+ * Library: **core** 
  */
 typedef LineJoinEnum =
 {
     /**
-     * 'miter': make a sharp corner where outer part of lines meet
+     * Make a sharp corner where outer part of lines meet.
      */
     var MITER:String;
 
     /**
-     * 'bevel': add a square butt at each end of line segment and fill the triangle at turn
+     * Add a square butt at each end of line segment and fill the triangle at turn.
      */
     var BEVEL:String;
 
     /**
-     * 'round': add an arc at the joint
+     * Add an arc at the joint.
      */
     var ROUND:String;
 }
 
 /**
- * Constants for mask implementations.
- * 
+ * Constants for mask implementations.  
  * We use `type` suffix because it leads to very different behaviours.
+ * ***
+ * Library: **core** 
  */
 typedef MaskTypesEnum =
 {
@@ -606,6 +610,8 @@ typedef MaskTypesEnum =
  * of 2. Due to platform restriction, `ON` option will work like `POW2` for webgl-1.
  * 
  * This property only affects WebGL.
+ * ***
+ * Library: **core** 
  */
 typedef MipmapModesEnum =
 {
@@ -627,6 +633,8 @@ typedef MipmapModesEnum =
 
 /**
  * Constants for multi-sampling antialiasing.
+ * ***
+ * Library: **core** 
  */
 typedef MSAAQualityEnum =
 {
@@ -653,6 +661,8 @@ typedef MSAAQualityEnum =
 
 /**
  * Constants that specify float precision in shaders.
+ * ***
+ * Library: **core** 
  */
 typedef PrecisionEnum =
 {
@@ -674,6 +684,8 @@ typedef PrecisionEnum =
 
 /**
  * Constant to identify the Renderer Type.
+ * ***
+ * Library: **core** 
  */
 typedef RendererTypeEnum =
 {
@@ -698,8 +710,9 @@ typedef RendererTypeEnum =
  * 
  * The PIXI.settings.SCALE_MODE scale mode affects the default scaling mode of future operations.
  * It can be re-assigned to either LINEAR or NEAREST, depending upon suitability.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.settings.html#.SCALE_MODE
+ * ***
+ * Library: **core** 
  */
 typedef ScaleModesEnum =
 {
@@ -716,6 +729,8 @@ typedef ScaleModesEnum =
 
 /**
  * Constants that identify shapes, mainly to prevent `instanceof` calls.
+ * ***
+ * Library: **core** 
  */
 typedef ShapesEnum =
 {
@@ -747,6 +762,8 @@ typedef ShapesEnum =
 
 /**
  * Various GL target types.
+ * ***
+ * Library: **core** 
  */
 typedef TargetsEnum =
 {
@@ -798,6 +815,8 @@ typedef TargetsEnum =
 
 /**
  * Constants that define the type of gradient on text.
+ * ***
+ * Library: **core** 
  */
 typedef TextGradientEnum =
 {
@@ -814,6 +833,8 @@ typedef TextGradientEnum =
 
 /**
  * Various GL data format types.
+ * ***
+ * Library: **core** 
  */
 typedef TypesEnum =
 {
@@ -857,52 +878,43 @@ typedef TypesEnum =
  * Represents the update priorities used by internal PIXI classes when registered with the
  * PIXI.Ticker object. Higher priority items are updated first and lower priority items,
  * such as render, should go later.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html
+ * ***
+ * Library: **core** 
  */
 typedef UpdatePriorityEnum =
 {
     /**
-     * Highest priority, used for PIXI.InteractionManager
-     * 
+     * Highest priority, used for PIXI.InteractionManager.  
      * Default: `50`
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.InteractionManager.html
      */
     var INTERACTION:Int;
 
     /**
-     * High priority updating, PIXI.VideoBaseTexture and PIXI.AnimatedSprite
-     * 
+     * High priority updating, PIXI.VideoBaseTexture and PIXI.AnimatedSprite.  
      * Default: `25`
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.AnimatedSprite.html
      */
     var HIGH:Int;
 
     /**
-     * Default priority for ticker events, see PIXI.Ticker#add.
-     * 
+     * Default priority for ticker events, see PIXI.Ticker#add.  
      * Default: `0`
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.Ticker_.html#add
      */
     var NORMAL:Int;
 
     /**
-     * Low priority used for PIXI.Application rendering.
-     * 
+     * Low priority used for PIXI.Application rendering.  
      * Default: `-25`
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.Application.html
      */
     var LOW:Int;
 
     /**
-     * Lowest priority used for PIXI.BasePrepare utility.
-     * 
+     * Lowest priority used for PIXI.BasePrepare utility.  
      * Default: `-50`
-     * 
      * @see https://pixijs.download/dev/docs/PIXI.BasePrepare.html
      */
     var UTILITY:Int;
@@ -917,8 +929,9 @@ typedef UpdatePriorityEnum =
  * is po2.
  * 
  * This property only affects WebGL.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.settings.html#.WRAP_MODE
+ * ***
+ * Library: **core** 
  */
 typedef WrapModesEnum =
 {
@@ -940,19 +953,19 @@ typedef WrapModesEnum =
 
 /**
  * The optional renderer parameters.
+ * ***
+ * Library: **core** 
  */
 typedef RendererOptions =
 {
     /**
-     * The width of the renderers view.
-     * 
+     * The width of the renderers view.  
      * Default: `800`
      */
     @:optional var width:Int;
 
     /**
-     * The height of the renderers view.
-     * 
+     * The height of the renderers view.  
      * Default: `600`
      */
     @:optional var height:Int;
@@ -963,50 +976,45 @@ typedef RendererOptions =
     @:optional var view:CanvasElement;
 
     /**
-     * If the render view is transparent.
-     * 
+     * If the render view is transparent.  
      * Default: `false`
      */
     @:optional var transparent:Bool;
 
     /**
-     * Resizes renderer view in CSS pixels to allow for resolutions other than 1.
-     * 
+     * Resizes renderer view in CSS pixels to allow for resolutions other than 1.  
      * Default: `false`
      */
     @:optional var autoDensity:Bool;
 
     /**
-     * Sets antialias.
-     * 
+     * Sets antialias.  
      * Default: `false`
      */
     @:optional var antialias:Bool;
 
     /**
-     * Enables drawing buffer preservation, enable this if you need to call toDataUrl on the webgl context.
-     * 
+     * Enables drawing buffer preservation, enable this if you need to call
+     * toDataUrl on the webgl context.  
      * Default: `false`
      */
     @:optional var preserveDrawingBuffer:Bool;
 
     /**
-     * The background color of the rendered area (shown if not transparent).
-     * 
+     * The background color of the rendered area (shown if not transparent).  
      * Default: `0x000000`
      */
     @:optional var backgroundColor:Int;
 
     /**
-     * This sets if the renderer will clear the canvas or not before the new render pass.
-     * 
+     * This sets if the renderer will clear the canvas or not before the new
+     * render pass.
      * Default: `true`
      */
     @:optional var clearBeforeRender:Bool;
 
     /**
-     * The resolution / device pixel ratio of the renderer, retina would be 2.
-     * 
+     * The resolution / device pixel ratio of the renderer, retina would be 2.  
      * Default: `1`
      */
     @:optional var resolution:Float;
@@ -1014,8 +1022,7 @@ typedef RendererOptions =
     /**
      * Prevents selection of WebGL renderer, even if such is present, this option only is
      * available when using **pixi.js-legacy** or **@pixi/canvas-renderer** modules,
-     * otherwise it is ignored.
-     * 
+     * otherwise it is ignored.  
      * Default: `false`
      */
     @:optional var forceCanvas:Bool;

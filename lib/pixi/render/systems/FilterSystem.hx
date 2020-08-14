@@ -2,6 +2,7 @@ package pixi.render.systems;
 
 import pixi.display.DisplayObject;
 import pixi.display.Sprite;
+import pixi.enums.ClearMode;
 import pixi.filters.Filter;
 import pixi.geom.Matrix;
 import pixi.geom.Quad;
@@ -11,9 +12,10 @@ import pixi.textures.RenderTexture;
 
 /**
  * System plugin to the renderer to manage the filters.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.FilterSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_filters_FilterSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.FilterSystem")
 extern class FilterSystem extends System
@@ -35,8 +37,7 @@ extern class FilterSystem extends System
     public var defaultFilterStack(default, null):Array<Dynamic>;
 
     /**
-     * Whether to clear output renderTexture in AUTO/BLIT mode.
-     * 
+     * Whether to clear output renderTexture in AUTO/BLIT mode.  
      * See Pixi.CLEAR_MODES.
      */
     public var forceClear:Bool;
@@ -73,8 +74,7 @@ extern class FilterSystem extends System
 
     /**
      * Old padding behavior is to use the max amount instead of sum padding.
-     * Use this flag if you need the old behavior.
-     * 
+     * Use this flag if you need the old behavior.  
      * Default: `false`
      */
     public var useMaxPadding:Bool;

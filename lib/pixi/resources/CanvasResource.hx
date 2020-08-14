@@ -4,9 +4,10 @@ import js.html.CanvasElement;
 
 /**
  * Resource type for HTMLCanvasElement.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.CanvasResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_CanvasResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.CanvasResource")
 extern class CanvasResource extends BaseImageResource

@@ -8,9 +8,10 @@ import pixi.filters.SpriteMaskFilter;
 
 /**
  * System plugin to the renderer to manage masks.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.MaskSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_mask_MaskSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.MaskSystem")
 extern class MaskSystem extends System
@@ -22,8 +23,7 @@ extern class MaskSystem extends System
     public function new(renderer:Renderer);
 
     /**
-     * Current index of alpha mask pool.
-     * 
+     * Current index of alpha mask pool.  
      * Default: `0`
      */
     public var alphaMaskIndex(default, null):Int;

@@ -1,9 +1,11 @@
-package pixi.render;
+package pixi.enums;
 
 /**
  * Constants for multi-sampling antialiasing.
- * 
- * *This enum contains values from: `Pixi.MSAA_QUALITY` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.MSAA_QUALITY` for more convenience.*
  */
 enum abstract MSAAQuality(Int) to Int from Int
 {

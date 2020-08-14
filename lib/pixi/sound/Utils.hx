@@ -9,9 +9,10 @@ import pixi.loaders.ResourceLoader;
 
 /**
  * Utilities that work with sounds.
- * 
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.utils.html#.extensions
  * @see Source code: https://github.com/pixijs/pixi-sound/tree/main/src/utils
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound.utils")
 extern class Utils
@@ -65,26 +66,25 @@ extern class Utils
 
 /**
  * Custom rendering options.
+ * ***
+ * Library: **sound** 
  */
 typedef RenderOptions = 
 {
     /**
-     * Width of the render.
-     * 
+     * Width of the render.  
      * Default: `512`
      */
     var width:Int;
 
     /**
-     * Height of the render.
-     * 
+     * Height of the render.  
      * Default: `128`
      */
     var height:Int;
 
     /**
-     * Fill style for waveform.
-     * 
+     * Fill style for waveform.  
      * Default: `black`
      */
     var fill:EitherType<String, EitherType<CanvasPattern, CanvasGradient>>;
@@ -92,6 +92,8 @@ typedef RenderOptions =
 
 /**
  * The list of browser supported audio formats.
+ * ***
+ * Library: **sound** 
  */
 typedef SupportedFormats = 
 {

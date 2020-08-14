@@ -6,21 +6,19 @@ import pixi.geom.Matrix;
 import pixi.textures.RenderTexture;
 
 /**
- * The Renderer draws the scene and all its content onto a WebGL enabled canvas.
- * 
- * This renderer should be used for browsers that support WebGL.
- * 
+ * The Renderer draws the scene and all its content onto a WebGL enabled canvas.  
+ * This renderer should be used for browsers that support WebGL.  
  * This renderer works by automatically managing WebGLBatchesm, so no need for
  * Sprite Batches or Sprite Clouds. Don't forget to add the view to your DOM or
  * you will not see anything!
- * 
  * @event RenderEvent.CONTEXT Fired when the WebGL context is set.
  * @event RenderEvent.PRERENDER Fired before rendering starts.
  * @event RenderEvent.POSTRENDER Fired after rendering finishes.
  * @event RenderEvent.RESIZE Fired after view has been resized.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Renderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_Renderer.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Renderer")
 extern class Renderer extends AbstractRenderer
@@ -87,8 +85,7 @@ extern class Renderer extends AbstractRenderer
     public var projection(default, null):ProjectionSystem;
 
     /**
-     * Flag if we are rendering to the screen vs renderTexture.
-     * 
+     * Flag if we are rendering to the screen vs renderTexture.  
      * Default: `true`
      */
     public var renderingToScreen(default, null):Bool;
@@ -184,6 +181,8 @@ extern class Renderer extends AbstractRenderer
 
 /**
  * The optional renderer parameters.
+ * ***
+ * Library: **core** 
  */
 typedef RendererOptions = 
 {

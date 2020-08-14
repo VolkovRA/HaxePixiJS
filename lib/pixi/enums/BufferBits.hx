@@ -1,9 +1,11 @@
-package pixi.render;
+package pixi.enums;
 
 /**
  * Bitwise OR of masks that indicate the buffers to be cleared.
- * 
- * *This enum contains values from: `Pixi.BUFFER_BITS` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.BUFFER_BITS` for more convenience.*
  */
 enum abstract BufferBits(Int) to Int from Int
 {

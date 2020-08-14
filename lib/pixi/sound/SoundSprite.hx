@@ -8,6 +8,8 @@ import pixi.sound.Sound;
  * Object that represents a single Sound's sprite.
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.SoundSprite.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/sprites/SoundSprite.ts
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound.SoundSprite")
 extern class SoundSprite
@@ -18,12 +20,6 @@ extern class SoundSprite
      * @param options Data associated with object.
      */
     public function new(parent:Sound, options:SoundSpriteData);
-
-
-
-    //////////////////
-    //   СВОЙСТВА   //
-    //////////////////
 
     /**
      * The duration of the sound in seconds.
@@ -55,12 +51,6 @@ extern class SoundSprite
      */
     public var start(default, null):Float;
 
-
-
-    ////////////////
-    //   МЕТОДЫ   //
-    ////////////////
-
     /**
      * Play the sound sprite.
      * @param complete Function call when complete.
@@ -76,6 +66,8 @@ extern class SoundSprite
 
 /**
  * Options of sound sprite.
+ * ***
+ * Library: **sound** 
  */
 typedef SoundSpriteData =
 {

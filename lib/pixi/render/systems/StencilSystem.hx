@@ -4,9 +4,10 @@ import pixi.display.DisplayObject;
 
 /**
  * System plugin to the renderer to manage stencils (used for masks).
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.StencilSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_mask_StencilSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.StencilSystem")
 extern class StencilSystem extends System

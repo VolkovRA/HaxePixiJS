@@ -12,6 +12,8 @@ import pixi.geom.Point;
  * 
  * @see https://pixijs.download/dev/docs/PIXI.ObservablePoint.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_ObservablePoint.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.ObservablePoint")
 extern class ObservablePoint implements IPoint
@@ -27,26 +29,22 @@ extern class ObservablePoint implements IPoint
 
     /**
      * The position of the displayObject on the x axis relative to the local
-     * coordinates of the parent.
-     * 
+     * coordinates of the parent.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
      * The position of the displayObject on the x axis relative to the local
-     * coordinates of the parent.
-     * 
+     * coordinates of the parent.  
      * Default: `0`
      */
     public var y:Float;
 
     /**
-     * Creates a clone of this point.
-     * 
+     * Creates a clone of this point.  
      * The callback and scope params can be overidden otherwise they will default
      * to the clone object's values.
-     * 
      * @return A copy of the point.
      */
     public function clone():ObservablePoint;

@@ -1,6 +1,6 @@
 package pixi.textures;
 
-import pixi.display.ScaleMode;
+import pixi.enums.ScaleMode;
 import pixi.render.MaskData;
 import pixi.utils.CanvasRenderTarget;
 
@@ -42,6 +42,8 @@ import pixi.utils.CanvasRenderTarget;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.BaseRenderTexture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_renderTexture_BaseRenderTexture.js.html
+ * ***
+ * Library: **core** 
  */
  @:native("PIXI.BaseRenderTexture")
 extern class BaseRenderTexture extends BaseTexture 
@@ -96,19 +98,19 @@ extern class BaseRenderTexture extends BaseTexture
 
 /**
  * The options to BaseRenderTexture constructor.
+ * ***
+ * Library: **core** 
  */
 typedef BaseRenderTextureOptions =
 {
     /**
-     * The width of the base render texture.
-     * 
+     * The width of the base render texture.  
      * Default: `100`
      */
     @:optional var width:Int;
 
     /**
-     * The height of the base render texture.
-     * 
+     * The height of the base render texture.  
      * Default: `100`
      */
     @:optional var height:Int;
@@ -119,8 +121,7 @@ typedef BaseRenderTextureOptions =
     @:optional var scaleMode:ScaleMode;
 
     /**
-     * The resolution / device pixel ratio of the texture being generated.
-     * 
+     * The resolution / device pixel ratio of the texture being generated.  
      * Default: `1`
      */
     @:optional var resolution:Float;

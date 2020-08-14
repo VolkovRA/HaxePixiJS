@@ -6,9 +6,10 @@ import pixi.geom.Geometry;
 
 /**
  * System plugin to the renderer to manage geometry.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.GeometrySystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_geometry_GeometrySystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.GeometrySystem")
 extern class GeometrySystem extends System

@@ -1,16 +1,16 @@
 package pixi.geom;
 
 /**
- * Interface for classes that represent a hit area.
- * 
+ * Interface for classes that represent a hit area.  
  * It is implemented by the following classes:
  * - Rectangle
  * - Circle
  * - Ellipse
  * - Polygon
  * - RoundedRectangle
- * 
  * @see https://pixijs.download/dev/docs/PIXI.IHitArea.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.IHitArea")
 extern interface IHitArea

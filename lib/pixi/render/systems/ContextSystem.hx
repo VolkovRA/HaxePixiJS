@@ -4,9 +4,10 @@ import js.html.CanvasElement;
 
 /**
  * System plugin to the renderer to manage the context.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.ContextSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_context_ContextSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.ContextSystem")
 extern class ContextSystem extends System
@@ -89,6 +90,8 @@ extern class ContextSystem extends System
 
 /**
  * Extensions being used.
+ * ***
+ * Library: **core** 
  */
 typedef ExtensionsParams =
 {

@@ -4,9 +4,10 @@ import js.html.ImageBitmap;
 
 /**
  * Resource type for ImageBitmap.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.ImageBitmapResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_ImageBitmapResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.ImageBitmapResource")
 extern class ImageBitmapResource extends BaseImageResource

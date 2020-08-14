@@ -3,9 +3,10 @@ package pixi.geom;
 /**
  * The Ellipse object is used to help draw graphics and can also be used
  * to specify a hit area for displayObjects.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Ellipse.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Ellipse.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Ellipse")
 extern class Ellipse implements IHitArea
@@ -20,36 +21,31 @@ extern class Ellipse implements IHitArea
     public function new(?x:Float, ?y:Float, ?halfWidth:Float, ?halfHeight:Float);
 
     /**
-     * The type of the object, mainly used to avoid `instanceof` checks.
-     * 
+     * The type of the object, mainly used to avoid `instanceof` checks.  
      * Default: `Pixi.SHAPES.ELIP`
      */
     public var type(default, null):Int;
 
     /**
-     * The X coordinate of the center of this ellipse.
-     * 
+     * The X coordinate of the center of this ellipse.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
-     * The Y coordinate of the center of this ellipse.
-     * 
+     * The Y coordinate of the center of this ellipse.  
      * Default: `0`
      */
     public var y:Float;
 
     /**
-     * The width of this ellipse.
-     * 
+     * The width of this ellipse.  
      * Default: `0`
      */
     public var width:Float;
 
     /**
-     * The height of this ellipse.
-     * 
+     * The height of this ellipse.  
      * Default: `0`
      */
     public var height:Float;

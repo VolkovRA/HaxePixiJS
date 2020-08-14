@@ -1,4 +1,4 @@
-package pixi.textures;
+package pixi.enums;
 
 /**
  * The wrap modes that are supported by pixi.
@@ -9,8 +9,10 @@ package pixi.textures;
  * is po2.
  * 
  * This property only affects WebGL.
- * 
- * *This enum contains values from: `Pixi.WRAP_MODES` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.WRAP_MODES` for more convenience.*
  */
 enum abstract WrapMode(Int) to Int from Int
 {

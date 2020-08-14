@@ -2,9 +2,10 @@ package pixi.geom;
 
 /**
  * Draw a star shape with an arbitrary number of points.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.graphicsUtils.Star.html
  * @see Source code: http://pixijs.download/release/docs/packages_graphics_src_utils_Star.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.graphicsUtils.Star")
 extern class Star extends Polygon 

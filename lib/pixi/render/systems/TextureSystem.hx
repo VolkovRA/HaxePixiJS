@@ -6,9 +6,10 @@ import pixi.textures.Texture;
 
 /**
  * System plugin to the renderer to manage textures.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.TextureSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_TextureSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.TextureSystem")
 extern class TextureSystem extends System
@@ -40,11 +41,9 @@ extern class TextureSystem extends System
     public var unknownTexture(default, null):BaseTexture;
 
     /**
-     * Bind a texture to a specific location.
-     * 
+     * Bind a texture to a specific location.  
      * If you want to unbind something, please use `unbind(texture)` instead
      * of `bind(null, textureLocation)`.
-     * 
      * @param texture Texture to bind.
      * @param location Location to bind at. Default: `0`
      */

@@ -12,9 +12,10 @@ import pixi.render.Renderer;
 
 /**
  * Resource type for HTMLVideoElement.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.VideoResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_VideoResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.VideoResource")
 extern class VideoResource extends BaseImageResource
@@ -38,8 +39,7 @@ extern class VideoResource extends BaseImageResource
 
     /**
      * When set to true will automatically play videos used by this texture once they are loaded.
-     * If false, it will not modify the playing state.
-     * 
+     * If false, it will not modify the playing state.  
      * Default: `true`
      */
     public var autoPlay:Bool;
@@ -85,34 +85,32 @@ extern class VideoResource extends BaseImageResource
 
 /**
  * Options of VideoResource.
+ * ***
+ * Library: **core** 
  */
 typedef VideoResourceOptions = 
 {
     /**
-     * Start loading the video immediately.
-     * 
+     * Start loading the video immediately.  
      * Default: `true`
      */
     @:optional var autoLoad:Bool;
 
     /**
-     * Start playing video immediately.
-     * 
+     * Start playing video immediately.  
      * Default: `true`
      */
     @:optional var autoPlay:Bool;
 
     /**
      * How many times a second to update the texture from the video.
-     * Leave at 0 to update at every render.
-     * 
+     * Leave at 0 to update at every render.  
      * Default: `0`
      */
     @:optional var updateFPS:Float;
 
     /**
-     * Load image using cross origin.
-     * 
+     * Load image using cross origin.  
      * Default: `true`
      */
     @:optional var crossorigin:Bool;

@@ -7,12 +7,12 @@ import pixi.render.Renderer;
 
 /**
  * Base resource class for textures that manages validation and
- * uploading, depending on its type.
- * 
+ * uploading, depending on its type.  
  * Uploading of a base texture to the GPU is required.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.Resource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_Resource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.Resource")
 extern class Resource
@@ -41,8 +41,7 @@ extern class Resource
     private var internal:Bool;
 
     /**
-     * If resource has been destroyed.
-     * 
+     * If resource has been destroyed.  
      * Default: `false`
      */
     public var destroyed:Bool;

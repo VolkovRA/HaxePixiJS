@@ -5,9 +5,10 @@ import pixi.display.DisplayObject;
 /**
  * System plugin to the renderer to manage texture garbage collection on the GPU,
  * ensuring that it does not get clogged up with textures that are no longer being used.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.TextureGCSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_TextureGCSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.TextureGCSystem")
 extern class TextureGCSystem extends System
@@ -25,7 +26,6 @@ extern class TextureGCSystem extends System
 
     /**
      * Maximum number of item to check.
-     * 
      * @see `pixi.Settings.GC_MAX_CHECK_COUNT` http://pixijs.download/release/docs/PIXI.settings.html#.GC_MAX_CHECK_COUNT
      */
     public var checkCountMax:Int;
@@ -37,14 +37,12 @@ extern class TextureGCSystem extends System
 
     /**
      * Maximum idle time, in seconds.
-     * 
      * @see `pixi.Settings.GC_MAX_IDLE` http://pixijs.download/release/docs/PIXI.settings.html#.GC_MAX_IDLE
      */
     public var maxIdle:Float;
 
     /**
      * Current garabage collection mode.
-     * 
      * @see `pixi.Settings.GC_MODE` http://pixijs.download/release/docs/PIXI.settings.html#.GC_MODE
      */
     public var mode:GCMode;

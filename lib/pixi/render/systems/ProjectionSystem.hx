@@ -5,9 +5,10 @@ import pixi.geom.Rectangle;
 
 /**
  * System plugin to the renderer to manage the projection matrix.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.ProjectionSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_projection_ProjectionSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.ProjectionSystem")
 extern class ProjectionSystem extends System
@@ -39,12 +40,14 @@ extern class ProjectionSystem extends System
     public var sourceFrame(default, null):Rectangle;
 
     /**
-     * A transform that will be appended to the projection matrix if null, nothing will be applied.
+     * A transform that will be appended to the projection matrix if
+     * null, nothing will be applied.
      */
     public var transform:Matrix;
 
     /**
-     * Updates the projection matrix based on a projection frame. (Which is a rectangle)
+     * Updates the projection matrix based on a projection frame.
+     * (Which is a rectangle)
      * @param destinationFrame The destination frame.
      * @param sourceFrame The source frame.
      * @param resolution Resolution.
@@ -59,10 +62,8 @@ extern class ProjectionSystem extends System
     public function setTransform(matrix:Matrix):Void;
 
     /**
-     * Updates the projection matrix based on a projection frame (which is a rectangle).
-     * 
+     * Updates the projection matrix based on a projection frame (which is a rectangle).  
      * Make sure to run `renderer.framebuffer.setViewport(destinationFrame)` after calling this.
-     * 
      * @param destinationFrame The destination frame.
      * @param sourceFrame The source frame.
      * @param resolution Resolution.

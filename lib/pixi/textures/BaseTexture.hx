@@ -6,8 +6,13 @@ import js.lib.Float32Array;
 import js.html.CanvasElement;
 import js.html.ImageElement;
 import js.html.VideoElement;
-import pixi.textures.AlphaMode;
-import pixi.display.ScaleMode;
+import pixi.enums.AlphaMode;
+import pixi.enums.GLDataType;
+import pixi.enums.GLTarget;
+import pixi.enums.MipmapMode;
+import pixi.enums.ScaleMode;
+import pixi.enums.TextureFormat;
+import pixi.enums.WrapMode;
 import pixi.events.EventEmitter;
 import pixi.resources.Resource;
 
@@ -26,6 +31,8 @@ import pixi.resources.Resource;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.BaseTexture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_BaseTexture.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.BaseTexture")
 extern class BaseTexture extends EventEmitter
@@ -54,15 +61,13 @@ extern class BaseTexture extends EventEmitter
     public var _batchLocation:Int;
 
     /**
-     * How to treat premultiplied alpha, see Pixi.ALPHA_MODES.
-     * 
+     * How to treat premultiplied alpha, see Pixi.ALPHA_MODES.  
      * Default: `AlphaMode.UNPACK`
      */
     public var alphaMode:AlphaMode;
 
     /**
-     * Anisotropic filtering level of texture.
-     * 
+     * Anisotropic filtering level of texture.  
      * Default: `Settings.ANISOTROPIC_LEVEL`
      */
     public var anisotropicLevel:Float;
@@ -89,11 +94,10 @@ extern class BaseTexture extends EventEmitter
     private var dirtyStyleId:Int;
 
     /**
-     * The pixel format of the texture.
-     * 
-     * Default: `Format.RGBA`
+     * The pixel format of the texture.  
+     * Default: `TextureFormat.RGBA`
      */
-    public var format:Format;
+    public var format:TextureFormat;
 
     /**
      * The width of the base texture set when the image has loaded.
@@ -106,15 +110,14 @@ extern class BaseTexture extends EventEmitter
     public var height(default, null):Int;
 
     /**
-     * Whether or not the texture is a power of two, try to use power of two textures as much as you can.
-     * 
+     * Whether or not the texture is a power of two, try to use power of two
+     * textures as much as you can.  
      * Default: `false`
      */
     public var isPowerOfTwo(default, null):Bool;
 
     /**
-     * Mipmap mode of the texture, affects downscaled images.
-     * 
+     * Mipmap mode of the texture, affects downscaled images.  
      * Default: `Settings.MIPMAP_TEXTURES`
      */
     public var mipmap:MipmapMode;
@@ -135,8 +138,7 @@ extern class BaseTexture extends EventEmitter
     public var realHeight(default, null):Int;
 
     /**
-     * The resolution / device pixel ratio of the texture.
-     * 
+     * The resolution / device pixel ratio of the texture.  
      * Default: `Settings.RESOLUTION`
      */
     public var resolution:Float;
@@ -148,18 +150,16 @@ extern class BaseTexture extends EventEmitter
     public var resource(default, null):Resource;
 
     /**
-     * The scale mode to apply when scaling this texture.
-     * 
+     * The scale mode to apply when scaling this texture.  
      * Default: `Settings.SCALE_MODE`
      */
     public var scaleMode:ScaleMode;
 
     /**
-     * The target type.
-     * 
-     * Default: `Target.TEXTURE_2D`
+     * The target type.  
+     * Default: `GLTarget.TEXTURE_2D`
      */
-    public var target:Target;
+    public var target:GLTarget;
 
     /**
      * The collection of alternative cache ids, since some BaseTextures can
@@ -173,11 +173,10 @@ extern class BaseTexture extends EventEmitter
     private var touched:Float;
 
     /**
-     * The type of resource data.
-     * 
-     * Default: `Type.UNSIGNED_BYTE`
+     * The type of resource data.  
+     * Default: `GLDataType.UNSIGNED_BYTE`
      */
-    public var type:Type;
+    public var type:GLDataType;
 
     /**
      * Global unique identifier for this BaseTexture.
@@ -246,7 +245,6 @@ extern class BaseTexture extends EventEmitter
     /**
      * Frees the texture from WebGL memory without destroying this texture object.
      * This means you can still use the texture later which will upload it to GPU memory again.
-     * 
      * @see BaseTextureEvent.DISPOSE
      */
     public function dispose():Void;
@@ -307,75 +305,67 @@ extern class BaseTexture extends EventEmitter
 
 /**
  * The options to BaseTexture constructor.
+ * ***
+ * Library: **core** 
  */
 typedef BaseTextureOptions =
 {
     /**
-     * If mipmapping is enabled for texture.
-     * 
+     * If mipmapping is enabled for texture.  
      * Default: `Settings.MIPMAP_TEXTURES`
      */
     @:optional var mipmap:MipmapMode;
 
     /**
-     * Anisotropic filtering level of texture.
-     * 
+     * Anisotropic filtering level of texture.  
      * Default: `Settings.ANISOTROPIC_LEVEL`
      */
     @:optional var anisotropicLevel:Float;
 
     /**
-     * Wrap mode for textures.
-     * 
+     * Wrap mode for textures.  
      * Default: `Settings.WRAP_MODE`
      */
     @:optional var wrapMode:WrapMode;
 
     /**
-     * Default scale mode, linear, nearest.
-     * 
+     * Default scale mode, linear, nearest.  
      * Default: `Settings.SCALE_MODE`
      */
     @:optional var scaleMode:ScaleMode;
 
     /**
-     * GL format type.
-     * 
-     * Default: `Foramt.RGBA`
+     * GL format type.  
+     * Default: `TextureFormat.RGBA`
      */
-    @:optional var format:Foramt;
+    @:optional var format:TextureFormat;
 
     /**
-     * GL data type.
-     * 
-     * Default: `Type.UNSIGNED_BYTE`
+     * GL data type.  
+     * Default: `GLDataType.UNSIGNED_BYTE`
      */
-    @:optional var type:Type;
+    @:optional var type:GLDataType;
 
     /**
-     * GL texture target.
-     * 
-     * Default: `Target.TEXTURE_2D`
+     * GL texture target.  
+     * Default: `GLTarget.TEXTURE_2D`
      */
-    @:optional var target:Target;
+    @:optional var target:GLTarget;
 
     /**
-     * Pre multiply the image alpha.
-     * 
+     * Pre multiply the image alpha.  
      * Default: `AlphaMode.UNPACK`
      */
     @:optional var alphaMode:AlphaMode;
 
     /**
-     * Width of the texture.
-     * 
+     * Width of the texture.  
      * Default: `0`
      */
     @:optional var width:Int;
 
     /**
-     * Height of the texture.
-     * 
+     * Height of the texture.  
      * Default: `0`
      */
     @:optional var height:Int;

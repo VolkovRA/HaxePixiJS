@@ -3,16 +3,17 @@ package pixi.resources;
 import js.lib.Promise;
 import js.html.ImageElement;
 import js.html.ImageBitmap;
-import pixi.textures.AlphaMode;
+import pixi.enums.AlphaMode;
 import pixi.textures.BaseTexture;
 import pixi.textures.GLTexture;
 import pixi.render.Renderer;
 
 /**
  * Resource type for HTMLImageElement.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.ImageResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_ImageResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.ImageResource")
 extern class ImageResource extends BaseImageResource
@@ -41,22 +42,19 @@ extern class ImageResource extends BaseImageResource
     public var alphaMode(default, null):Null<AlphaMode>;
 
     /**
-     * The ImageBitmap element created for HTMLImageElement.
-     * 
+     * The ImageBitmap element created for HTMLImageElement.  
      * Default: `null`
      */
     public var bitmap:ImageBitmap;
 
     /**
-     * If capable, convert the image using createImageBitmap API.
-     * 
+     * If capable, convert the image using createImageBitmap API.  
      * Default: `Settings.CREATE_IMAGE_BITMAP`
      */
     public var createBitmap:Bool;
 
     /**
-     * If the image should be disposed after upload.
-     * 
+     * If the image should be disposed after upload.  
      * Default: `false`
      */
     public var preserveBitmap:Bool;
@@ -103,33 +101,31 @@ extern class ImageResource extends BaseImageResource
 
 /**
  * The options of ImageResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef ImageResourceOptions =
 {
     /**
-     * Start loading process.
-     * 
+     * Start loading process.  
      * Default: `true`
      */
     @:optional var autoLoad:Bool;
 
     /**
-     * Whether its required to create a bitmap before upload.
-     * 
+     * Whether its required to create a bitmap before upload.  
      * Default: `Settings.CREATE_IMAGE_BITMAP`
      */
     @:optional var createBitmap:Bool;
 
     /**
-     * Load image using cross origin.
-     * 
+     * Load image using cross origin.  
      * Default: `true`
      */
     @:optional var crossorigin:Bool;
 
     /**
-     * Premultiply image alpha in bitmap.
-     * 
+     * Premultiply image alpha in bitmap.  
      * Default: `AlphaMode.UNPACK`
      */
     @:optional var alphaMode:AlphaMode;

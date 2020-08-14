@@ -5,12 +5,12 @@ import pixi.geom.Rectangle;
 import pixi.textures.RenderTexture;
 
 /**
- * System plugin to the renderer to manage render textures.
- * 
+ * System plugin to the renderer to manage render textures.  
  * Should be added after FramebufferSystem.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.RenderTextureSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_renderTexture_RenderTextureSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.RenderTextureSystem")
 extern class RenderTextureSystem extends System

@@ -6,9 +6,10 @@ import pixi.sound.filters.Filter;
 /**
  * Represents the audio context for playing back sounds.
  * This can represent either an HTML or WebAudio context.
- * 
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.IMediaContext.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/interfaces/IMediaContext.ts
+ * ***
+ * Library: **sound** 
  */
 extern interface IMediaContext
 {

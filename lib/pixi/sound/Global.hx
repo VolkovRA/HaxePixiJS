@@ -10,12 +10,12 @@ import pixi.sound.SoundSprite;
 import pixi.sound.filters.Filter;
 
 /**
- * Contains all of the functionality for using the pixi-sound library.
- * 
- * This is deisnged to play audio with WebAudio and fallback to HTML5.
- * 
+ * Contains all of the functionality for using the pixi-sound library.  
+ * This is deisnged to play audio with WebAudio and fallback to HTML5.  
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.html#context
  * @see Source code: https://github.com/pixijs/pixi-sound/tree/main/src
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound")
 extern class Global
@@ -26,8 +26,7 @@ extern class Global
     static public var context(default, null):IMediaContext;
 
     /**
-     * Apply filters to all sounds.
-     * 
+     * Apply filters to all sounds.  
      * Can be useful for setting global planning or global effects.
      * **Only supported with WebAudio.**
      * ```
@@ -40,8 +39,7 @@ extern class Global
     static public var filtersAll:Array<Filter>;
 
     /**
-     * Set the global speed for all sounds.
-     * 
+     * Set the global speed for all sounds.  
      * To set per-sound speed see `Global.speed()`.
      */
     static public var speedAll:Float;
@@ -52,15 +50,13 @@ extern class Global
     static public var supported(default, null):Bool;
 
     /**
-     * Do not use WebAudio, force the use of legacy.
-     * 
+     * Do not use WebAudio, force the use of legacy.  
      * This **must** be called before loading any files.
      */
     static public var useLegacy:Bool;
 
     /**
-     * Set the global volume for all sounds.
-     * 
+     * Set the global volume for all sounds.  
      * To set per-sound volume see `Global.volume()`.
      */
     static public var volumeAll:Float;
@@ -76,8 +72,7 @@ extern class Global
     static public function add(alias:String, options:EitherType<String, EitherType<ArrayBuffer, EitherType<AudioElement, AddOptions>>>):Sound;
 
     /**
-     * Closes the sound library.
-     * 
+     * Closes the sound library.  
      * This will release/destroy the AudioContext(s). Can be used safely if you want to
      * initialize the sound library later. Use init method.
      */
@@ -105,8 +100,7 @@ extern class Global
     static public function find(alias:String):Sound;
 
     /**
-     * Re-initialize the sound library, this will recreate the AudioContext.
-     * 
+     * Re-initialize the sound library, this will recreate the AudioContext.  
      * If there's a hardware-failure call close and then init.
      * @return Sound instance.
      */
@@ -216,6 +210,8 @@ extern class Global
 
 /**
  * Options object.
+ * ***
+ * Library: **sound** 
  */
 typedef AddOptions =
 {
@@ -230,58 +226,50 @@ typedef AddOptions =
     @:optional var source:EitherType<ArrayBuffer, AudioElement>;
 
     /**
-     * `true` to play after loading.
-     * 
+     * `true` to play after loading.  
      * Default: `false`
      */
     @:optional var autoPlay:Bool;
 
     /**
-     * `true` to immediately start preloading.
-     * 
+     * `true` to immediately start preloading.  
      * Default: `false`
      */
     @:optional var preload:Bool;
 
     /**
-     * `true` to disallow playing multiple layered instances at once.
-     * 
+     * `true` to disallow playing multiple layered instances at once.  
      * Default: `false`
      */
     @:optional var singleInstance:Bool;
 
     /**
-     * The amount of volume `1` = 100%.
-     * 
+     * The amount of volume `1` = 100%.  
      * Default: `1`
      */
     @:optional var volume:Float;
 
     /**
-     * The playback rate where `1` is 100% speed.
-     * 
+     * The playback rate where `1` is 100% speed.  
      * Default: `1`
      */
     @:optional var speed:Float;
 
     /**
-     * The map of sprite data.
-     * 
+     * The map of sprite data.  
      * Where a sprite is an object with a start and end, which are the times in seconds.
      * Optionally, can include a speed amount where `1` is 100% speed.
      */
     @:optional var sprites:DynamicAccess<SoundSpriteData>;
 
     /**
-     * Global complete callback when play is finished.
-     * 
+     * Global complete callback when play is finished.  
      * Default: `null`
      */
     @:optional var complete:CompleteCallback;
 
     /**
-     * Call when finished loading.
-     * 
+     * Call when finished loading.  
      * Default: `null`
      */
     @:optional var loaded:LoadedCallback;

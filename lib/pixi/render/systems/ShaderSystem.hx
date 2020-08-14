@@ -4,9 +4,10 @@ import pixi.filters.Shader;
 
 /**
  * System plugin to the renderer to manage shaders.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.ShaderSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_shader_ShaderSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.ShaderSystem")
 extern class ShaderSystem extends System

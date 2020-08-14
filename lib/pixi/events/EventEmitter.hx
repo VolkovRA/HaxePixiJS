@@ -7,9 +7,10 @@ import js.lib.Symbol;
 
 /**
  * EventEmitter3 is a high performance EventEmitter.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.utils.EventEmitter.html
  * @see Source code: https://github.com/primus/eventemitter3/blob/master/index.d.ts
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.utils.EventEmitter")
 extern class EventEmitter
@@ -40,13 +41,10 @@ extern class EventEmitter
     public function listenerCount(event:EventName):Int;
 
     /**
-     * Calls each of the listeners registered for a given event.
-     * 
+     * Calls each of the listeners registered for a given event.  
      * Synchronously calls each of the listeners registered for the event named `event`,
-     * in the order they were registered, passing the supplied arguments to each.
-     * 
+     * in the order they were registered, passing the supplied arguments to each.  
      * Returns `true` if the event had listeners, `false` otherwise.
-     * 
      * @param event Event name.
      * @param args The parameters for a listeners.
      * @return Returns `true` if the event had listeners, `false` otherwise.
@@ -110,5 +108,7 @@ extern class EventEmitter
 
 /**
  * The a valid type of events names.
+ * ***
+ * Library: **core** 
  */
 typedef EventName = EitherType<String,Symbol>;

@@ -2,9 +2,10 @@ package pixi.sound.filters;
 
 /**
  * Filter for adding equalizer bands.
- * 
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.filters.EqualizerFilter.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/filters/EqualizerFilter.ts
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound.filters.EqualizerFilter")
 extern class EqualizerFilter extends Filter
@@ -35,71 +36,61 @@ extern class EqualizerFilter extends Filter
     );
 
     /**
-     * Gain at 1 KHz frequencey.
-     * 
+     * Gain at 1 KHz frequencey.  
      * Default: `0`
      */
     public var f1k:Float;
 
     /**
-     * Gain at 2 KHz frequencey.
-     * 
+     * Gain at 2 KHz frequencey.  
      * Default: `0`
      */
     public var f2k:Float;
 
     /**
-     * Gain at 4 KHz frequencey.
-     * 
+     * Gain at 4 KHz frequencey.  
      * Default: `0`
      */
     public var f4k:Float;
 
     /**
-     * Gain at 8 KHz frequencey.
-     * 
+     * Gain at 8 KHz frequencey.  
      * Default: `0`
      */
     public var f8k:Float;
 
     /**
-     * Gain at 16 KHz frequencey.
-     * 
+     * Gain at 16 KHz frequencey.  
      * Default: `0`
      */
     public var f16k:Float;
 
     /**
-     * Gain at 32 Hz frequencey.
-     * 
+     * Gain at 32 Hz frequencey.  
      * Default: `0`
      */
     public var f32:Float;
 
     /**
-     * Gain at 64 Hz frequencey.
-     * 
+     * Gain at 64 Hz frequencey.  
      * Default: `0`
      */
     public var f64:Float;
 
     /**
-     * Gain at 125 Hz frequencey.
-     * 
+     * Gain at 125 Hz frequencey.  
      * Default: `0`
      */
     public var f125:Float;
 
     /**
-     * Gain at 250 Hz frequencey.
-     * 
+     * Gain at 250 Hz frequencey.  
      * Default: `0`
      */
     public var f250:Float;
 
     /**
-     * Gain at 500 Hz frequencey.
-     * 
+     * Gain at 500 Hz frequencey.  
      * Default: `0`
      */
     public var f500:Float;

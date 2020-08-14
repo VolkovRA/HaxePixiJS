@@ -5,9 +5,10 @@ import pixi.geom.Point;
 
 /**
  * A class to define a shape via user defined co-orinates.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Polygon.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Polygon.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Polygon")
 extern class Polygon implements IHitArea
@@ -24,15 +25,13 @@ extern class Polygon implements IHitArea
     public function new(points:EitherType<Array<IPoint>, Array<Float>>);
 
     /**
-     * The type of the object, mainly used to avoid `instanceof` checks.
-     * 
+     * The type of the object, mainly used to avoid `instanceof` checks.  
      * Default: `Pixi.SHAPES.POLY`
      */
     public var type(default, null):Int;
 
     /**
-     * `false` after moveTo, `true` after `closePath`. In all other cases it is `true`.
-     * 
+     * `false` after moveTo, `true` after `closePath`. In all other cases it is `true`.  
      * Default: `true`
      */
     public var closeStroke:Bool;

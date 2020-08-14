@@ -4,9 +4,10 @@ package pixi.geom;
  * The Rounded Rectangle object is an area that has nice rounded corners, as
  * indicated by its top-left corner point (x, y) and by its width and its
  * height and its radius.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.RoundedRectangle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_RoundedRectangle.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.RoundedRectangle")
 extern class RoundedRectangle implements IHitArea
@@ -22,43 +23,37 @@ extern class RoundedRectangle implements IHitArea
     public function new(?x:Float, ?y:Float, ?width:Float, ?height:Float, ?radius:Float);
 
     /**
-     * The type of the object, mainly used to avoid `instanceof` checks.
-     * 
+     * The type of the object, mainly used to avoid `instanceof` checks.  
      * Default: `Pixi.SHAPES.RREC`
      */
     public var type(default, null):Int;
 
     /**
-     * The X coordinate of the upper-left corner of the rounded rectangle.
-     * 
+     * The X coordinate of the upper-left corner of the rounded rectangle.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
-     * The Y coordinate of the upper-left corner of the rounded rectangle.
-     * 
+     * The Y coordinate of the upper-left corner of the rounded rectangle.  
      * Default: `0`
      */
     public var y:Float;
 
     /**
-     * The width of this rect.
-     * 
+     * The width of this rect.  
      * Default: `0`
      */
     public var width:Float;
 
     /**
-     * The height of this rect.
-     * 
+     * The height of this rect.  
      * Default: `0`
      */
     public var height:Float;
 
     /**
-     * The radius of the rounded corners.
-     * 
+     * The radius of the rounded corners.  
      * Default: `20`
      */
     public var radius:Float;

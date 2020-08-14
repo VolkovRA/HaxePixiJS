@@ -3,9 +3,10 @@ package pixi.geom;
 /**
  * Rectangle object is an area defined by its position, as indicated by
  * its top-left corner point (x, y) and by its width and its height.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Rectangle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Rectangle.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Rectangle")
 extern class Rectangle implements IHitArea
@@ -25,8 +26,7 @@ extern class Rectangle implements IHitArea
     static public var EMPTY(default, null):Rectangle;
 
     /**
-     * The type of the object, mainly used to avoid `instanceof` checks.
-     * 
+     * The type of the object, mainly used to avoid `instanceof` checks.  
      * Default: `Pixi.SHAPES.RECT`
      */
     public var type(default, null):Int;
@@ -52,29 +52,25 @@ extern class Rectangle implements IHitArea
     public var bottom:Float;
 
     /**
-     * The X coordinate of rectangle.
-     * 
+     * The X coordinate of rectangle.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
-     * The Y coordinate of rectangle.
-     * 
+     * The Y coordinate of rectangle.  
      * Default: `0`
      */
     public var y:Float;
 
     /**
-     * The width of this rectangle.
-     * 
+     * The width of this rectangle.  
      * Default: `0`
      */
     public var width:Float;
 
     /**
-     * The height of this rectangle.
-     * 
+     * The height of this rectangle.  
      * Default: `0`
      */
     public var height:Float;
@@ -130,10 +126,8 @@ extern class Rectangle implements IHitArea
     public function fit(rectangle:Rectangle):Rectangle;
 
     /**
-     * Pads the rectangle making it grow in all directions.
-     * 
+     * Pads the rectangle making it grow in all directions.  
      * If paddingY is omitted, both paddingX and paddingY will be set to paddingX.
-     * 
      * @param paddingX The horizontal padding amount. Default: `0`
      * @param paddingY The vertical padding amount. Default: `0`
      * @return Returns itself.

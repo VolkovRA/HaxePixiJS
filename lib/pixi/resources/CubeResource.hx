@@ -5,9 +5,10 @@ import pixi.textures.BaseTexture;
 
 /**
  * Resource for a CubeTexture which contains six resources.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.CubeResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_CubeResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.CubeResource")
 extern class CubeResource extends ArrayResource
@@ -20,8 +21,7 @@ extern class CubeResource extends ArrayResource
     public function new(?source:Array<EitherType<String,Resource>>, ?options:CubeResourceOptions);
 
     /**
-     * Number of texture sides to store for CubeResources.
-     * 
+     * Number of texture sides to store for CubeResources.  
      * Default: `6`
      */
     static public var SIDES:Int;
@@ -61,6 +61,8 @@ extern class CubeResource extends ArrayResource
 
 /**
  * The options object to CubeResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef CubeResourceOptions =
 {
@@ -75,15 +77,13 @@ typedef CubeResourceOptions =
     @:optional var height:Float;
 
     /**
-     * Whether to auto-load resources.
-     * 
+     * Whether to auto-load resources.  
      * Default: `true`
      */
     @:optional var autoLoad:Bool;
 
     /**
-     * In case BaseTextures are supplied, whether to copy them or use.
-     * 
+     * In case BaseTextures are supplied, whether to copy them or use.  
      * Default: `true`
      */
     @:optional var linkBaseTexture:Bool;

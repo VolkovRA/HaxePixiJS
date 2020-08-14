@@ -1,9 +1,11 @@
-package pixi;
+package pixi.enums;
 
 /**
  * The Garbage Collection mode.
- * 
- * *This enum contains values from: `Pixi.GC_MODES` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.GC_MODES` for more convenience.*
  */
 enum abstract GCMode(Int) to Int from Int
 {

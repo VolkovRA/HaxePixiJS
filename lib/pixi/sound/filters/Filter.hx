@@ -4,20 +4,20 @@ import js.html.audio.AudioNode;
 
 /**
  * Represents a single sound element. Can be used to play, pause, etc. sound instances.
- * 
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.filters.Filter.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/filters/Filter.ts
+ * ***
+ * Library: **sound** 
  */
  @:native("PIXI.sound.filters.Filter")
 extern class Filter
 {
+    /**
+     * Create a new Filter instance.
+     * @param destination Destination.
+     * @param source Source.
+     */
     public function new(destination:AudioNode, ?source:AudioNode);
-
-
-
-    //////////////////
-    //   СВОЙСТВА   //
-    //////////////////
 
     /**
      * The node to connect for the filter to the previous filter.
@@ -28,12 +28,6 @@ extern class Filter
      * The node to connect for the filter to the previous filter.
      */
     public var source:AudioNode;
-
-
-
-    ////////////////
-    //   МЕТОДЫ   //
-    ////////////////
 
     /**
      * Connect to the destination.

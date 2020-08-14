@@ -11,9 +11,10 @@ import pixi.render.Renderer;
 
 /**
  * Base for all the image/canvas resources.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.BaseImageResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_BaseImageResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.BaseImageResource")
 extern class BaseImageResource extends Resource

@@ -1,12 +1,15 @@
 package pixi.textures;
 
 import js.html.webgl.Texture;
+import pixi.enums.GLDataType;
+import pixi.enums.WrapMode;
 
 /**
  * Internal texture for WebGL context.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.GLTexture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_GLTexture.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.GLTexture")
 extern class GLTexture
@@ -39,7 +42,7 @@ extern class GLTexture
     /**
      * Type copied from baseTexture.
      */
-    public var internalFormat:Type;
+    public var internalFormat:GLDataType;
 
     /**
      * Whether mip levels has to be generated.
@@ -54,7 +57,7 @@ extern class GLTexture
     /**
      * Type copied from baseTexture.
      */
-    public var type:Type;
+    public var type:GLDataType;
 
     /**
      * WrapMode copied from baseTexture.

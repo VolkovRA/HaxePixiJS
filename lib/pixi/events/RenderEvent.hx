@@ -2,9 +2,10 @@ package pixi.events;
 
 /**
  * The events of rendering.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Renderer.html#event
  * @see Documentation: http://pixijs.download/release/docs/PIXI.CanvasRenderer.html#event
+ * ***
+ * Library: **core** 
  */
 enum abstract RenderEvent(String) to String from String
 {

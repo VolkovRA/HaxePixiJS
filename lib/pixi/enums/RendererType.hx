@@ -1,9 +1,11 @@
-package pixi.render;
+package pixi.enums;
 
 /**
  * Constant to identify the Renderer Type.
- * 
- * *This enum contains values from: `Pixi.RENDERER_TYPE` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.RENDERER_TYPE` for more convenience.*
  */
 enum abstract RendererType(Int) to Int from Int
 {

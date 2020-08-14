@@ -5,9 +5,10 @@ import pixi.textures.BaseTexture;
 
 /**
  * System plugin to the renderer to manage batching.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.BatchSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_batch_BatchSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.BatchSystem")
 extern class BatchSystem extends System

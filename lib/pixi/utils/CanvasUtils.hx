@@ -6,12 +6,12 @@ import pixi.display.Sprite;
 import pixi.textures.Texture;
 
 /**
- * Utility methods for Sprite/Texture tinting.
- * 
+ * Utility methods for Sprite/Texture tinting.  
  * Tinting with the CanvasRenderer involves creating a new canvas to use
  * as a texture, so be aware of the performance implications.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.canvasUtils.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.canvasUtils")
 extern class CanvasUtils

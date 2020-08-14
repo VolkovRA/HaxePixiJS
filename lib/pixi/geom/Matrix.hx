@@ -3,17 +3,17 @@ package pixi.geom;
 import pixi.geom.Point;
 
 /**
- * The PixiJS Matrix as a class makes it a lot faster.
- * 
+ * The PixiJS Matrix as a class makes it a lot faster.  
  * Here is a representation of it:
  * ```
  * | a | c | tx|
  * | b | d | ty|
  * | 0 | 0 | 1 |
  * ```
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Matrix.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_Matrix.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Matrix")
 extern class Matrix
@@ -40,43 +40,37 @@ extern class Matrix
     static public var TEMP_MATRIX(default, null):Matrix;
 
     /**
-     * X Scale.
-     * 
+     * X Scale.  
      * Default: `1`
      */
     public var a:Float;
 
     /**
-     * X Skew.
-     * 
+     * X Skew.  
      * Default: `0`
      */
     public var b:Float;
 
     /**
-     * Y Skew.
-     * 
+     * Y Skew.  
      * Default: `0`
      */
     public var c:Float;
 
     /**
-     * Y Scale.
-     * 
+     * Y Scale.  
      * Default: `1`
      */
     public var d:Float;
 
     /**
-     * X Translation.
-     * 
+     * X Translation.  
      * Default: `0`
      */
     public var tx:Float;
 
     /**
-     * Y Translation.
-     * 
+     * Y Translation.  
      * Default: `0`
      */
     public var ty:Float;

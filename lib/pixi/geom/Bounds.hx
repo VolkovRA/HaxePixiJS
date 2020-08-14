@@ -3,13 +3,13 @@ package pixi.geom;
 import pixi.geom.Point;
 
 /**
- * 'Builder' pattern for bounds rectangles.
- * 
+ * 'Builder' pattern for bounds rectangles.  
  * This could be called an Axis-Aligned Bounding Box. It is not an actual shape.
  * It is a mutable thing; no 'EMPTY' or those kind of problems.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Bounds.html
  * @see Source code: https://pixijs.download/dev/docs/packages_display_src_Bounds.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Bounds")
 extern class Bounds 
@@ -40,8 +40,8 @@ extern class Bounds
     public var minY:Float;
 
     /**
-     * It is updated to _boundsID of corresponding object to keep bounds in sync with content.
-     * 
+     * It is updated to _boundsID of corresponding object to keep bounds
+     * in sync with content.  
      * Updated from outside, thus public modifier.
      */
     public var updateID:Int;
@@ -164,10 +164,8 @@ extern class Bounds
     public function isEmpty():Bool;
 
     /**
-     * Pads bounds object, making it grow in all directions.
-     * 
+     * Pads bounds object, making it grow in all directions.  
      * If paddingY is omitted, both paddingX and paddingY will be set to paddingX.
-     * 
      * @param paddingX The horizontal padding amount. Default: `0`
      * @param paddingY The vertical padding amount. Default: `0`
      */

@@ -5,12 +5,12 @@ import pixi.enums.MaskType;
 import pixi.geom.Rectangle;
 
 /**
- * Component for masked elements.
- * 
+ * Component for masked elements.  
  * Holds mask mode and temporary data about current mask.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.MaskData.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_mask_MaskData.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.MaskData")
 extern class MaskData 
@@ -28,8 +28,7 @@ extern class MaskData
     public var _scissorRect:Rectangle;
 
     /**
-     * Whether we know the mask type beforehand.
-     * 
+     * Whether we know the mask type beforehand.  
      * Default: `true`
      */
     public var autoDetect:Bool;

@@ -3,9 +3,10 @@ package pixi.geom;
 /**
  * The Point object represents a location in a two-dimensional coordinate system,
  * where x represents the horizontal axis and y represents the vertical axis.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Point.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_Point.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Point")
 extern class Point implements IPoint
@@ -18,15 +19,13 @@ extern class Point implements IPoint
     public function new(?x:Float, ?y:Float);
 
     /**
-     * Position of the point on the x axis.
-     * 
+     * Position of the point on the x axis.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
-     * Position of the point on the y axis.
-     * 
+     * Position of the point on the y axis.  
      * Default: `0`
      */
     public var y:Float;
@@ -69,8 +68,9 @@ extern class Point implements IPoint
 
 /**
  * Common interface for points. Both Point and ObservablePoint implement it.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.IPoint.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.IPoint")
 extern interface IPoint
@@ -117,8 +117,9 @@ extern interface IPoint
 
 /**
  * Common interface for points. Both Point and ObservablePoint implement it.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.IPointData.html
+ * ***
+ * Library: **core** 
  */
 typedef IPointData =
 {

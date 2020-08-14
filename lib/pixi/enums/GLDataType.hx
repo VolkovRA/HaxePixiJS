@@ -1,11 +1,13 @@
-package pixi.textures;
+package pixi.enums;
 
 /**
  * Various GL data format types.
- * 
- * *This enum contains values from: `Pixi.TYPES` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.TYPES` for more convenience.*
  */
-enum abstract Type(Int) to Int from Int
+enum abstract GLDataType(Int) to Int from Int
 {
     /**
      * Default: `5121`

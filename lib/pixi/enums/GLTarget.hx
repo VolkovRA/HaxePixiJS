@@ -1,11 +1,13 @@
-package pixi.textures;
+package pixi.enums;
 
 /**
  * Various GL target types.
- * 
- * *This enum contains values from: `Pixi.TARGETS` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.TARGETS` for more convenience.*
  */
-enum abstract Target(Int) to Int from Int
+enum abstract GLTarget(Int) to Int from Int
 {
     /**
      * Default: `3553`

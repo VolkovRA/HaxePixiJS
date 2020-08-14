@@ -10,25 +10,20 @@ import pixi.sound.SoundSprite;
 import pixi.sound.filters.Filter;
 
 /**
- * Sound represents a single piece of loaded media.
- * 
+ * Sound represents a single piece of loaded media.  
  * When playing a sound PIXI.sound.IMediaInstance objects are created.
  * Properties such a volume, pause, mute, speed, etc will have an effect
- * on all instances.
- * 
+ * on all instances.  
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.Sound.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/Sound.ts
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound.Sound")
 extern class Sound
 {
-    //////////////////
-    //   СВОЙСТВА   //
-    //////////////////
-
     /**
-     * `true` to start playing immediate after load.
-     * 
+     * `true` to start playing immediate after load.  
      * Default: `false`
      */
     public var autoPlay(default, null):Bool;
@@ -54,8 +49,7 @@ extern class Sound
     public var instances(default, null):Array<IMediaInstance>;
 
     /**
-     * `true` if the buffer is loaded.
-     * 
+     * `true` if the buffer is loaded.  
      * Default: `false`
      */
     public var isLoaded(default, null):Bool;
@@ -66,8 +60,7 @@ extern class Sound
     public var isPlayable(default, null):Bool;
 
     /**
-     * `true` if the sound is currently being played.
-     * 
+     * `true` if the sound is currently being played.  
      * Default: `false`
      */
     public var isPlaying(default, null):Bool;
@@ -93,15 +86,13 @@ extern class Sound
     public var paused(default, null):Bool;
 
     /**
-     * `true` to immediately start preloading.
-     * 
+     * `true` to immediately start preloading.  
      * Default: `false`
      */
     public var preload(default, null):Bool;
 
     /**
-     * `true` to disallow playing multiple layered instances at once.
-     * 
+     * `true` to disallow playing multiple layered instances at once.  
      * Default: `false`
      */
     public var singleInstance:Bool;
@@ -125,12 +116,6 @@ extern class Sound
      * Gets and sets the volume.
      */
     public var volume:Float;
-
-
-
-    ////////////////
-    //   МЕТОДЫ   //
-    ////////////////
 
     /**
      * Create a new sound instance from source.
@@ -210,61 +195,55 @@ extern class Sound
 
 /**
  * Constructor options object.
+ * ***
+ * Library: **sound** 
  */
 typedef Options = 
 {
     /**
-     * `true` to play after loading.
-     * 
+     * `true` to play after loading.  
      * Default: `false`
      */
     @:optional var autoPlay:Bool;
 
     /**
-     * `true` to disallow playing multiple layered instances at once.
-     * 
+     * `true` to disallow playing multiple layered instances at once.  
      * Default: `false`
      */
     @:optional var singleInstance:Bool;
 
     /**
-     * The amount of volume `1` = 100%.
-     * 
+     * The amount of volume `1` = 100%.  
      * Default: `1`
      */
     @:optional var volume:Float;
 
     /**
-     * The playback rate where `1` is 100% speed.
-     * 
+     * The playback rate where `1` is 100% speed.  
      * Default: `1`
      */
     @:optional var speed:Float;
 
     /**
-     * Global complete callback when play is finished.
-     * 
+     * Global complete callback when play is finished.  
      * Default: `null`
      */
     @:optional var complete:CompleteCallback;
 
     /**
-     * Call when finished loading.
-     * 
+     * Call when finished loading.  
      * Default: `null`
      */
     @:optional var loaded:LoadedCallback;
 
     /**
-     * `true` to immediately start preloading.
-     * 
+     * `true` to immediately start preloading.  
      * Default: `false`
      */
     @:optional var preload:Bool;
 
     /**
-     * `true` to loop the audio playback.
-     * 
+     * `true` to loop the audio playback.  
      * Default: `false`
      */
     @:optional var loop:Bool;
@@ -290,6 +269,8 @@ typedef Options =
 
 /**
  * Play options object.
+ * ***
+ * Library: **sound** 
  */
 typedef PlayOptions =
 {
@@ -304,8 +285,7 @@ typedef PlayOptions =
     @:optional var loaded:LoadedCallback;
 
     /**
-     * Start time offset.
-     * 
+     * Start time offset.  
      * Default: `0`
      */
     @:optional var start:Float;

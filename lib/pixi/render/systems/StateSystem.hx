@@ -1,13 +1,14 @@
 package pixi.render.systems;
 
 import haxe.Constraints.Function;
-import pixi.display.BlendMode;
+import pixi.enums.BlendMode;
 
 /**
  * System plugin to the renderer to manage WebGL state machines.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.StateSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_state_StateSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.StateSystem")
 extern class StateSystem extends System
@@ -24,8 +25,7 @@ extern class StateSystem extends System
     private var _blendEq:Bool;
 
     /**
-     * Blend mode.
-     * 
+     * Blend mode.  
      * Default: `BlendMode.NONE`
      */
     public var blendMode(default, null):BlendMode;

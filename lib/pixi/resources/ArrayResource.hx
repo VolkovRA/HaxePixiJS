@@ -7,9 +7,10 @@ import pixi.render.Renderer;
 
 /**
  * A resource that contains a number of sources.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.ArrayResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_ArrayResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.ArrayResource")
 extern class ArrayResource extends Resource
@@ -47,6 +48,8 @@ extern class ArrayResource extends Resource
 
 /**
  * The options object to ArrayResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef ArrayResourceOptions = 
 {

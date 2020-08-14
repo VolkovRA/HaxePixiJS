@@ -4,12 +4,12 @@ import haxe.extern.EitherType;
 import pixi.interaction.EventEmitter;
 
 /**
- * Interface for single instance return by a Sound play call.
- * 
- * This can either be a WebAudio or HTMLAudio instance.
- * 
+ * Interface for single instance return by a Sound play call.  
+ * This can either be a WebAudio or HTMLAudio instance.  
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.IMediaInstance.html
  * @see Source code: https://github.com/pixijs/pixi-sound/blob/main/src/interfaces/IMediaInstance.ts
+ * ***
+ * Library: **sound** 
  */
 @:native("PIXI.sound.IMediaInstance")
 extern class IMediaInstance extends EventEmitter
@@ -40,15 +40,13 @@ extern class IMediaInstance extends EventEmitter
     public var progress(default, null):Float;
 
     /**
-     * Current speed of the instance.
-     * 
+     * Current speed of the instance.  
      * This is not the actual speed since it takes into account the global context and the sound volume.
      */
     public var speed:Float;
 
     /**
-     * Current volume of the instance.
-     * 
+     * Current volume of the instance.  
      * This is not the actual volume since it takes into account the global context and the sound volume.
      */
     public var volume:Float;
@@ -73,6 +71,8 @@ extern class IMediaInstance extends EventEmitter
 
 /**
  * The events of IMediaInstance instances.
+ * ***
+ * Library: **sound** 
  */
 @:enum abstract MediaInstanceEvent(String) to String from String
 {

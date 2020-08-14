@@ -2,8 +2,9 @@ package pixi.utils;
 
 /**
  * Generalized convenience utilities for Graphics.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.graphicsUtils.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.graphicsUtils")
 extern class GraphicsUtils

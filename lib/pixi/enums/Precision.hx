@@ -1,9 +1,11 @@
-package pixi.filters;
+package pixi.enums;
 
 /**
  * Constants that specify float precision in shaders.
- * 
- * *This enum contains values from: `Pixi.PRECISION` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.PRECISION` for more convenience.*
  */
 enum abstract Precision(String) to String from String
 {

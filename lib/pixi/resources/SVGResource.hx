@@ -6,9 +6,10 @@ import pixi.geom.ISize;
 
 /**
  * Resource type for SVG elements and graphics.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.SVGResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_SVGResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.SVGResource")
 extern class SVGResource extends BaseImageResource
@@ -21,8 +22,7 @@ extern class SVGResource extends BaseImageResource
     public function new(source:String, ?options:SVGResourceOptions);
 
     /**
-     * RegExp for SVG size.
-     * 
+     * RegExp for SVG size.  
      * Example:
      * ```
      * <svg width="100" height="100"></svg>
@@ -68,6 +68,8 @@ extern class SVGResource extends BaseImageResource
 
 /**
  * The options object to SVGResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef SVGResourceOptions = 
 {
@@ -87,8 +89,7 @@ typedef SVGResourceOptions =
     @:optional var height:Float;
 
     /**
-     * Start loading right away.
-     * 
+     * Start loading right away.  
      * Default: `true`
      */
     @:optional var autoLoad:Bool;

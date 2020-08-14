@@ -41,6 +41,8 @@ import pixi.geom.Rectangle;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Texture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_Texture.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Texture")
 extern class Texture extends EventEmitter
@@ -93,8 +95,7 @@ extern class Texture extends EventEmitter
 
     /**
      * Anchor point that is used as default if sprite is created with this texture.
-     * Changing the defaultAnchor at a later point of time will not update Sprite's anchor point.
-     * 
+     * Changing the defaultAnchor at a later point of time will not update Sprite's anchor point.  
      * Default: `{0,0}`
      */
     public var defaultAnchor:Point;
@@ -257,17 +258,15 @@ extern class Texture extends EventEmitter
     private function onBaseTextureUpdated(baseTexture:BaseTexture):Void;
 
     /**
-     * Updates this texture on the gpu.
-     * 
-     * Calls the TextureResource update.
-     * 
+     * Updates this texture on the gpu.  
+     * Calls the TextureResource update.  
      * If you adjusted `frame` manually, please call `updateUvs()` instead.
      */
     public function update():Void;
 
     /**
-     * Updates the internal WebGL UV cache.
-     * Use it after you change `frame` or `trim` of the texture.
+     * Updates the internal WebGL UV cache.  
+     * Use it after you change `frame` or `trim` of the texture.  
      * Call it after changing the frame.
      */
     public function updateUvs():Void;

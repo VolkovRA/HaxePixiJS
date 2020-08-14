@@ -1,9 +1,11 @@
-package pixi.display;
+package pixi.enums;
 
 /**
  * Support line caps in `pixi.LineStyle` for graphics.
- * 
- * *This enum contains values from: `Pixi.LINE_CAP` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.LINE_CAP` for more convenience.*
  */
 enum abstract LineCap(String) to String from String
 {

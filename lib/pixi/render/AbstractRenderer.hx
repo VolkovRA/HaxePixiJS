@@ -2,19 +2,20 @@ package pixi.render;
 
 import js.html.CanvasElement;
 import pixi.display.DisplayObject;
-import pixi.display.ScaleMode;
+import pixi.enums.RendererType;
+import pixi.enums.ScaleMode;
 import pixi.events.EventEmitter;
 import pixi.geom.Rectangle;
 import pixi.textures.RenderTexture;
 
 /**
- * The AbstractRenderer is the base for a PixiJS Renderer.
- * 
+ * The AbstractRenderer is the base for a PixiJS Renderer.  
  * It is extended by the `CanvasRenderer` and `Renderer` which can be
  * used for rendering a PixiJS scene.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.AbstractRenderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_AbstractRenderer.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.AbstractRenderer")
 extern class AbstractRenderer extends EventEmitter
@@ -67,15 +68,13 @@ extern class AbstractRenderer extends EventEmitter
     public var clearBeforeRender:Bool;
 
     /**
-     * Same as view.width, actual number of pixels in the canvas by horizontal.
-     * 
+     * Same as view.width, actual number of pixels in the canvas by horizontal.  
      * Default: `800`
      */
     public var width(default, null):Int;
 
     /**
-     * Same as view.height, actual number of pixels in the canvas by vertical.
-     * 
+     * Same as view.height, actual number of pixels in the canvas by vertical.  
      * Default: `600`
      */
     public var height(default, null):Int;
@@ -97,15 +96,13 @@ extern class AbstractRenderer extends EventEmitter
     public var preserveDrawingBuffer:Bool;
 
     /**
-     * The resolution / device pixel ratio of the renderer.
-     * 
+     * The resolution / device pixel ratio of the renderer.  
      * Default: `1`
      */
     public var resolution:Float;
 
     /**
-     * Measurements of the screen. (0, 0, screenWidth, screenHeight).
-     * 
+     * Measurements of the screen. (0, 0, screenWidth, screenHeight).  
      * Its safe to use as filterArea or hitArea for the whole stage.
      */
     public var screen:Rectangle;
@@ -116,8 +113,7 @@ extern class AbstractRenderer extends EventEmitter
     public var transparent:Bool;
 
     /**
-     * The type of the renderer.
-     * 
+     * The type of the renderer.  
      * Default: `RendererType.UNKNOWN`
      */
     public var type:RendererType;
@@ -163,19 +159,19 @@ extern class AbstractRenderer extends EventEmitter
 
 /**
  * The optional renderer parameters.
+ * ***
+ * Library: **core** 
  */
 typedef AbstractRendererOptions =
 {
     /**
-     * The width of the screen.
-     * 
+     * The width of the screen.  
      * Default: `800`
      */
     @:optional var width:Int;
 
     /**
-     * The height of the screen.
-     * 
+     * The height of the screen.  
      * Default: `600`
      */
     @:optional var height:Int;
@@ -186,50 +182,46 @@ typedef AbstractRendererOptions =
     @:optional var view:CanvasElement;
 
     /**
-     * If the render view is transparent.
-     * 
+     * If the render view is transparent.  
      * Default: `false`
      */
     @:optional var transparent:Bool;
 
     /**
-     * Resizes renderer view in CSS pixels to allow for resolutions other than 1.
-     * 
+     * Resizes renderer view in CSS pixels to allow for resolutions other than 1.  
      * Default: `false`
      */
     @:optional var autoDensity:Bool;
 
     /**
-     * Sets antialias.
-     * 
+     * Sets antialias.  
      * Default: `false`
      */
     @:optional var antialias:Bool;
 
     /**
-     * The resolution / device pixel ratio of the renderer. The resolution of the renderer retina would be 2.
-     * 
+     * The resolution / device pixel ratio of the renderer. The resolution of
+     * the renderer retina would be 2.  
      * Default: `1`
      */
     @:optional var resolution:Float;
 
     /**
-     * Enables drawing buffer preservation, enable this if you need to call toDataUrl on the WebGL context.
-     * 
+     * Enables drawing buffer preservation, enable this if you need to call
+     * toDataUrl on the WebGL context.  
      * Default: `false`
      */
     @:optional var preserveDrawingBuffer:Bool;
 
     /**
-     * This sets if the renderer will clear the canvas or not before the new render pass.
-     * 
+     * This sets if the renderer will clear the canvas or not before the new
+     * render pass.  
      * Default: `true`
      */
     @:optional var clearBeforeRender:Bool;
 
     /**
-     * The background color of the rendered area (shown if not transparent).
-     * 
+     * The background color of the rendered area (shown if not transparent).  
      * Default: `0x000000`
      */
     @:optional var backgroundColor:Int;

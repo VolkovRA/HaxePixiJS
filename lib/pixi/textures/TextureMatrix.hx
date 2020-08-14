@@ -20,6 +20,8 @@ import pixi.geom.Matrix;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.TextureMatrix.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_TextureMatrix.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.TextureMatrix")
 extern class TextureMatrix extends EventEmitter
@@ -43,23 +45,20 @@ extern class TextureMatrix extends EventEmitter
 
     /**
      * Changes frame clamping Works with TilingSprite and Mesh Change to -0.5 to
-     * add a pixel to the edge, recommended for transparent trimmed textures in atlas.
-     * 
+     * add a pixel to the edge, recommended for transparent trimmed textures in atlas.  
      * Default: `0.5`
      */
     public var clampMargin:Float;
 
     /**
      * Changes frame clamping Works with TilingSprite and Mesh Change to 1.5 if
-     * you texture has repeated right and bottom lines, that leads to smoother borders.
-     * 
+     * you texture has repeated right and bottom lines, that leads to smoother borders.  
      * Default: `0`
      */
     public var clampOffset:Float;
 
     /**
-     * If texture size is the same as baseTexture.
-     * 
+     * If texture size is the same as baseTexture.  
      * Default: `false`
      */
     public var isSimple(default, null):Bool;

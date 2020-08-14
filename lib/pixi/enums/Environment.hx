@@ -1,9 +1,11 @@
-package pixi;
+package pixi.enums;
 
 /**
  * Different types of environments for WebGL.
- * 
- * *This enum contains values from: `Pixi.ENV` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.ENV` for more convenience.*
  */
 enum abstract Environment(Int) to Int from Int
 {

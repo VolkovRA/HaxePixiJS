@@ -7,9 +7,10 @@ import pixi.textures.BaseTexture;
  * Resource that can manage several resource (items) inside. 
  * All resources need to have the same pixel size.
  * Parent class for CubeResource and ArrayResource.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.AbstractMultiResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_AbstractMultiResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.AbstractMultiResource")
 extern class AbstractMultiResource extends Resource
@@ -97,6 +98,8 @@ extern class AbstractMultiResource extends Resource
 
 /**
  * The options of AbstractMultiResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef AbstractMultiResourceOptions =
 {

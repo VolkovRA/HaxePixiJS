@@ -10,9 +10,10 @@ import pixi.textures.GLTexture;
 
 /**
  * Buffer resource with data of typed array.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.BufferResource.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_resources_BufferResource.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources.BufferResource")
 extern class BufferResource extends Resource
@@ -53,6 +54,8 @@ extern class BufferResource extends Resource
 
 /**
  * The options object to BufferResource constructor.
+ * ***
+ * Library: **core** 
  */
 typedef BufferResourceOptions =
 {

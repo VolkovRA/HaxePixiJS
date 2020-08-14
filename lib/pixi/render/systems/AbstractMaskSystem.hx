@@ -2,9 +2,10 @@ package pixi.render.systems;
 
 /**
  * System plugin to the renderer to manage masks of certain type.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.systems.AbstractMaskSystem.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_mask_AbstractMaskSystem.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.systems.AbstractMaskSystem")
 extern class AbstractMaskSystem extends System

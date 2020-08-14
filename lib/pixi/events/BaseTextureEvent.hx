@@ -2,8 +2,9 @@ package pixi.events;
 
 /**
  * The events of BaseTexture.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.BaseTexture.html#event
+ * ***
+ * Library: **core** 
  */
 enum abstract BaseTextureEvent(String) to String from String
 {

@@ -1,22 +1,21 @@
 package pixi.render;
 
 import js.html.CanvasRenderingContext2D;
-import pixi.display.BlendMode;
 import pixi.display.DisplayObject;
+import pixi.enums.BlendMode;
 import pixi.geom.Matrix;
 import pixi.textures.RenderTexture;
 
 /**
- * The CanvasRenderer draws the scene and all its content onto a 2d canvas.
- * 
- * This renderer should be used for browsers that do not support WebGL.
+ * The CanvasRenderer draws the scene and all its content onto a 2d canvas.  
+ * This renderer should be used for browsers that do not support WebGL.  
  * Don't forget to add the CanvasRenderer.view to your DOM or you will not see anything!
- * 
  * @event RenderEvent.PRERENDER Fired before rendering starts.
  * @event RenderEvent.POSTRENDER Fired after rendering finishes.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.CanvasRenderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_canvas_canvas-renderer_src_CanvasRenderer.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.CanvasRenderer")
 extern class CanvasRenderer extends AbstractRenderer
@@ -69,8 +68,7 @@ extern class CanvasRenderer extends AbstractRenderer
     public var refresh:Bool;
 
     /**
-     * The resolution / device pixel ratio of the renderer.
-     * 
+     * The resolution / device pixel ratio of the renderer.  
      * Default: `1`
      */
     override public var resolution:Float;

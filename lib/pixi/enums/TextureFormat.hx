@@ -1,11 +1,13 @@
-package pixi.textures;
+package pixi.enums;
 
 /**
  * Various GL texture/resources formats.
- * 
- * *This enum contains values from: `Pixi.FORMATS` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.FORMATS` for more convenience.*
  */
-enum abstract Format(Int) to Int from Int
+enum abstract TextureFormat(Int) to Int from Int
 {
     /**
      * Default: `6407`

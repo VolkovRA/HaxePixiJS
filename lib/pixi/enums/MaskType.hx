@@ -3,8 +3,10 @@ package pixi.enums;
 /**
  * Constants for mask implementations. We use `type` suffix because it leads to
  * very different behaviours.
- * 
- * *This enum contains values from: `Pixi.MASK_TYPES` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.MASK_TYPES` for more convenience.*
  */
 enum abstract MaskType(Int) to Int from Int
 {

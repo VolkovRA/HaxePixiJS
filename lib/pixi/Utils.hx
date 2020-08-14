@@ -1,11 +1,10 @@
 package pixi;
 
 import js.html.CanvasElement;
-import pixi.display.BlendMode;
+import pixi.enums.BlendMode;
 
 /**
- * Generalized convenience utilities for PIXI.
- * 
+ * Generalized convenience utilities for PIXI.  
  * Example:
  * ```
  * // Get info on current device
@@ -14,15 +13,15 @@ import pixi.display.BlendMode;
  * // Convert hex color to string
  * trace(Utils.hex2string(0xff00ff)); // returns: "#ff00ff"
  * ```
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.utils.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.utils")
 extern class Utils
 {
     /**
      * A simple JS library that detects mobile devices.
-     * 
      * @see https://github.com/kaimallea/isMobile
      */
     static public var isMobile:MobileDevice;
@@ -49,7 +48,6 @@ extern class Utils
 
     /**
      * Node.js compatible URL utilities.
-     * 
      * @see https://www.npmjs.com/package/url
      */
     static public var url:Dynamic;
@@ -121,13 +119,11 @@ extern class Utils
 
     /**
      * Converts a hexadecimal color number to an [R, G, B] array of normalized
-     * floats (numbers from 0.0 to 1.0).
-     * 
+     * floats (numbers from 0.0 to 1.0).  
      * Example:
      * ```
      * Utils.hex2rgb(0xffffff); // returns [1, 1, 1]
      * ```
-     * 
      * @param hex The hexadecimal number to convert. (`0xFFFFFF`)
      * @param out If supplied, this array will be used rather than returning a new one.
      * @return An array representing the [R, G, B] of the color where all values are floats.
@@ -135,39 +131,33 @@ extern class Utils
     static public function hex2rgb(hex:Int, ?out:Array<Float>):Array<Float>;
 
     /**
-     * Converts a color as an [R, G, B] array of normalized floats to a hexadecimal number.
-     * 
+     * Converts a color as an [R, G, B] array of normalized floats to a hexadecimal number.  
      * Example:
      * ```
      * Utils.rgb2hex([1, 1, 1]); // returns 0xffffff
      * ```
-     * 
      * @param rgb Array of numbers where all values are normalized floats from 0.0 to 1.0.
      * @return Number in hexadecimal.
      */
     static public function rgb2hex(rgb:Array<Float>):Int;
 
     /**
-     * Converts a hexadecimal color number to a string.
-     * 
+     * Converts a hexadecimal color number to a string.  
      * Example:
      * ```
      * Utils.hex2string(0xffffff); // returns "#ffffff"
      * ```
-     * 
      * @param hex Number in hex (e.g., 0xffffff).
      * @return The string color (e.g., "#ffffff").
      */
     static public function hex2string(hex:Int):String;
 
     /**
-     * Converts a hexadecimal string to a hexadecimal color number.
-     * 
+     * Converts a hexadecimal string to a hexadecimal color number.  
      * Example:
      * ```
      * Utils.string2hex("#ffffff"); // returns 0xffffff
      * ```
-     * 
      * @param string The string color (e.g., `#ffffff`)
      * @return Number in hexadecimal.
      */
@@ -271,8 +261,9 @@ extern class Utils
 
 /**
  * The mobile device description.
- * 
  * @see https://github.com/kaimallea/isMobile
+ * ***
+ * Library: **core** 
  */
 typedef MobileDevice =
 {
@@ -319,6 +310,8 @@ typedef MobileDevice =
 
 /**
  * The Android device description.
+ * ***
+ * Library: **core** 
  */
 typedef AndroidDevice = 
 {
@@ -327,6 +320,8 @@ typedef AndroidDevice =
 
 /**
  * The Amazon device description.
+ * ***
+ * Library: **core** 
  */
 typedef AmazonDevice = 
 {
@@ -335,6 +330,8 @@ typedef AmazonDevice =
 
 /**
  * The Windows device description.
+ * ***
+ * Library: **core** 
  */
 typedef WindowsDevice = 
 {
@@ -343,6 +340,8 @@ typedef WindowsDevice =
 
 /**
  * Other device description.
+ * ***
+ * Library: **core** 
  */
 typedef OtherDevice = 
 {
@@ -356,6 +355,8 @@ typedef OtherDevice =
 
 /**
  * The Apple device description.
+ * ***
+ * Library: **core** 
  */
 typedef AppleDevice = 
 {
@@ -371,6 +372,8 @@ typedef AppleDevice =
 
 /**
  * The mobile device description.
+ * ***
+ * Library: **core** 
  */
 typedef DeviceParams =
 {
@@ -401,6 +404,8 @@ typedef DeviceParams =
 
 /**
  * @see Documentation: http://pixijs.download/release/docs/PIXI.utils.DecomposedDataUri.html
+ * ***
+ * Library: **core** 
  */
 typedef DecomposedDataUri =
 {

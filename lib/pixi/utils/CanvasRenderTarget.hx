@@ -5,9 +5,10 @@ import js.html.CanvasRenderingContext2D;
 
 /**
  * Creates a Canvas element of the given size to be used as a target for rendering to.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.utils.CanvasRenderTarget.html
  * @see Source code: http://pixijs.download/release/docs/packages_utils_src_media_CanvasRenderTarget.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.utils.CanvasRenderTarget")
 extern class CanvasRenderTarget

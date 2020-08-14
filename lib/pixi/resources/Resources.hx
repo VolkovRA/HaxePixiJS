@@ -3,12 +3,10 @@ package pixi.resources;
 import haxe.extern.EitherType;
 
 /**
- * Collection of base resource types supported by PixiJS.
- * 
+ * Collection of base resource types supported by PixiJS.  
  * Resources are used by `BaseTexture` to handle different media types such
  * as images, video, SVG graphics, etc. In most use-cases, you should not
- * instantiate the resources directly. The easy thing is to use `BaseTexture.from()`.
- * 
+ * instantiate the resources directly. The easy thing is to use `BaseTexture.from()`.  
  * Example:
  * ```
  * var baseTexture = BaseTexture.from('path/to/image.jpg');
@@ -16,6 +14,8 @@ import haxe.extern.EitherType;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.resources.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_BaseTexture.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.resources")
 extern class Resources
@@ -69,6 +69,8 @@ extern class Resources
 
 /**
  * Pass-through options to use for Resource.
+ * ***
+ * Library: **core** 
  */
 typedef ResourceOptions =
 {
@@ -83,44 +85,38 @@ typedef ResourceOptions =
     @:optional var height:Float;
 
     /**
-     * Image, SVG and Video flag to start loading.
-     * 
+     * Image, SVG and Video flag to start loading.  
      * Default: `true`
      */
     @:optional var autoLoad:Bool;
 
     /**
-     * SVG source scale. Overridden by width, height.
-     * 
+     * SVG source scale. Overridden by width, height.  
      * Default: `1`
      */
     @:optional var scale:Float;
 
     /**
-     * Image option to create Bitmap object.
-     * 
+     * Image option to create Bitmap object.  
      * Default: `pixi.Settings.CREATE_IMAGE_BITMAP`
      */
     @:optional var createBitmap:Bool;
 
     /**
-     * Image and Video option to set crossOrigin.
-     * 
+     * Image and Video option to set crossOrigin.  
      * Default: `true`
      */
     @:optional var crossorigin:Bool;
 
     /**
-     * Video option to start playing video immediately.
-     * 
+     * Video option to start playing video immediately.  
      * Default: `true`
      */
     @:optional var autoPlay:Bool;
 
     /**
      * Video option to update how many times a second the texture should be
-     * updated from the video. Leave at 0 to update at every render.
-     * 
+     * updated from the video. Leave at 0 to update at every render.  
      * Default: `0`
      */
     @:optional var updateFPS:Float;

@@ -2,9 +2,10 @@ package pixi.geom;
 
 /**
  * Transform that takes care about its versions.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Transform.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_Transform.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Transform")
 extern class Transform

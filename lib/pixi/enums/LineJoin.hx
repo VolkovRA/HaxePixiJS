@@ -1,12 +1,13 @@
-package pixi.display;
+package pixi.enums;
 
 /**
  * Supported line joints in `LineStyle` for graphics.
- * 
- * *This enum contains values from: `Pixi.LINE_JOIN` for more convenient use.*
- * 
  * @see http://pixijs.download/release/docs/PIXI.Graphics.html#lineStyle
  * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.LINE_JOIN` for more convenience.*
  */
 enum abstract LineJoin(String) to String from String
 {

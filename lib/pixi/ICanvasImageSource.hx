@@ -8,7 +8,8 @@ import js.html.ImageBitmap;
 
 /**
  * Types that can be passed to drawImage.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.html#.ICanvasImageSource
+ * ***
+ * Library: **core** 
  */
 typedef ICanvasImageSource = EitherType<ImageElement, EitherType<CanvasElement, EitherType<VideoElement, ImageBitmap>>>;

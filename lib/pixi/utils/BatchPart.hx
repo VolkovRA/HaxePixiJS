@@ -6,9 +6,10 @@ import pixi.display.LineStyle;
 
 /**
  * A structure to hold interim batch objects for Graphics.
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.graphicsUtils.BatchPart.html
  * @see Source code: http://pixijs.download/release/docs/packages_graphics_src_utils_BatchPart.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.graphicsUtils.BatchPart")
 extern class BatchPart

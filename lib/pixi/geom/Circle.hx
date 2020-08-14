@@ -3,9 +3,10 @@ package pixi.geom;
 /**
  * The Point object represents a location in a two-dimensional coordinate system,
  * where x represents the horizontal axis and y represents the vertical axis.
- * 
  * @see https://pixijs.download/dev/docs/PIXI.Circle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Circle.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.Circle")
 extern class Circle implements IHitArea
@@ -19,29 +20,25 @@ extern class Circle implements IHitArea
     public function new(?x:Float, ?y:Float, ?radius:Float);
 
     /**
-     * The type of the object, mainly used to avoid `instanceof` checks.
-     * 
+     * The type of the object, mainly used to avoid `instanceof` checks.  
      * Default: `Pixi.SHAPES.CIRC`
      */
     public var type(default, null):Int;
 
     /**
-     * The X coordinate of the center of this circle.
-     * 
+     * The X coordinate of the center of this circle.  
      * Default: `0`
      */
     public var x:Float;
 
     /**
-     * The Y coordinate of the center of this circle.
-     * 
+     * The Y coordinate of the center of this circle.  
      * Default: `0`
      */
     public var y:Float;
 
     /**
-     * The radius of the circle.
-     * 
+     * The radius of the circle.  
      * Default: `0`
      */
     public var radius:Float;

@@ -15,6 +15,8 @@ import pixi.geom.Rectangle;
  * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.TextureUvs.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_TextureUvs.js.html
+ * ***
+ * Library: **core** 
  */
 @:native("PIXI.TextureUvs")
 extern class TextureUvs

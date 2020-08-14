@@ -1,4 +1,4 @@
-package pixi.textures;
+package pixi.enums;
 
 /**
  * Mipmap filtering modes that are supported by pixi.
@@ -9,8 +9,10 @@ package pixi.textures;
  * restriction, `ON` option will work like `POW2` for webgl-1.
  * 
  * This property only affects WebGL.
- * 
- * *This enum contains values from: `Pixi.MIPMAP_MODES` for more convenient use.*
+ * ***
+ * Library: **core**  
+ *   
+ * *This enum duplicate values from: `Pixi.MIPMAP_MODES` for more convenience.*
  */
 enum abstract MipmapMode(Int) to Int from Int
 {
