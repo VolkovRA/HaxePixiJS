@@ -14,7 +14,7 @@ import pixi.geom.ISize;
 extern class SVGResource extends BaseImageResource
 {
     /**
-     * Base64 encoded SVG element or URL for SVG file.
+     * Create a new SVGResource instance.
      * @param source Base64 encoded SVG element or URL for SVG file.
      * @param options Options to use.
      */
