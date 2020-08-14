@@ -61,8 +61,9 @@ extern class SVGResource extends BaseImageResource
      * Used to auto-detect the type of resource.
      * @param source The source object.
      * @param extension The extension of source, if set.
+     * @return Return `true`, if source is correct svg.
      */
-    static public function test(source:Dynamic, extension:String):Void;
+    static public function test(source:Dynamic, extension:String):Bool;
 }
 
 /**
