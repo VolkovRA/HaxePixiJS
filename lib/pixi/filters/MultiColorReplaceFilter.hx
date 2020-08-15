@@ -44,7 +44,7 @@ extern class MultiColorReplaceFilter extends Filter
      *                  the fragment is only compiled once, this cannot be changed after
      *                  construction. If omitted, the default value is the length of `replacements`.
      */
-    function new(replacements:Array<Array<Int>>, ?epsilon:Float, ?maxColors:Float);
+    public function new(replacements:Array<Array<Int>>, ?epsilon:Float, ?maxColors:Float);
 
     /**
      * Tolerance of the floating-point comparison between colors

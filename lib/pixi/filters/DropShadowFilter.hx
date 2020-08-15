@@ -17,7 +17,7 @@ extern class DropShadowFilter extends Filter
 	 * Create a new DropShadowFilter instance.
      * @param options Options for filter.
      */
-    function new(?options:DropShadowFilterOptions);
+    public function new(?options:DropShadowFilterOptions);
 
     /**
      * The alpha of the shadow.  

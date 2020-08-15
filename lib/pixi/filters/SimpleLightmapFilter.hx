@@ -27,7 +27,7 @@ extern class SimpleLightmapFilter extends Filter
      * @param alpha Default alpha set independent of color (if it's a number, not array).  
      *              Default: `1`
      */
-    function new(texture:Texture, ?color:EitherType<Int,Array<Float>>, ?alpha:Float);
+    public function new(texture:Texture, ?color:EitherType<Int,Array<Float>>, ?alpha:Float);
 
     /**
      * When setting `color` as hex, this can be used to set alpha independently.

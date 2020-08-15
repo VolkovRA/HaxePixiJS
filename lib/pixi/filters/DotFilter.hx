@@ -19,7 +19,7 @@ extern class DotFilter extends Filter
      * @param angle The radius of the effect.  
      *              Default: `5`
      */
-    function new(?scale:Float, ?angle:Float);
+    public function new(?scale:Float, ?angle:Float);
 
     /**
      * The radius of the effect.  

@@ -14,7 +14,7 @@ extern class GlowFilter extends Filter
 	 * Create a new GlowFilter instance.
      * @param options Options for filter.
      */
-    function new(?options:GlowFilterOptions);
+    public function new(?options:GlowFilterOptions);
 
     /**
      * The color of the glow.  

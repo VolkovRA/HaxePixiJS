@@ -23,7 +23,7 @@ extern class ColorReplaceFilter extends Filter
      * @param epsilon Tolerance/sensitivity of the floating-point comparison between colors (lower = more exact, higher = more inclusive)  
      *                Default: `0.4`
      */
-    function new(?originalColor:EitherType<Int,Array<Float>>, ?newColor:EitherType<Int,Array<Float>>, ?epsilon:Float);
+    public function new(?originalColor:EitherType<Int,Array<Float>>, ?newColor:EitherType<Int,Array<Float>>, ?epsilon:Float);
 
     /**
      * Tolerance/sensitivity of the floating-point comparison between

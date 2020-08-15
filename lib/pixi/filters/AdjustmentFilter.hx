@@ -16,7 +16,7 @@ extern class AdjustmentFilter extends Filter
      * Create a new AdjustmentFilter instance.
      * @param options The optional parameters of the filter.
      */
-    function new(?options:AdjustmentFilterOptions);
+    public function new(?options:AdjustmentFilterOptions);
 
     /**
      * The amount of alpha channel.  

@@ -24,7 +24,7 @@ extern class RadialBlurFilter extends Filter
      * @param radius The maximum size of the blur radius, -1 is infinite.  
      *               Default: `-1`
      */
-    function new(?angle:Float, ?center:EitherType<Point,Array<Float>>, ?kernelSize:Float, ?radius:Float);
+    public function new(?angle:Float, ?center:EitherType<Point,Array<Float>>, ?kernelSize:Float, ?radius:Float);
 
     /**
      * Sets the angle in degrees of the motion for blur effect.  

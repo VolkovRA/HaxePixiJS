@@ -25,7 +25,7 @@ extern class BloomFilter extends Filter
      * @param kernelSize The kernelSize of the blurX & blurY filter.Options: 5, 7, 9, 11, 13, 15.  
      *                   Default: `5`
      */
-    function new(?blur:EitherType<Float,EitherType<Point,Array<Float>>>, ?quality:Float, ?resolution:Float, ?kernelSize:Float);
+    public function new(?blur:EitherType<Float,EitherType<Point,Array<Float>>>, ?quality:Float, ?resolution:Float, ?kernelSize:Float);
 
     /**
      * Sets the strength of both the blurX and blurY properties simultaneously.  
