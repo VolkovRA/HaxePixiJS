@@ -1,22 +1,20 @@
 package pixi.filters;
 
-import pixi.core.renderers.webgl.filters.Filter;
-
 /**
  * GlowFilter, originally by mishaa codepen.
- * @see https://pixijs.io/pixi-filters/docs/PIXI.filters.GlowFilter.html
- * @see https://codepen.io/mishaa/pen/raKzrm
+ * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.GlowFilter.html
+ * @see Source code: https://pixijs.io/pixi-filters/docs/filters_glow_src_GlowFilter.js.html
  * ***
- * Library: **core** 
+ * Library: **filters** 
  */
 @:native("PIXI.filters.GlowFilter")
 extern class GlowFilter extends Filter
 {
 	/**
-	 * Create a new GlowFilter.
+	 * Create a new GlowFilter instance.
      * @param options Options for filter.
      */
-    function new(options:GlowFilterParams);
+    function new(?options:GlowFilterOptions);
 
     /**
      * The color of the glow.  
@@ -44,11 +42,11 @@ extern class GlowFilter extends Filter
 }
 
 /**
- * The options of filter.
+ * The options of GlowFilter.
  * ***
- * Library: **core** 
+ * Library: **filters** 
  */
-typedef GlowFilterParams =
+typedef GlowFilterOptions=
 {
     /**
      * The distance of the glow.

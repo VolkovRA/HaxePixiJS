@@ -1,23 +1,23 @@
 package pixi.filters;
 
-import pixi.core.math.Point;
-import pixi.core.renderers.webgl.filters.Filter;
 import haxe.extern.EitherType;
+import pixi.geom.Point;
 
 /**
  * Drop shadow filter.
- * @see https://pixijs.io/pixi-filters/docs/PIXI.filters.DropShadowFilter.html
+ * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.DropShadowFilter.html
+ * @see Source code: https://pixijs.io/pixi-filters/docs/filters_drop-shadow_src_DropShadowFilter.js.html
  * ***
- * Library: **core** 
+ * Library: **filters** 
  */
 @:native("PIXI.filters.DropShadowFilter")
 extern class DropShadowFilter extends Filter
 {
 	/**
-	 * Create a new DropShadowFilter.
+	 * Create a new DropShadowFilter instance.
      * @param options Options for filter.
      */
-    function new(options:DropShadowFilterParams);
+    function new(?options:DropShadowFilterOptions);
 
     /**
      * The alpha of the shadow.  
@@ -68,11 +68,11 @@ extern class DropShadowFilter extends Filter
 }
 
 /**
- * The options of filter.
+ * The options of DropShadowFilter.
  * ***
- * Library: **core** 
+ * Library: **filters** 
  */
-typedef DropShadowFilterParams =
+typedef DropShadowFilterOptions =
 {
     /**
      * The angle of the shadow in degrees.  
@@ -130,7 +130,7 @@ typedef DropShadowFilterParams =
 
     /**
      * The resolution of the Blur filter.  
-     * Default: `PIXI.settings.RESOLUTION`
+     * Default: `Settings.RESOLUTION`
      */
     @:optional var resolution:Float;
 }
