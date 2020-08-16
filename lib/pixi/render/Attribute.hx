@@ -8,8 +8,8 @@ import pixi.enums.GLDataType;
  * This does not contain the actual data, but instead has a buffer id that maps to a
  * `pixi.utils.Buffer` This can include anything from positions, uvs, normals, colors etc.
  * 
- * @see Documentation: https://pixijs.download/dev/docs/PIXI.html
- * @see Source code: https://github.com/pixijs/pixi-sound/tree/main/src
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Attribute.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_geometry_Attribute.js.html
  * ***
  * Library: **core** 
  */
