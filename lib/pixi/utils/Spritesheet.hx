@@ -23,6 +23,9 @@ import pixi.textures.Texture;
  * Sprite sheets can be packed using tools like TexturePacker, Shoebox or Spritesheet.js.
  * Default anchor points (see PIXI.Texture#defaultAnchor) and grouping of animation sprites
  * are currently only supported by TexturePacker.
+ * 
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Spritesheet.html
+ * @see Source code: http://pixijs.download/release/docs/packages_spritesheet_src_Spritesheet.js.html
  * ***
  * Library: **core** 
  */
