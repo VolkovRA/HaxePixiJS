@@ -1,6 +1,7 @@
 package pixi.geom;
 
 import haxe.extern.EitherType;
+import pixi.enums.ShapeType;
 import pixi.geom.Point;
 
 /**
@@ -26,9 +27,9 @@ extern class Polygon implements IHitArea
 
     /**
      * The type of the object, mainly used to avoid `instanceof` checks.  
-     * Default: `Pixi.SHAPES.POLY`
+     * Default: `ShapeType.POLY`
      */
-    public var type(default, null):Int;
+    public var type(default, null):ShapeType;
 
     /**
      * `false` after moveTo, `true` after `closePath`. In all other cases it is `true`.  

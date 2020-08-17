@@ -1,5 +1,7 @@
 package pixi.geom;
 
+import pixi.enums.ShapeType;
+
 /**
  * Rectangle object is an area defined by its position, as indicated by
  * its top-left corner point (x, y) and by its width and its height.
@@ -27,9 +29,9 @@ extern class Rectangle implements IHitArea
 
     /**
      * The type of the object, mainly used to avoid `instanceof` checks.  
-     * Default: `Pixi.SHAPES.RECT`
+     * Default: `ShapeType.RECT`
      */
-    public var type(default, null):Int;
+    public var type(default, null):ShapeType;
 
     /**
      * Returns the top edge of the rectangle.

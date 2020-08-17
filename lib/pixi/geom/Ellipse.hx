@@ -1,5 +1,7 @@
 package pixi.geom;
 
+import pixi.enums.ShapeType;
+
 /**
  * The Ellipse object is used to help draw graphics and can also be used
  * to specify a hit area for displayObjects.
@@ -22,9 +24,9 @@ extern class Ellipse implements IHitArea
 
     /**
      * The type of the object, mainly used to avoid `instanceof` checks.  
-     * Default: `Pixi.SHAPES.ELIP`
+     * Default: `ShapeType.ELIP`
      */
-    public var type(default, null):Int;
+    public var type(default, null):ShapeType;
 
     /**
      * The X coordinate of the center of this ellipse.  

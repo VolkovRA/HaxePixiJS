@@ -1,5 +1,7 @@
 package pixi.geom;
 
+import pixi.enums.ShapeType;
+
 /**
  * The Point object represents a location in a two-dimensional coordinate system,
  * where x represents the horizontal axis and y represents the vertical axis.
@@ -21,9 +23,9 @@ extern class Circle implements IHitArea
 
     /**
      * The type of the object, mainly used to avoid `instanceof` checks.  
-     * Default: `Pixi.SHAPES.CIRC`
+     * Default: `ShapeType.CIRC`
      */
-    public var type(default, null):Int;
+    public var type(default, null):ShapeType;
 
     /**
      * The X coordinate of the center of this circle.  

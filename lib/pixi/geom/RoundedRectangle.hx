@@ -1,5 +1,7 @@
 package pixi.geom;
 
+import pixi.enums.ShapeType;
+
 /**
  * The Rounded Rectangle object is an area that has nice rounded corners, as
  * indicated by its top-left corner point (x, y) and by its width and its
@@ -24,9 +26,9 @@ extern class RoundedRectangle implements IHitArea
 
     /**
      * The type of the object, mainly used to avoid `instanceof` checks.  
-     * Default: `Pixi.SHAPES.RREC`
+     * Default: `ShapeType.RREC`
      */
-    public var type(default, null):Int;
+    public var type(default, null):ShapeType;
 
     /**
      * The X coordinate of the upper-left corner of the rounded rectangle.  
