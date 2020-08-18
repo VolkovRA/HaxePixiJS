@@ -39,7 +39,6 @@ import pixi.utils.CanvasRenderTarget;
  * 
  * renderer.render(sprite, renderTexture);  // Renders to center of RenderTexture
  * ```
- * 
  * @see Documentation: http://pixijs.download/release/docs/PIXI.BaseRenderTexture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_renderTexture_BaseRenderTexture.js.html
  * ***
@@ -78,7 +77,7 @@ extern class BaseRenderTexture extends BaseTexture
      * Frees the texture and framebuffer from WebGL memory without destroying this texture object.
      * This means you can still use the texture later which will upload it to GPU memory again.
      * 
-     * @event BaseTextureEvent.DISPOSE
+     * @event `PixiEvent.DISPOSE`
      */
     override public function dispose():Void;
 

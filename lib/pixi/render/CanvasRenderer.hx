@@ -10,8 +10,9 @@ import pixi.textures.RenderTexture;
  * The CanvasRenderer draws the scene and all its content onto a 2d canvas.  
  * This renderer should be used for browsers that do not support WebGL.  
  * Don't forget to add the CanvasRenderer.view to your DOM or you will not see anything!
- * @event RenderEvent.PRERENDER Fired before rendering starts.
- * @event RenderEvent.POSTRENDER Fired after rendering finishes.
+ * 
+ * @event `PixiEvent.PRERENDER` Fired before rendering starts.
+ * @event `PixiEvent.POSTRENDER` Fired after rendering finishes.
  * @see Documentation: http://pixijs.download/release/docs/PIXI.CanvasRenderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_canvas_canvas-renderer_src_CanvasRenderer.js.html
  * ***

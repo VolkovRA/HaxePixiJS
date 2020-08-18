@@ -24,11 +24,10 @@ import pixi.resources.Resource;
  * All textures have a base texture, which contains information about the source.
  * Therefore you can have many textures all using a single BaseTexture.
  * 
- * @event BaseTextureEvent.DISPOSE Fired when BaseTexture is destroyed.
- * @event BaseTextureEvent.ERROR Fired when a not-immediately-available source fails to load.
- * @event BaseTextureEvent.LOADED Fired when a not-immediately-available source finishes loading.
- * @event BaseTextureEvent.UPDATE Fired when BaseTexture is updated.
- * 
+ * @event `PixiEvent.DISPOSE` Fired when BaseTexture is destroyed.
+ * @event `PixiEvent.ERROR` Fired when a not-immediately-available source fails to load.
+ * @event `PixiEvent.LOADED` Fired when a not-immediately-available source finishes loading.
+ * @event `PixiEvent.UPDATE` Fired when BaseTexture is updated.
  * @see Documentation: http://pixijs.download/release/docs/PIXI.BaseTexture.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_textures_BaseTexture.js.html
  * ***
@@ -245,7 +244,7 @@ extern class BaseTexture extends EventEmitter
     /**
      * Frees the texture from WebGL memory without destroying this texture object.
      * This means you can still use the texture later which will upload it to GPU memory again.
-     * @see BaseTextureEvent.DISPOSE
+     * @see `PixiEvent.DISPOSE`
      */
     public function dispose():Void;
 

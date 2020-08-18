@@ -11,10 +11,11 @@ import pixi.textures.RenderTexture;
  * This renderer works by automatically managing WebGLBatchesm, so no need for
  * Sprite Batches or Sprite Clouds. Don't forget to add the view to your DOM or
  * you will not see anything!
- * @event RenderEvent.CONTEXT Fired when the WebGL context is set.
- * @event RenderEvent.PRERENDER Fired before rendering starts.
- * @event RenderEvent.POSTRENDER Fired after rendering finishes.
- * @event RenderEvent.RESIZE Fired after view has been resized.
+ * 
+ * @event `PixiEvent.CONTEXT` Fired when the WebGL context is set.
+ * @event `PixiEvent.PRERENDER` Fired before rendering starts.
+ * @event `PixiEvent.POSTRENDER` Fired after rendering finishes.
+ * @event `PixiEvent.RESIZE` Fired after view has been resized.
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Renderer.html
  * @see Source code: http://pixijs.download/release/docs/packages_core_src_Renderer.js.html
  * ***

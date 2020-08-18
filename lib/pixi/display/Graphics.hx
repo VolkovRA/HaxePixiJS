@@ -27,33 +27,33 @@ import pixi.render.State;
  * leak. Alternatively, keep using the same Graphics instance and
  * call `clear()` between redraws.
  * 
- * @event `DisplayObjectEvent.ADDED` Fired when this DisplayObject is added to a Container. 
- * @event `DisplayObjectEvent.REMOVED` Fired when this DisplayObject is removed from a Container.
- * @event `DisplayObjectEvent.CLICK` Fired when a pointer device button (usually a mouse left-button) is pressed and released on the display object.
- * @event `DisplayObjectEvent.MOUSE_DOWN` Fired when a pointer device button (usually a mouse left-button) is pressed on the display.
- * @event `DisplayObjectEvent.MOUSE_MOVE` Fired when a pointer device (usually a mouse) is moved while over the display object.
- * @event `DisplayObjectEvent.MOUSE_OUT` Fired when a pointer device (usually a mouse) is moved off the display object.
- * @event `DisplayObjectEvent.MOUSE_OVER` Fired when a pointer device (usually a mouse) is moved onto the display object.
- * @event `DisplayObjectEvent.MOUSE_UP` Fired when a pointer device button (usually a mouse left-button) is released over the display object.
- * @event `DisplayObjectEvent.MOUSE_UP_OUTSIDE` Fired when a pointer device button (usually a mouse left-button) is released outside the display object that initially registered a **mousedown**.
- * @event `DisplayObjectEvent.POINTER_CANCEL` Fired when the operating system cancels a pointer event.
- * @event `DisplayObjectEvent.POINTER_DOWN` Fired when a pointer device button is pressed on the display object.
- * @event `DisplayObjectEvent.POINTER_MOVE` Fired when a pointer device is moved while over the display object.
- * @event `DisplayObjectEvent.POINTER_OUT` Fired when a pointer device is moved off the display object.
- * @event `DisplayObjectEvent.POINTER_OVER` Fired when a pointer device is moved onto the display object.
- * @event `DisplayObjectEvent.POINTER_TAP` Fired when a pointer device button is pressed and released on the display object.
- * @event `DisplayObjectEvent.POINTER_UP` Fired when a pointer device button is released over the display object.
- * @event `DisplayObjectEvent.POINTER_UP_OUTSIDE` Fired when a pointer device button is released outside the display object that initially registered a **pointerdown**.
- * @event `DisplayObjectEvent.RIGHT_CLICK` Fired when a pointer device secondary button (usually a mouse right-button) is pressed and released on the display object.
- * @event `DisplayObjectEvent.RIGHT_DOWN` Fired when a pointer device secondary button (usually a mouse right-button) is pressed on the display object.
- * @event `DisplayObjectEvent.RIGHT_UP` Fired when a pointer device secondary button (usually a mouse right-button) is released over the display object.
- * @event `DisplayObjectEvent.RIGHT_UP_OUTSIDE` Fired when a pointer device secondary button (usually a mouse right-button) is released outside the display object that initially registered a **rightdown**.
- * @event `DisplayObjectEvent.TAP` Fired when a touch point is placed and removed from the display object.
- * @event `DisplayObjectEvent.TOUCH_CANCEL` Fired when the operating system cancels a touch.
- * @event `DisplayObjectEvent.TOUCH_END` Fired when a touch point is removed from the display object.
- * @event `DisplayObjectEvent.TOUCH_END_OUTSIDE` Fired when a touch point is removed outside of the display object that initially registered a **touchstart**.
- * @event `DisplayObjectEvent.TOUCH_MOVE` Fired when a touch point is moved along the display object.
- * @event `DisplayObjectEvent.TOUCH_START` Fired when a touch point is placed on the display object.
+ * @event `PixiEvent.ADDED` Fired when this DisplayObject is added to a Container. 
+ * @event `PixiEvent.REMOVED` Fired when this DisplayObject is removed from a Container.
+ * @event `InteractionEvent.CLICK` Fired when a pointer device button (usually a mouse left-button) is pressed and released on the display object.  
+ * @event `InteractionEvent.MOUSE_DOWN` Fired when a pointer device button (usually a mouse left-button) is pressed on the display.
+ * @event `InteractionEvent.MOUSE_MOVE` Fired when a pointer device (usually a mouse) is moved while over the display object.
+ * @event `InteractionEvent.MOUSE_OUT` Fired when a pointer device (usually a mouse) is moved off the display object.
+ * @event `InteractionEvent.MOUSE_OVER` Fired when a pointer device (usually a mouse) is moved onto the display object.
+ * @event `InteractionEvent.MOUSE_UP` Fired when a pointer device button (usually a mouse left-button) is released over the display object.
+ * @event `InteractionEvent.MOUSE_UP_OUTSIDE` Fired when a pointer device button (usually a mouse left-button) is released outside the display object that initially registered a **mousedown**.
+ * @event `InteractionEvent.POINTER_CANCEL` Fired when the operating system cancels a pointer event.
+ * @event `InteractionEvent.POINTER_DOWN` Fired when a pointer device button is pressed on the display object.
+ * @event `InteractionEvent.POINTER_MOVE` Fired when a pointer device is moved while over the display object.
+ * @event `InteractionEvent.POINTER_OUT` Fired when a pointer device is moved off the display object.
+ * @event `InteractionEvent.POINTER_OVER` Fired when a pointer device is moved onto the display object.
+ * @event `InteractionEvent.POINTER_TAP` Fired when a pointer device button is pressed and released on the display object.
+ * @event `InteractionEvent.POINTER_UP` Fired when a pointer device button is released over the display object.
+ * @event `InteractionEvent.POINTER_UP_OUTSIDE` Fired when a pointer device button is released outside the display object that initially registered a **pointerdown**.
+ * @event `InteractionEvent.RIGHT_CLICK` Fired when a pointer device secondary button (usually a mouse right-button) is pressed and released on the display object.
+ * @event `InteractionEvent.RIGHT_DOWN` Fired when a pointer device secondary button (usually a mouse right-button) is pressed on the display object.
+ * @event `InteractionEvent.RIGHT_UP` Fired when a pointer device secondary button (usually a mouse right-button) is released over the display object.
+ * @event `InteractionEvent.RIGHT_UP_OUTSIDE` Fired when a pointer device secondary button (usually a mouse right-button) is released outside the display object that initially registered a **rightdown**.
+ * @event `InteractionEvent.TAP` Fired when a touch point is placed and removed from the display object.
+ * @event `InteractionEvent.TOUCH_CANCEL` Fired when the operating system cancels a touch.
+ * @event `InteractionEvent.TOUCH_END` Fired when a touch point is removed from the display object.
+ * @event `InteractionEvent.TOUCH_END_OUTSIDE` Fired when a touch point is removed outside of the display object that initially registered a **touchstart**.
+ * @event `InteractionEvent.TOUCH_MOVE` Fired when a touch point is moved along the display object.
+ * @event `InteractionEvent.TOUCH_START` Fired when a touch point is placed on the display object.
  * @see Documentation: http://pixijs.download/release/docs/PIXI.Graphics.html
  * @see Source code: http://pixijs.download/release/docs/packages_graphics_src_Graphics.js.html
  * ***
