@@ -6,7 +6,7 @@ import pixi.geom.Point;
 
 /**
  * A class to define a shape via user defined co-orinates.
- * @see https://pixijs.download/dev/docs/PIXI.Polygon.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Polygon.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Polygon.js.html
  * ***
  * Library: **core** 

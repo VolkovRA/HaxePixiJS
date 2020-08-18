@@ -1,6 +1,7 @@
 package pixi.render.systems;
 
 import pixi.display.DisplayObject;
+import pixi.enums.GCMode;
 
 /**
  * System plugin to the renderer to manage texture garbage collection on the GPU,

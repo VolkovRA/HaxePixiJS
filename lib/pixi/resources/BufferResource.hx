@@ -40,7 +40,7 @@ extern class BufferResource extends Resource
     /**
      * Clean up anything, this happens when destroying is ready.
      */
-    override dispose():Void;
+    override private function dispose():Void;
 
     /**
      * Upload the texture to the GPU.

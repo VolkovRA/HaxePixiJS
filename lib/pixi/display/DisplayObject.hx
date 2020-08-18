@@ -182,6 +182,8 @@ extern class DisplayObject extends EventEmitter
     public var buttonMode:Bool;
 
     /**
+     * DisplayObject
+     * ----------
      * Set this to true if you want this display object to be cached as a bitmap.
      * This basically takes a snap shot of the display object as it is at that moment.
      * It can provide a performance benefit for complex static displayObjects.
@@ -190,6 +192,15 @@ extern class DisplayObject extends EventEmitter
      * IMPORTANT GOTCHA - Make sure that all your textures are preloaded BEFORE
      * setting this property to true as it will take a snapshot of what is currently
      * there. If the textures have not loaded then they will not appear.
+     * 
+     * Graphics (override)
+     * ----------
+     * When cacheAsBitmap is set to true the graphics object will be rendered as
+     * if it was a sprite. This is useful if your graphics element does not change
+     * often, as it will speed up the rendering of the object in exchange for
+     * taking up texture memory. It is also useful if you need the graphics object
+     * to be anti-aliased, because it will be rendered using canvas. This is not
+     * recommended if you are constantly redrawing the graphics element.
      */
     public var cacheAsBitmap:Bool;
     

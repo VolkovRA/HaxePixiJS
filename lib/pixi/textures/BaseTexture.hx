@@ -6,6 +6,7 @@ import js.lib.Float32Array;
 import js.html.CanvasElement;
 import js.html.ImageElement;
 import js.html.VideoElement;
+import js.html.svg.Element;
 import pixi.enums.AlphaMode;
 import pixi.enums.GLDataType;
 import pixi.enums.GLTarget;
@@ -210,7 +211,7 @@ extern class BaseTexture extends EventEmitter
      * @param strict Enforce strict-mode, see Settings.STRICT_TEXTURE_CACHE.
      * @return BaseTexture
      */
-    static public function from(source:EitherType<String,EitherType<HTMLImageElement,EitherType<HTMLCanvasElement,EitherType<SVGElement,HTMLVideoElement>>>>, ?options:BaseTextureOptions, ?strict:Bool):BaseTexture;
+    static public function from(source:EitherType<String,EitherType<ImageElement,EitherType<CanvasElement,EitherType<Element,VideoElement>>>>, ?options:BaseTextureOptions, ?strict:Bool):BaseTexture;
 
     /**
      * Create a new BaseTexture with a BufferResource from a Float32Array. RGBA values are floats from 0 to 1.

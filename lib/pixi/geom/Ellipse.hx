@@ -5,7 +5,7 @@ import pixi.enums.ShapeType;
 /**
  * The Ellipse object is used to help draw graphics and can also be used
  * to specify a hit area for displayObjects.
- * @see https://pixijs.download/dev/docs/PIXI.Ellipse.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Ellipse.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Ellipse.js.html
  * ***
  * Library: **core** 

@@ -2,7 +2,6 @@ package pixi.display;
 
 import haxe.extern.EitherType;
 import haxe.extern.Rest;
-import pixi.filters.Filter;
 import pixi.geom.Rectangle;
 import pixi.render.CanvasRenderer;
 import pixi.render.Renderer;
@@ -59,11 +58,6 @@ extern class Container extends DisplayObject
     public function new();
 
     /**
-     * Currently enabled filters.
-     */
-    override private var _enabledFilters:Array<Filter>;
-
-    /**
      * The width of the Container, setting this will actually modify the
      * scale to achieve the value set.
      */
@@ -103,11 +97,6 @@ extern class Container extends DisplayObject
      * child's zIndex changes.
      */
     public var sortDirty:Bool;
-
-    /**
-     * The multiplied alpha of the displayObject.
-     */
-    override public var worldAlpha:Float;
 
     /**
      * Recalculates the bounds of the object. Override this to calculate the

@@ -2,8 +2,8 @@ package pixi.filters;
 
 /**
  * A helper class for shaders.
- * @see http://pixijs.download/release/docs/PIXI.Shader.html
- * @see http://pixijs.download/release/docs/packages_core_src_shader_Shader.js.html
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Shader.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_shader_Shader.js.html
  * ***
  * Library: **core** 
  */

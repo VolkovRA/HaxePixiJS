@@ -5,7 +5,7 @@ import pixi.enums.ShapeType;
 /**
  * The Point object represents a location in a two-dimensional coordinate system,
  * where x represents the horizontal axis and y represents the vertical axis.
- * @see https://pixijs.download/dev/docs/PIXI.Circle.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Circle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Circle.js.html
  * ***
  * Library: **core** 

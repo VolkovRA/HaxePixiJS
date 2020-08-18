@@ -4,7 +4,9 @@ import js.html.CanvasRenderingContext2D;
 import pixi.display.DisplayObject;
 import pixi.enums.BlendMode;
 import pixi.geom.Matrix;
+import pixi.render.AbstractRenderer;
 import pixi.textures.RenderTexture;
+import pixi.utils.CanvasMaskManager;
 
 /**
  * The CanvasRenderer draws the scene and all its content onto a 2d canvas.  
@@ -28,11 +30,6 @@ extern class CanvasRenderer extends AbstractRenderer
     public function new(?options:AbstractRendererOptions);
 
     /**
-     * The last root object that the renderer tried to render.
-     */
-    override private var _lastObjectRendered:DisplayObject;
-
-    /**
      * Tracks the blend modes useful for this renderer.
      */
     public var blendModes:Dynamic;
@@ -48,31 +45,9 @@ extern class CanvasRenderer extends AbstractRenderer
     public var maskManager:CanvasMaskManager;
 
     /**
-     * Collection of installed plugins.
-     * 
-     * These are included by default in PIXI, but can be excluded by creating a custom build.
-     * Consult the README for more information about creating custom builds and excluding plugins.
-     * 
-     * Properties:
-     * ```
-     * accessibility	PIXI.AccessibilityManager	Support tabbing interactive elements.
-     * extract          PIXI.CanvasExtract	        Extract image data from renderer.
-     * interaction	    PIXI.InteractionManager     Handles mouse, touch and pointer events.
-     * prepare	        PIXI.CanvasPrepare	        Pre-render display objects.
-     * ```
-     */
-    override public var plugins(default, null):Dynamic;
-
-    /**
      * Boolean flag controlling canvas refresh.
      */
     public var refresh:Bool;
-
-    /**
-     * The resolution / device pixel ratio of the renderer.  
-     * Default: `1`
-     */
-    override public var resolution:Float;
 
     /**
      * The root canvas 2d context that everything is drawn with.

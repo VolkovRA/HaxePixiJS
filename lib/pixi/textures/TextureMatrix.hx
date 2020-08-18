@@ -1,6 +1,7 @@
 package pixi.textures;
 
 import js.lib.Float32Array;
+import pixi.events.EventEmitter;
 import pixi.geom.Matrix;
 
 /**

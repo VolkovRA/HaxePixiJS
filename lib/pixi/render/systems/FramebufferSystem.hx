@@ -4,7 +4,6 @@ import pixi.enums.MSAAQuality;
 import pixi.geom.ISize;
 import pixi.geom.Rectangle;
 import pixi.textures.Framebuffer;
-import pixi.textures.GLFramebuffer;
 
 /**
  * System plugin to the renderer to manage framebuffers.
@@ -126,4 +125,62 @@ extern class FramebufferSystem extends System
      * Update the framebuffer.
      */
     private function updateFramebuffer(framebuffer:Framebuffer):Void;
+}
+
+/**
+ * Internal framebuffer for WebGL context.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.GLFramebuffer.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_framebuffer_GLFramebuffer.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.GLFramebuffer")
+extern class GLFramebuffer
+{
+    /**
+     * Create a new GLFramebuffer instance.
+     */
+    public function new();
+
+    /**
+     * In case we use MSAA, this is actual framebuffer that has colorTextures[0]
+     * The contents of that framebuffer are read when we use that renderTexture
+     * in sprites.
+     */
+    public var blitFramebuffer:Framebuffer;
+
+    /**
+     * Latest known version of framebuffer format.
+     */
+    private var dirtyFormat:Float;
+    
+    /**
+     * Dirty ID.
+     */
+    private var dirtyId:Int;
+
+    /**
+     * Latest known version of framebuffer size.
+     */
+    private var dirtySize:Float;
+
+    /**
+     * The WebGL framebuffer.
+     */
+    public var framebuffer:js.html.webgl.Framebuffer;
+
+    /**
+     * In case MSAA, we use this Renderbuffer instead of colorTextures[0] when we write info.
+     */
+    public var msaaBuffer:js.html.webgl.Renderbuffer;
+
+    /**
+     * Detected AA samples number.
+     */
+    public var multisample:MSAAQuality;
+
+    /**
+     * Stencil+depth , usually costs 32bits per pixel.
+     */
+    public var stencil:js.html.webgl.Renderbuffer;
 }

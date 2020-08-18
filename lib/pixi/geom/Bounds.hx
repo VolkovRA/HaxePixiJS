@@ -6,7 +6,7 @@ import pixi.geom.Point;
  * 'Builder' pattern for bounds rectangles.  
  * This could be called an Axis-Aligned Bounding Box. It is not an actual shape.
  * It is a mutable thing; no 'EMPTY' or those kind of problems.
- * @see https://pixijs.download/dev/docs/PIXI.Bounds.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Bounds.html
  * @see Source code: https://pixijs.download/dev/docs/packages_display_src_Bounds.js.html
  * ***
  * Library: **core** 

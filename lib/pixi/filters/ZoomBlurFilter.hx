@@ -23,7 +23,7 @@ extern class ZoomBlurFilter extends Filter
      * Center of the effect.  
      * Default: `[0,0]`
      */
-    public var center:EitherType<Point, Array<Float>;
+    public var center:EitherType<Point, Array<Float>>;
 
     /**
      * Radius of the inner region not effected by blur.  

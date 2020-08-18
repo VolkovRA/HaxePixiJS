@@ -1,14 +1,6 @@
 package pixi.resources;
 
-import haxe.extern.EitherType;
 import js.lib.Promise;
-import js.html.CanvasElement;
-import js.html.ImageElement;
-import js.html.VideoElement;
-import js.html.svg.Element;
-import pixi.textures.BaseTexture;
-import pixi.textures.GLTexture;
-import pixi.render.Renderer;
 
 /**
  * Resource type for HTMLVideoElement.

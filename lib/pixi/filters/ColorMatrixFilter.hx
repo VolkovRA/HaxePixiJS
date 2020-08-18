@@ -46,7 +46,7 @@ extern class ColorMatrixFilter extends Filter
      * @param multiply If true, current matrix and matrix are multiplied.
      *                 If false, just set the current matrix with @param matrix
      */
-    public function _loadMatrix(matrix:Array<Float>, ?multiply:Bool);
+    public function _loadMatrix(matrix:Array<Float>, ?multiply:Bool):Void;
 
     /**
      * Set the black and white matrice.

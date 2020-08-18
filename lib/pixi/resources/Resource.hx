@@ -44,7 +44,7 @@ extern class Resource
      * If resource has been destroyed.  
      * Default: `false`
      */
-    public var destroyed:Bool;
+    public var destroyed(default, null):Bool;
 
     /**
      * The width of the resource.
@@ -59,7 +59,7 @@ extern class Resource
     /**
      * Has been validated.
      */
-    public var valid:Bool;
+    public var valid(default, null):Bool;
 
     /**
      * Abstract, used to auto-detect resource type.

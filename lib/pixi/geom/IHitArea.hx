@@ -8,7 +8,7 @@ package pixi.geom;
  * - Ellipse
  * - Polygon
  * - RoundedRectangle
- * @see https://pixijs.download/dev/docs/PIXI.IHitArea.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.IHitArea.html
  * ***
  * Library: **core** 
  */

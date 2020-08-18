@@ -105,7 +105,7 @@ typedef CRTFilterOptions =
      * Contrast of interlaced lines.  
      * Default: `0.25`
      */
-    @:optional var lineContrast:Flota;
+    @:optional var lineContrast:Float;
 
     /**
      * `true` is vertical lines, `false` is horizontal.  

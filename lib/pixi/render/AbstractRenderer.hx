@@ -85,7 +85,25 @@ extern class AbstractRenderer extends EventEmitter
     public var options(default, null):AbstractRendererOptions;
 
     /**
+     * AbstractRenderer
+     * ----------
      * Collection of plugins.
+     * 
+     * CanvasRenderer (override)
+     * ----------
+     * Collection of installed plugins.
+     * 
+     * These are included by default in PIXI, but can be excluded by creating a custom build.
+     * Consult the README for more information about creating custom builds and excluding plugins.
+     * 
+     * Properties:
+     * 
+     * |Name|Type|Description|
+     * |:-|:-|:-|
+     * |`accessibility`|[PIXI.AccessibilityManager](http://pixijs.download/release/docs/PIXI.AccessibilityManager.html)|Support tabbing interactive elements.|
+     * |`extract`|[PIXI.CanvasExtract](http://pixijs.download/release/docs/PIXI.CanvasExtract.html)|Extract image data from renderer.|
+     * |`interaction`|[PIXI.InteractionManager](http://pixijs.download/release/docs/PIXI.InteractionManager.html)|Handles mouse, touch and pointer events.|
+     * |`prepare`|[PIXI.CanvasPrepare](http://pixijs.download/release/docs/PIXI.CanvasPrepare.html)|Pre-render display objects.|
      */
     public var plugins(default, null):Dynamic;
 

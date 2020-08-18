@@ -1,12 +1,5 @@
 package pixi.sound;
 
-import haxe.DynamicAccess;
-import haxe.extern.EitherType;
-import js.html.AudioElement;
-import js.lib.ArrayBuffer;
-import js.lib.Promise;
-import pixi.sound.Sound;
-import pixi.sound.SoundSprite;
 import pixi.sound.filters.Filter;
 
 /**
@@ -18,7 +11,7 @@ import pixi.sound.filters.Filter;
  * Library: **sound** 
  */
 @:native("PIXI.sound")
-extern class Global
+extern class Sounds
 {
     /**
      * The global context to use.

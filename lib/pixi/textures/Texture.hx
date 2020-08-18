@@ -7,9 +7,10 @@ import js.lib.Float32Array;
 import js.html.CanvasElement;
 import js.html.ImageElement;
 import js.html.VideoElement;
-import pixi.textures.BaseTexture.BaseTextureOptions;
+import pixi.events.EventEmitter;
 import pixi.geom.Point;
 import pixi.geom.Rectangle;
+import pixi.textures.BaseTexture.BaseTextureOptions;
 
 /**
  * A texture stores the information that represents an image or part of an image.
@@ -171,8 +172,8 @@ extern class Texture extends EventEmitter
     public var uvMatrix:TextureMatrix;
 
     /**
-     * This will let the renderer know if the texture is valid. If it's not then
-     * it cannot be rendered.
+     * This will let the renderer know if the texture is valid.  
+     * If it's not then it cannot be rendered.
      */
     public var valid:Bool;
 
@@ -193,7 +194,7 @@ extern class Texture extends EventEmitter
      * @param strict Enforce strict-mode, see `Settings.STRICT_TEXTURE_CACHE`.
      * @return The newly created texture.
      */
-    static public function from(source:EitherType<String,EitherType<ImageElement,EitherType<CanvasElement.EitherType<VideoElement,BaseTexture>>>>, ?options:BaseTextureOptions, ?strict:Bool):Texture;
+    static public function from(source:EitherType<String,EitherType<ImageElement,EitherType<CanvasElement,EitherType<VideoElement,BaseTexture>>>>, ?options:BaseTextureOptions, ?strict:Bool):Texture;
 
     /**
      * Create a new Texture with a BufferResource from a Float32Array.
@@ -225,7 +226,7 @@ extern class Texture extends EventEmitter
      * @param options Optional options to include.
      * @return A Promise that resolves to a Texture.
      */
-    static public function fromURL(url:String, ?options:Dynamic);Promise<Texture>;
+    static public function fromURL(url:String, ?options:Dynamic):Promise<Texture>;
 
     /**
      * Remove a Texture from the global TextureCache.

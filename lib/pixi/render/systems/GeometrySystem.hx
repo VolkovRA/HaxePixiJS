@@ -3,6 +3,7 @@ package pixi.render.systems;
 import pixi.filters.Program;
 import pixi.filters.Shader;
 import pixi.geom.Geometry;
+import pixi.utils.Buffer;
 
 /**
  * System plugin to the renderer to manage geometry.

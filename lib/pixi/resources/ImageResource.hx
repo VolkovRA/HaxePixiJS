@@ -1,5 +1,6 @@
 package pixi.resources;
 
+import haxe.extern.EitherType;
 import js.lib.Promise;
 import js.html.ImageElement;
 import js.html.ImageBitmap;
@@ -24,16 +25,6 @@ extern class ImageResource extends BaseImageResource
      * @param options ImageResource options.
      */
     public function new(source:EitherType<ImageElement,String>, ?options:ImageResourceOptions);
-
-    /**
-     * Internal width of the resource.
-     */
-    override private var _width:Float;
-
-    /**
-     * Internal height of the resource.
-     */
-    override private var _height:Float;
 
     /**
      * Controls texture alphaMode field Copies from options Default
@@ -69,7 +60,7 @@ extern class ImageResource extends BaseImageResource
      * @param source The source object.
      * @return `true` if source is string or HTMLImageElement.
      */
-    static public function test(source:EiqtherType<String,ImageElement>):Bool;
+    static public function test(source:EitherType<String,ImageElement>):Bool;
 
     /**
      * Clean up anything, this happens when destroying is ready.

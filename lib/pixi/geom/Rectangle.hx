@@ -5,7 +5,7 @@ import pixi.enums.ShapeType;
 /**
  * Rectangle object is an area defined by its position, as indicated by
  * its top-left corner point (x, y) and by its width and its height.
- * @see https://pixijs.download/dev/docs/PIXI.Rectangle.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Rectangle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_Rectangle.js.html
  * ***
  * Library: **core** 

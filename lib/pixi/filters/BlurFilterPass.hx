@@ -31,24 +31,11 @@ extern class BlurFilterPass extends Filter
     public var blur:Float;
 
     /**
-     * The padding of the filter. Some filters require extra space to breath
-     * such as a blur. Increasing this will add extra width and height to the
-     * bounds of the object that the filter is applied to.
-     */
-    override public var padding:Float;
-
-    /**
      * Sets the quality of the blur by modifying the number of passes. More
      * passes means higher quaility bluring but the lower the performance.  
      * Default: `4`
      */
     public var quality:Float;
-
-    /**
-     * The resolution of the filter. Setting this to be lower will lower the
-     * quality but increase the performance of the filter.
-     */
-    override public var resolution:Float;
 
     /**
      * Applies the filter.

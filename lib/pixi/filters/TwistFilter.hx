@@ -1,5 +1,7 @@
 package pixi.filters;
 
+import pixi.geom.Point;
+
 /**
  * This filter applies a twist effect making display objects appear twisted in the given direction.
  * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.TwistFilter.html

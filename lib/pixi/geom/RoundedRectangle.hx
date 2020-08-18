@@ -6,7 +6,7 @@ import pixi.enums.ShapeType;
  * The Rounded Rectangle object is an area that has nice rounded corners, as
  * indicated by its top-left corner point (x, y) and by its width and its
  * height and its radius.
- * @see https://pixijs.download/dev/docs/PIXI.RoundedRectangle.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.RoundedRectangle.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_shapes_RoundedRectangle.js.html
  * ***
  * Library: **core** 

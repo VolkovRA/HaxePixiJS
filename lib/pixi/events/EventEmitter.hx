@@ -7,7 +7,29 @@ import js.lib.Symbol;
 
 /**
  * EventEmitter3 is a high performance EventEmitter.
- * @see https://pixijs.download/dev/docs/PIXI.utils.EventEmitter.html
+ * 
+ * It has been micro-optimized for various of code paths making this,
+ * one of, if not the fastest EventEmitter available for Node.js and
+ * browsers. The module is API compatible with the EventEmitter that
+ * ships by default with Node.js but there are some slight differences:
+ * - Domain support has been removed.
+ * - We do not `throw` an error when you emit an `error` event and
+ *   nobody is listening.
+ * - The `newListener` and `removeListener` events have been removed as
+ *   they are useful only in some uncommon use-cases.
+ * - The `setMaxListeners`, `getMaxListeners`, `prependListener` and
+ *   `prependOnceListener` methods are not available.
+ * - Support for custom context for events so there is no need to use
+ *   `fn.bind`.
+ * - The `removeListener` method removes all matching listeners, not
+ *   only the first.
+ * 
+ * It's a drop in replacement for existing EventEmitters, but just faster.
+ * Free performance, who wouldn't want that? The EventEmitter is written
+ * in EcmaScript 3 so it will work in the oldest browsers and node versions
+ * that you need to support.
+ * 
+ * @see Documentation: https://github.com/primus/eventemitter3
  * @see Source code: https://github.com/primus/eventemitter3/blob/master/index.d.ts
  * ***
  * Library: **core** 

@@ -4,7 +4,7 @@ package pixi.enums;
  * The cursor CSS property sets the type of mouse cursor, if any, to
  * show when the mouse pointer is over an element.
  * 
- * @see https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+ * @see Documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
  * ***
  * Library: **core**  
  */

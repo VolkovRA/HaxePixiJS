@@ -22,16 +22,6 @@ extern class AbstractMultiResource extends Resource
     public function new(?options:AbstractMultiResourceOptions);
 
     /**
-     * Internal width of the resource.
-     */
-    override private var _width:Float;
-
-    /**
-     * Internal height of the resource.
-     */
-    override private var _height:Float;
-
-    /**
      * Bound baseTexture, there can only be one.
      */
     public var baseTexture:BaseTexture;
@@ -50,11 +40,6 @@ extern class AbstractMultiResource extends Resource
      * Number of elements in array.
      */
     public var length(default, null):Int;
-
-    /**
-     * Has been validated.
-     */
-    public var valid(default, null):Bool;
 
     /**
      * Set a resource by ID.

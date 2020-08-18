@@ -10,7 +10,7 @@ import pixi.geom.Point;
  * | b | d | ty|
  * | 0 | 0 | 1 |
  * ```
- * @see https://pixijs.download/dev/docs/PIXI.Matrix.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Matrix.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_Matrix.js.html
  * ***
  * Library: **core** 

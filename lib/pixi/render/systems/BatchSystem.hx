@@ -1,6 +1,5 @@
 package pixi.render.systems;
 
-import pixi.textures.BatchTextureArray;
 import pixi.textures.BaseTexture;
 
 /**
@@ -66,4 +65,36 @@ extern class BatchSystem extends System
      * @param objectRenderer The object renderer to use.
      */
     public function setObjectRenderer(objectRenderer:ObjectRenderer):Void;
+}
+
+/**
+ * Used by the batcher to build texture batches.
+ * Holds list of textures and their respective locations.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.BatchTextureArray.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_batch_BatchTextureArray.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.BatchTextureArray")
+extern class BatchTextureArray
+{
+    /**
+     * Create a new BatchTextureArray instance.
+     */
+    public function new();
+
+    /**
+     * number of filled elements.
+     */
+    public var count:Int;
+
+    /**
+     * Inside textures array.
+     */
+    public var elements:Array<BaseTexture>;
+
+    /**
+     * Respective locations for textures.
+     */
+    public var ids:Array<Int>;
 }

@@ -1,10 +1,10 @@
 package pixi;
 
 import haxe.extern.EitherType;
-import js.html.VideoElement;
-import js.html.ImageElement;
 import js.html.CanvasElement;
 import js.html.ImageBitmap;
+import js.html.ImageElement;
+import js.html.VideoElement;
 
 /**
  * Types that can be passed to drawImage.

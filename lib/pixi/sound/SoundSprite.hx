@@ -1,9 +1,5 @@
 package pixi.sound;
 
-import haxe.extern.EitherType;
-import js.lib.Promise;
-import pixi.sound.Sound;
-
 /**
  * Object that represents a single Sound's sprite.
  * @see Documentation: https://pixijs.io/pixi-sound/docs/PIXI.sound.SoundSprite.html

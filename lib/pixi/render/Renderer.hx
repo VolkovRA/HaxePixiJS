@@ -1,9 +1,27 @@
 package pixi.render;
 
+import haxe.extern.EitherType;
+import js.lib.Uint8Array;
+import js.html.ImageElement;
+import js.html.CanvasElement;
 import js.html.webgl.RenderingContext;
 import pixi.display.DisplayObject;
 import pixi.geom.Matrix;
 import pixi.textures.RenderTexture;
+import pixi.render.systems.BatchSystem;
+import pixi.render.systems.ContextSystem;
+import pixi.render.systems.FilterSystem;
+import pixi.render.systems.FramebufferSystem;
+import pixi.render.systems.GeometrySystem;
+import pixi.render.systems.MaskSystem;
+import pixi.render.systems.ProjectionSystem;
+import pixi.render.systems.RenderTextureSystem;
+import pixi.render.systems.ScissorSystem;
+import pixi.render.systems.ShaderSystem;
+import pixi.render.systems.StateSystem;
+import pixi.render.systems.StencilSystem;
+import pixi.render.systems.TextureGCSystem;
+import pixi.render.systems.TextureSystem;
 
 /**
  * The Renderer draws the scene and all its content onto a WebGL enabled canvas.  
@@ -29,11 +47,6 @@ extern class Renderer extends AbstractRenderer
      * @param options The optional renderer parameters.
      */
     public function new(?options:RendererOptions);
-
-    /**
-     * The last root object that the renderer tried to render.
-     */
-    override private var _lastObjectRendered:DisplayObject;
 
     /**
      * Batch system instance.
@@ -198,4 +211,126 @@ typedef RendererOptions =
      * If WebGL context already exists, all parameters must be taken from it.
      */
     @:optional var context:Dynamic;
+}
+
+/**
+ * This class provides renderer-specific plugins for exporting content from a renderer.
+ * For instance, these plugins can be used for saving an Image, Canvas element or for
+ * exporting the raw image data (pixels).
+ * 
+ * Do not instantiate these plugins directly. It is available from the `renderer.plugins`
+ * property. See PIXI.CanvasRenderer#plugins or PIXI.Renderer#plugins.
+ * 
+ * Example:
+ * ```
+ * // Create a new app (will auto-add extract plugin to renderer)
+ * var app = new Application();
+ * 
+ * // Draw a red circle
+ * var graphics = new Graphics()
+ *     .beginFill(0xFF0000)
+ *     .drawCircle(0, 0, 50);
+ * 
+ * // Render the graphics as an HTMLImageElement
+ * var image = app.renderer.plugins.extract.image(graphics);
+ * document.body.appendChild(image);
+ * ```
+ * 
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Extract.html
+ * @see Source code: http://pixijs.download/release/docs/packages_extract_src_Extract.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.Extract")
+extern class Extract
+{
+    /**
+     * Create a new Extract instance.
+     * @param options A reference to the current renderer.
+     */
+    public function new(renderer:Renderer);
+
+    /**
+     * Will return a a base64 encoded string of this target. It works by
+     * calling `Extract.getCanvas` and then running toDataURL on that.
+     * @param target A displayObject or renderTexture to convert. If left empty will use the main renderer.
+     * @param format Image format, e.g. "image/jpeg" or "image/webp".
+     * @param quality JPEG or Webp compression from 0 to 1. Default: `0.92`
+     * @return A base64 encoded string of the texture.
+     */
+    public function base64(target:EitherType<DisplayObject,RenderTexture>, ?format:String, ?quality:Float):String;
+
+    /**
+     * Creates a Canvas element, renders this target to it and then returns it.
+     * @param target A displayObject or renderTexture to convert. If left empty will use the main renderer.
+     * @return Canvas element with the texture rendered on.
+     */
+    public function canvas(target:EitherType<DisplayObject,RenderTexture>):CanvasElement;
+
+    /**
+     * Destroys the extract.
+     */
+    public function destroy():Void;
+
+    /**
+     * Will return a HTML Image of the target.
+     * @param target A displayObject or renderTexture to convert. If left empty will use the main renderer.
+     * @param format Image format, e.g. "image/jpeg" or "image/webp".
+     * @param quality JPEG or Webp compression from 0 to 1. Default: `0.92`
+     * @return HTML Image of the target.
+     */
+    public function image(target:EitherType<DisplayObject,RenderTexture>, ?format:String, ?quality:Float):ImageElement;
+
+    /**
+     * Will return a one-dimensional array containing the pixel data of the entire
+     * texture in RGBA order, with integer values between 0 and 255 (included).
+     * @param target A displayObject or renderTexture to convert. If left empty will use the main renderer.
+     * @return One-dimensional array containing the pixel data of the entire texture.
+     */
+    public function pixels(target:EitherType<DisplayObject,RenderTexture>):Uint8Array;
+}
+
+/**
+ * Uniform group holds uniform map and some ID's for work.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.UniformGroup.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_shader_UniformGroup.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.UniformGroup")
+extern class UniformGroup
+{
+    /**
+     * Create a new UniformGroup instance.
+     * @param uniforms Custom uniforms to use to augment the built-in ones.
+     * @param _static Uniforms wont be changed after creation.
+     */
+    public function new(?uniforms:Dynamic, _static:Bool);
+
+    /**
+     * Dirty version.
+     */
+    private var dirtyId:Int;
+
+    /**
+     * Its a group and not a single uniforms.  
+     * Default: `true`
+     */
+    public var group(default, null):Bool;
+
+    /**
+     * Unique id.
+     */
+    private var id:Int;
+
+    /**
+     * Uniforms wont be changed after creation.
+     */
+    @:native('static')
+    var staticUniform:Bool;
+
+    /**
+     * Uniform values.
+     */
+    public var uniforms(default, null):Dynamic;
 }

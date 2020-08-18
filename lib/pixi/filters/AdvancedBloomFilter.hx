@@ -61,11 +61,6 @@ extern class AdvancedBloomFilter extends Filter
     public var quality:Float;
 
     /**
-     * The resolution of the filter.
-     */
-    public var resolution:Float;
-
-    /**
      * Defines how bright a color needs to be to affect bloom.  
      * Default: `0.5`
      */

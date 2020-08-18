@@ -10,7 +10,7 @@ import pixi.geom.Point;
  * An ObservablePoint is a point that triggers a callback when the point's
  * position is changed.
  * 
- * @see https://pixijs.download/dev/docs/PIXI.ObservablePoint.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.ObservablePoint.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_ObservablePoint.js.html
  * ***
  * Library: **core** 

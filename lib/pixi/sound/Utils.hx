@@ -2,10 +2,8 @@ package pixi.sound;
 
 import haxe.Constraints.Function;
 import haxe.extern.EitherType;
-import js.html.CanvasPattern;
 import js.html.CanvasGradient;
-import pixi.core.textures.BaseTexture;
-import pixi.loaders.ResourceLoader;
+import js.html.CanvasPattern;
 
 /**
  * Utilities that work with sounds.

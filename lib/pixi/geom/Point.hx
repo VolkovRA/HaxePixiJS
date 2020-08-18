@@ -3,7 +3,7 @@ package pixi.geom;
 /**
  * The Point object represents a location in a two-dimensional coordinate system,
  * where x represents the horizontal axis and y represents the vertical axis.
- * @see https://pixijs.download/dev/docs/PIXI.Point.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.Point.html
  * @see Source code: https://pixijs.download/dev/docs/packages_math_src_Point.js.html
  * ***
  * Library: **core** 
@@ -68,7 +68,7 @@ extern class Point implements IPoint
 
 /**
  * Common interface for points. Both Point and ObservablePoint implement it.
- * @see https://pixijs.download/dev/docs/PIXI.IPoint.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.IPoint.html
  * ***
  * Library: **core** 
  */
@@ -117,7 +117,7 @@ extern interface IPoint
 
 /**
  * Common interface for points. Both Point and ObservablePoint implement it.
- * @see https://pixijs.download/dev/docs/PIXI.IPointData.html
+ * @see Documentation: https://pixijs.download/dev/docs/PIXI.IPointData.html
  * ***
  * Library: **core** 
  */

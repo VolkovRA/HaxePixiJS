@@ -1,13 +1,12 @@
 package pixi.geom;
 
-import haxe.extern.EitherType;
 import pixi.display.FillStyle;
 import pixi.display.LineStyle;
+import haxe.extern.EitherType;
 import pixi.geom.Point;
 import pixi.textures.Texture;
 import pixi.utils.BatchGeometry;
 import pixi.utils.BatchPart;
-import pixi.utils.Buffer;
 import pixi.utils.GraphicsData;
 
 /**

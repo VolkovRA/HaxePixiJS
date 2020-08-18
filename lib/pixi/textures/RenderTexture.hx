@@ -71,12 +71,6 @@ extern class RenderTexture extends Texture
     public var framebuffer(default, null):Framebuffer;
 
     /**
-     * This will let the renderer know if the texture is valid.
-     * If it's not then it cannot be rendered.
-     */
-    override public var valid:Bool;
-
-    /**
      * A short hand way of creating a render texture.
      * @param options Options.
      * @return The new render texture.

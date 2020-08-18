@@ -4,7 +4,8 @@ import js.html.CanvasElement;
 import pixi.enums.BlendMode;
 
 /**
- * Generalized convenience utilities for PIXI.  
+ * Generalized convenience utilities for PIXI.
+ * 
  * Example:
  * ```
  * // Get info on current device

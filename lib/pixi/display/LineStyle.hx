@@ -31,12 +31,6 @@ extern class LineStyle extends FillStyle
     public var cap:LineCap;
 
     /**
-     * The hex color value used when coloring the Graphics object.  
-     * Default: `0xFFFFFF`
-     */
-    public var color:Int;
-
-    /**
      * Line join style.  
      * Default: `LineJoin.MITER`
      */

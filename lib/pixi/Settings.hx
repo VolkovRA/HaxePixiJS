@@ -1,6 +1,6 @@
 package pixi;
 
-import js.RegExp;
+import js.lib.RegExp;
 import pixi.enums.Environment;
 import pixi.enums.GCMode;
 import pixi.enums.MipmapMode;

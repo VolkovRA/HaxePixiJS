@@ -1,5 +1,7 @@
 package pixi.filters;
 
+import haxe.extern.EitherType;
+
 /**
  * The OldFilmFilter applies a Old film effect to an object.
  * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.OldFilmFilter.html

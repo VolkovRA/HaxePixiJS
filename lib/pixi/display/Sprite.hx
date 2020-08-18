@@ -5,7 +5,6 @@ import js.html.CanvasElement;
 import js.html.VideoElement;
 import pixi.display.Container;
 import pixi.enums.BlendMode;
-import pixi.geom.Bounds;
 import pixi.geom.ObservablePoint;
 import pixi.geom.Point;
 import pixi.geom.Rectangle;
@@ -85,11 +84,6 @@ extern class Sprite extends Container
     private var _height:Float;
 
     /**
-     * Cache of this display-object's local-bounds rectangle.
-     */
-    override private var _localBoundsRect:Bounds;
-
-    /**
      * Cached tinted texture.
      */
     private var _tintedCanvas:CanvasElement;
@@ -122,11 +116,6 @@ extern class Sprite extends Container
      * Default: `BlendMode.NORMAL`
      */
     public var blendMode:BlendMode;
-
-    /**
-     * Used to fast check if a sprite is.. a sprite!
-     */
-    override public var isSprite:Bool;
 
     /**
      * Plugin that is responsible for rendering this element. Allows to customize the

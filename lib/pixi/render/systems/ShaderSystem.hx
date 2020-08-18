@@ -1,5 +1,6 @@
 package pixi.render.systems;
 
+import js.html.webgl.Program;
 import pixi.filters.Shader;
 
 /**
@@ -60,4 +61,27 @@ extern class ShaderSystem extends System
      * @param syncData This is data that is passed to the sync function and any nested sync functions.
      */
     public function syncUniformGroup(group:Dynamic, ?syncData:Dynamic):Void;
+}
+
+/**
+ * Helper class to create a WebGL Program.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.GLProgram.html
+ * @see Source code: http://pixijs.download/release/docs/packages_core_src_shader_GLProgram.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.GLProgram")
+extern class GLProgram
+{
+    /**
+     * Makes a new Pixi program.
+     * @param program WEBGL Program.
+     * @param uniformData Uniforms.
+     */
+    public function new(program:Program, uniformData:Dynamic);
+
+    /**
+     * Destroys this program.
+     */
+    public function destroy():Void;
 }

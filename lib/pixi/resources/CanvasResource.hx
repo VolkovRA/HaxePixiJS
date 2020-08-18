@@ -19,16 +19,6 @@ extern class CanvasResource extends BaseImageResource
     public function new(source:CanvasElement);
 
     /**
-     * Internal width of the resource.
-     */
-    override private var _width:Float;
-
-    /**
-     * Internal height of the resource.
-     */
-    override private var _height:Float;
-
-    /**
      * Used to auto-detect the type of resource.
      * @param source The source object.
      * @return `true` if source is HTMLCanvasElement or OffscreenCanvas.

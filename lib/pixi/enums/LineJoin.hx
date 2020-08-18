@@ -2,8 +2,8 @@ package pixi.enums;
 
 /**
  * Supported line joints in `LineStyle` for graphics.
- * @see http://pixijs.download/release/docs/PIXI.Graphics.html#lineStyle
- * @see https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Graphics.html#lineStyle
+ * @see Examples: https://graphicdesign.stackexchange.com/questions/59018/what-is-a-bevel-join-of-two-lines-exactly-illustrator
  * ***
  * Library: **core**  
  *   

@@ -26,12 +26,6 @@ extern class BlurFilter extends Filter
     public function new(strength:Float, quality:Float, resolution:Float, kernelSize:Float);
 
     /**
-     * Sets the blendmode of the filter.  
-     * Default: `BlendMode.NORMAL`
-     */
-    override public var blendMode:BlendMode;
-
-    /**
      * Sets the strength of both the blurX and blurY properties simultaneously.  
      * Default: `2`
      */
@@ -50,13 +44,6 @@ extern class BlurFilter extends Filter
     public var blurY:Float;
 
     /**
-     * The padding of the filter. Some filters require extra space to breath such as
-     * a blur. Increasing this will add extra width and height to the bounds of the
-     * object that the filter is applied to.
-     */
-    override public var padding:Float;
-
-    /**
      * Sets the number of passes for blur. More passes means higher quaility bluring.  
      * Default: `1`
      */
@@ -67,12 +54,6 @@ extern class BlurFilter extends Filter
      * Default: `false`
      */
     public var repeatEdgePixels:Bool;
-
-    /**
-     * The resolution of the filter. Setting this to be lower will lower the quality
-     * but increase the performance of the filter.
-     */
-    override public var resolution:Float;
 
     /**
      * Applies the filter.
