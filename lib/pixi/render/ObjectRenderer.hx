@@ -1,4 +1,4 @@
-package pixi.render.systems;
+package pixi.render;
 
 import pixi.display.DisplayObject;
 
