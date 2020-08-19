@@ -265,7 +265,7 @@ extern class Container extends DisplayObject
 typedef DestroyOptions =
 {
     /**
-     * if set to true, all the children will have their destroy method called
+     * If set to true, all the children will have their destroy method called
      * as well. 'options' will be passed on to those calls.  
      * Default: `false`
      */
