@@ -195,7 +195,7 @@ extern class Sprite extends Container
      * @param options Options parameter. A boolean will act as if all options have
      *                been set to that value.
      */
-    override public function destroy(?options:EitherType<Bool,DestroyOptions>):Void;
+    override public function destroy(?options:EitherType<Bool, ContainerDestroyOptions>):Void;
 
     /**
      * Gets the local bounds of the sprite object.

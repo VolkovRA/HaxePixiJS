@@ -151,7 +151,7 @@ extern class Container extends DisplayObject
      * @param options Options parameter. A boolean will act as if all options have
      *                been set to that value.
      */
-    override public function destroy(?options:EitherType<Bool,DestroyOptions>):Void;
+    override public function destroy(?options:EitherType<Bool, ContainerDestroyOptions>):Void;
 
     /**
      * Returns the child at the specified index.
@@ -262,7 +262,7 @@ extern class Container extends DisplayObject
 /**
  * The options of `Container.destroy()` method.
  */
-typedef DestroyOptions =
+typedef ContainerDestroyOptions =
 {
     /**
      * If set to true, all the children will have their destroy method called
