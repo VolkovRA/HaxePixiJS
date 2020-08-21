@@ -1,6 +1,5 @@
 package pixi.display;
 
-import pixi.geom.Point;
 import haxe.extern.EitherType;
 import js.html.CanvasElement;
 import pixi.enums.BlendMode;
@@ -8,6 +7,7 @@ import pixi.enums.DrawMode;
 import pixi.filters.MeshMaterial;
 import pixi.filters.Shader;
 import pixi.geom.Geometry;
+import pixi.geom.Point;
 import pixi.textures.Texture;
 import pixi.render.CanvasRenderer;
 import pixi.render.Renderer;

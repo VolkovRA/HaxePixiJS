@@ -100,10 +100,10 @@ extern class AbstractRenderer extends EventEmitter
      * 
      * |Name|Type|Description|
      * |:-|:-|:-|
-     * |`accessibility`|[PIXI.AccessibilityManager](http://pixijs.download/release/docs/PIXI.AccessibilityManager.html)|Support tabbing interactive elements.|
-     * |`extract`|[PIXI.CanvasExtract](http://pixijs.download/release/docs/PIXI.CanvasExtract.html)|Extract image data from renderer.|
-     * |`interaction`|[PIXI.InteractionManager](http://pixijs.download/release/docs/PIXI.InteractionManager.html)|Handles mouse, touch and pointer events.|
-     * |`prepare`|[PIXI.CanvasPrepare](http://pixijs.download/release/docs/PIXI.CanvasPrepare.html)|Pre-render display objects.|
+     * |`accessibility`|[AccessibilityManager](http://pixijs.download/release/docs/PIXI.AccessibilityManager.html)|Support tabbing interactive elements.|
+     * |`extract`|[CanvasExtract](http://pixijs.download/release/docs/PIXI.CanvasExtract.html)|Extract image data from renderer.|
+     * |`interaction`|[InteractionManager](http://pixijs.download/release/docs/PIXI.InteractionManager.html)|Handles mouse, touch and pointer events.|
+     * |`prepare`|[CanvasPrepare](http://pixijs.download/release/docs/PIXI.CanvasPrepare.html)|Pre-render display objects.|
      */
     public var plugins(default, null):Dynamic;
 
