@@ -1,4 +1,4 @@
-package pixi.render;
+package pixi.render.plugins;
 
 import haxe.Constraints.Function;
 import haxe.extern.EitherType;
@@ -123,7 +123,6 @@ extern class TimeLimiter
      */
     public function beginFrame():Void;
 }
-
 
 /**
  * CountLimiter limits the number of items handled by a
