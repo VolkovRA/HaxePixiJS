@@ -1,4 +1,4 @@
-package pixi.fonts;
+package pixi.text;
 
 /**
  * Normalized parsed data from .fnt files.
