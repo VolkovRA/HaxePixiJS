@@ -240,3 +240,27 @@ extern class Ticker
      */
     public function update(?currentTime:Float):Void;
 }
+
+/**
+ * Middleware for for Application Ticker.
+ * 
+ * Example: (TypeScript)
+ * ```
+ * import {TickerPlugin} from '@pixi/ticker';
+ * import {Application} from '@pixi/app';
+ * Application.registerPlugin(TickerPlugin);
+ * ```
+ * 
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.TickerPlugin.html
+ * @see Source code: http://pixijs.download/release/docs/packages_ticker_src_TickerPlugin.js.html
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.TickerPlugin")
+extern class TickerPlugin
+{
+    /**
+     * Create a new TickerPlugin instance.
+     */
+    public function new();
+}
