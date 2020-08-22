@@ -119,11 +119,14 @@ extern class Application
      * @param removeView Automatically remove canvas from DOM. Default: `false`
      * @param stageOptions Options parameter. A boolean will act as if all options have been set to that value.
      */
-    public function destroy(?removeView:Bool, ?stageOptions:EitherType<DestroyOptions, Bool>):Void;
+    public function destroy(?removeView:Bool, ?stageOptions:EitherType<ApplicationDestroyOptions, Bool>):Void;
 }
 
 /**
  * The options object for new Application instance.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Application.html#Application
+ * ***
+ * Library: **core** 
  */
 typedef ApplicationOptions =
 {
@@ -234,6 +237,9 @@ typedef ApplicationOptions =
 
 /**
  * The application plugin.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Application.html#.Plugin
+ * ***
+ * Library: **core** 
  */
 typedef Plugin =
 {
@@ -248,4 +254,37 @@ typedef Plugin =
      * Called when destroying Application, scoped to Application instance.
      */
     var destroy:Function;
+}
+
+/**
+ * The options of application destroy method.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Application.html#destroy
+ * ***
+ * Library: **core** 
+ */
+typedef ApplicationDestroyOptions =
+{
+    /**
+     * if set to true, all the children will have their destroy method called as well.
+     * 'stageOptions' will be passed on to those calls.
+     * 
+     * Default: `false`
+     */
+    @:optional var children:Bool;
+
+    /**
+     * Only used for child Sprites if stageOptions.children is set to true.
+     * Should it destroy the texture of the child sprite.
+     * 
+     * Default: `false`
+     */
+    @:optional var texture:Bool;
+
+    /**
+     * Only used for child Sprites if stageOptions.children is set to true.
+     * Should it destroy the base texture of the child sprite.
+     * 
+     * Default: `false`
+     */
+    @:optional var baseTexture:Bool;
 }
