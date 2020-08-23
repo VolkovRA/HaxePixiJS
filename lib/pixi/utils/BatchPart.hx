@@ -1,8 +1,7 @@
 package pixi.utils;
 
 import haxe.extern.EitherType;
-import pixi.display.FillStyle;
-import pixi.display.LineStyle;
+import pixi.display.Graphics;
 
 /**
  * A structure to hold interim batch objects for Graphics.

@@ -1,7 +1,7 @@
 package pixi.render;
 
-import pixi.display.DisplayObject;
 import js.lib.Uint16Array;
+import pixi.display.DisplayObject;
 import pixi.display.Graphics.BatchDrawCall;
 import pixi.display.Sprite;
 import pixi.filters.Shader;

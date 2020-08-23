@@ -3,10 +3,10 @@ package pixi.events;
 /**
  * The PixiJS events.  
  * This enum contains of all base events of PixiJS.
- * @see DisplayObject events: http://pixijs.download/release/docs/PIXI.DisplayObject.html#event
- * @see BaseTexture events: http://pixijs.download/release/docs/PIXI.BaseTexture.html#event
- * @see Renderer events: http://pixijs.download/release/docs/PIXI.Renderer.html#event
- * @see CanvasRenderer events: http://pixijs.download/release/docs/PIXI.CanvasRenderer.html#event
+ * @see [DisplayObject events](http://pixijs.download/release/docs/PIXI.DisplayObject.html#event)
+ * @see [BaseTexture events](http://pixijs.download/release/docs/PIXI.BaseTexture.html#event)
+ * @see [Renderer events](http://pixijs.download/release/docs/PIXI.Renderer.html#event)
+ * @see [CanvasRenderer events](http://pixijs.download/release/docs/PIXI.CanvasRenderer.html#event)
  * ***
  * Library: **core** 
  */

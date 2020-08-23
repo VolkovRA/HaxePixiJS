@@ -1,5 +1,12 @@
 package pixi.sound;
 
+import haxe.DynamicAccess;
+import haxe.extern.EitherType;
+import js.lib.ArrayBuffer;
+import js.lib.Promise;
+import js.html.AudioElement;
+import pixi.sound.Sound;
+import pixi.sound.SoundSprite;
 import pixi.sound.filters.Filter;
 
 /**
@@ -69,7 +76,7 @@ extern class Sounds
      * This will release/destroy the AudioContext(s). Can be used safely if you want to
      * initialize the sound library later. Use init method.
      */
-    static public function close():Global;
+    static public function close():Dynamic;
 
     /**
      * Get the length of a sound in seconds.
@@ -97,13 +104,13 @@ extern class Sounds
      * If there's a hardware-failure call close and then init.
      * @return Sound instance.
      */
-    static public function init():Global;
+    static public function init():Dynamic;
 
     /**
      * Mutes all playing sounds.
      * @return Instance for chaining.
      */
-    static public function muteAll():Global;
+    static public function muteAll():Dynamic;
 
     /**
      * Pauses a sound.
@@ -116,7 +123,7 @@ extern class Sounds
      * Pauses any playing sounds.
      * @return Instance for chaining.
      */
-    static public function pauseAll():Global;
+    static public function pauseAll():Dynamic;
 
     /**
      * Plays a sound.
@@ -132,26 +139,26 @@ extern class Sounds
      * @param alias The sound alias reference.
      * @return Instance for chaining.
      */
-    static public function remove(alias:String):Global;
+    static public function remove(alias:String):Dynamic;
 
     /**
      * Stops and removes all sounds. They cannot be used after this.
      * @return Instance for chaining.
      */
-    static public function removeAll():Global;
+    static public function removeAll():Dynamic;
 
     /**
      * Resumes a sound.
      * @param alias The sound alias reference.
      * @return Instance for chaining.
      */
-    static public function resume(alias:String):Global;
+    static public function resume(alias:String):Dynamic;
 
     /**
      * Resumes any sounds.
      * @return Instance for chaining.
      */
-    static public function resumeAll():Global;
+    static public function resumeAll():Dynamic;
 
     /**
      * Get or set the speed for a sound.
@@ -172,7 +179,7 @@ extern class Sounds
      * Stops all sounds.
      * @return Instance for chaining.
      */
-    static public function stopAll():Global;
+    static public function stopAll():Dynamic;
 
     /**
      * Toggle muted property for all sounds.
@@ -190,7 +197,7 @@ extern class Sounds
      * Unmutes all playing sounds.
      * @return Instance for chaining.
      */
-    static public function unmuteAll():Global;
+    static public function unmuteAll():Dynamic;
 
     /**
      * Get or set the volume for a sound.

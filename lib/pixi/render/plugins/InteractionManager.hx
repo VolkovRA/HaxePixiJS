@@ -6,6 +6,7 @@ import haxe.extern.EitherType;
 import js.html.Element;
 import pixi.display.Container;
 import pixi.display.DisplayObject;
+import pixi.display.Sprite;
 import pixi.display.TilingSprite;
 import pixi.events.EventEmitter;
 import pixi.events.InteractionEvent;

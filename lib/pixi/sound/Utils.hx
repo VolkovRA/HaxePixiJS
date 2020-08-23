@@ -4,6 +4,8 @@ import haxe.Constraints.Function;
 import haxe.extern.EitherType;
 import js.html.CanvasGradient;
 import js.html.CanvasPattern;
+import pixi.loader.LoaderResource;
+import pixi.textures.BaseTexture;
 
 /**
  * Utilities that work with sounds.
@@ -51,7 +53,7 @@ extern class Utils
      *               extension and url of that object.
      * @return The format to resolve to.
      */
-    static public function resolveUrl(source:EitherType<String,ResourceLoader>):String;
+    static public function resolveUrl(source:EitherType<String,LoaderResource>):String;
 
     /**
      * Create a new sound for a sine wave-based tone. **Only supported with WebAudio**

@@ -1,5 +1,7 @@
 package pixi.loader;
 
+import haxe.Constraints.Function;
+
 /**
  * The new loader, extends Resource Loader by Chad Engler: https://github.com/englercj/resource-loader
  * 
@@ -114,3 +116,65 @@ extern class Loader
      */
     static public function registerPlugin(plugin:ILoaderPlugin):Loader;
 }
+
+/**
+ * Plugin to be installed for handling specific Loader resources.
+ * @see http://pixijs.download/release/docs/PIXI.html#.ILoaderPlugin
+ * ***
+ * Library: **core** 
+ */
+typedef ILoaderPlugin =
+{
+    /**
+     * Function to call immediate after registering plugin.
+     */
+    var add:Function;
+
+    /**
+     * Middleware function to run before load, the arguments for this are `(resource, next)`.
+     */
+    var pre:LoaderResource->Function->Void;
+
+    /**
+     * Middleware function to run after load, the arguments for this are `(resource, next)`.
+     */
+    var use:LoaderResource->Function->Void;
+}
+
+/**
+ * The simple dispatcher of Loader signals.  
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Loader.html#.ILoaderSignal
+ * ***
+ * Library: **core** 
+ */
+@:native("PIXI.Loader.ILoaderSignal")
+extern interface ILoaderDispatcher
+{
+    /**
+     * Register callback.
+     * @param callback The callback function.
+     * @return The id of registered callback for `ILoaderSignal.detach()` method.
+     */
+    public function add(callback:Function):CallbackID;
+
+    /**
+     * Register oneshot callback.
+     * @param callback The callback function.
+     * @return The id of registered callback for `ILoaderSignal.detach()` method.
+     */
+    public function once(callback:Function):CallbackID;
+
+    /**
+     * Detach specific callback by ID.
+     * @param callback The callback function.
+     */
+    public function detach(callback:Function):Void;
+}
+
+/**
+ * The CallbackID returned by `ILoaderSignal.add()` or `ILoaderSignal.once()` methods.
+ * @see Documentation: http://pixijs.download/release/docs/PIXI.Loader.html#.ICallbackID
+ * ***
+ * Library: **core** 
+ */
+typedef CallbackID = Dynamic;

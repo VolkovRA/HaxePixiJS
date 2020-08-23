@@ -1,8 +1,7 @@
 package pixi.geom;
 
-import pixi.display.FillStyle;
-import pixi.display.LineStyle;
 import haxe.extern.EitherType;
+import pixi.display.Graphics;
 import pixi.geom.Point;
 import pixi.textures.Texture;
 import pixi.utils.BatchGeometry;

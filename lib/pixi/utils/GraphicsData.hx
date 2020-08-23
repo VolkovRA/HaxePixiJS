@@ -1,8 +1,7 @@
 package pixi.utils;
 
 import haxe.extern.EitherType;
-import pixi.display.FillStyle;
-import pixi.display.LineStyle;
+import pixi.display.Graphics;
 import pixi.enums.ShapeType;
 import pixi.geom.Circle;
 import pixi.geom.Ellipse;
