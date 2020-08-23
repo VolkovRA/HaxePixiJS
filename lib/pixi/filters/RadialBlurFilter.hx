@@ -34,9 +34,13 @@ extern class RadialBlurFilter extends Filter
 
     /**
      * Center of the effect.  
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    public var center:EitherType<Point,Array<Float>>;
+    public var center:Dynamic;
 
     /**
      * Outer radius of the effect. The default value of `-1` is infinite.  

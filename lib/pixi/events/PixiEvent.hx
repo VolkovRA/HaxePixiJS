@@ -1,5 +1,7 @@
 package pixi.events;
 
+import pixi.events.EventEmitter;
+
 /**
  * The PixiJS events.  
  * This enum contains of all base events of PixiJS.
@@ -10,7 +12,7 @@ package pixi.events;
  * ***
  * Library: **core** 
  */
-enum abstract PixiEvent(String) to String from String
+enum abstract PixiEvent(EventName) to EventName from EventName
 {
     //////////////////////////////
     //   DisplayObject events   //
@@ -74,12 +76,12 @@ enum abstract PixiEvent(String) to String from String
     /**
      * Fired after rendering finishes.
      */
-    var POSTRENDER = "postrender";
+    var POST_RENDER = "postrender";
 
     /**
      * Fired before rendering starts.
      */
-    var PRERENDER = "prerender";
+    var PRE_RENDER = "prerender";
 
     /**
      * Fired after view has been resized.

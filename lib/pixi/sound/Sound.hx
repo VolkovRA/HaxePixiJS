@@ -254,9 +254,12 @@ typedef Options =
     @:optional var url:String;
 
     /**
-     * The source, if already preloaded.
+     * The source, if already preloaded.  
+     * Can be:
+     * - js.lib.ArrayBuffer
+     * - js.html.AudioElement
      */
-    @:optional var source:EitherType<ArrayBuffer, AudioElement>;
+    @:optional var source:Dynamic;
 
     /**
      * The map of sprite data.

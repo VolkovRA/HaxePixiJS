@@ -35,9 +35,12 @@ extern class ShockwaveFilter extends Filter
 
     /**
      * Sets the center of the shockwave in normalized screen coords.
-     * That is (0,0) is the top-left and (1,1) is the bottom right.
+     * That is (0,0) is the top-left and (1,1) is the bottom right.  
+     * Can be:
+     * - Point.
+     * - Array[Float].
      */
-    public var center:EitherType<Point,Array<Float>>;
+    public var center:Dynamic;
 
     /**
      * The maximum radius of shockwave. `< 0.0` means it's infinity.

@@ -1,6 +1,7 @@
 package pixi.resources;
 
 import haxe.extern.EitherType;
+import js.lib.ArrayBufferView;
 import js.lib.Uint8Array;
 import js.lib.Uint32Array;
 import js.lib.Float32Array;
@@ -26,9 +27,13 @@ extern class BufferResource extends Resource
     public function new(source:EitherType<Uint8Array,EitherType<Uint32Array,Float32Array>>, options:BufferResourceOptions);
 
     /**
-     * Source array Cannot be ClampedUint8Array because it cant be uploaded to WebGL.
+     * Source array Cannot be ClampedUint8Array because it cant be uploaded to WebGL.  
+     * Can be:
+     * - js.lib.Uint8Array
+     * - js.lib.Uint32Array
+     * - js.lib.Float32Array
      */
-    public var data:EitherType<Uint8Array,EitherType<Uint32Array,Float32Array>>;
+    public var data:ArrayBufferView;
 
     /**
      * Used to auto-detect the type of resource.

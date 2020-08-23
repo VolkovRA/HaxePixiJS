@@ -23,9 +23,12 @@ extern class Buffer
     public function new(data:EitherType<ArrayBuffer,ArrayBufferView>, ?_static:Bool, ?index:Bool);
 
     /**
-     * The data in the buffer, as a typed array.
+     * The data in the buffer, as a typed array.  
+     * Can be:
+     * - js.lib.ArrayBuffer
+     * - js.lib.ArrayBufferView
      */
-    public var data:EitherType<ArrayBuffer,ArrayBufferView>;
+    public var data:Dynamic;
 
     /**
      * Helper function that creates a buffer based on an array or TypedArray.

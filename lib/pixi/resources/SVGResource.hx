@@ -1,7 +1,5 @@
 package pixi.resources;
 
-import haxe.extern.EitherType;
-import js.lib.RegExp;
 import pixi.geom.ISize;
 
 /**
@@ -23,12 +21,17 @@ extern class SVGResource extends BaseImageResource
 
     /**
      * RegExp for SVG size.  
+     * 
+     * Can be:
+     * - String.
+     * - js.lib.RegExp.
+     * 
      * Example:
      * ```
      * <svg width="100" height="100"></svg>
      * ```
      */
-    static public var SVG_SIZE(default,null):EitherType<String,RegExp>;
+    static public var SVG_SIZE(default,null):Dynamic;
 
     /**
      * A height override for rasterization on load.

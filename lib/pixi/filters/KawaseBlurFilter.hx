@@ -1,7 +1,6 @@
 package pixi.filters;
 
 import haxe.extern.EitherType;
-import pixi.geom.Point;
 
 /**
  * A much faster blur than Gaussian blur, but more complicated to use.
@@ -28,9 +27,13 @@ extern class KawaseBlurFilter extends Filter
 
     /**
      * The amount of blur, value greater than 0.  
+     * Can be:
+     * - Float.
+     * - Array[Float]
+     * 
      * Default: `4`
      */
-    public var blur:EitherType<Float,Array<Float>>;
+    public var blur:Dynamic;
 
     /**
      * Get the if the filter is clampped.  
@@ -46,9 +49,13 @@ extern class KawaseBlurFilter extends Filter
 
     /**
      * Sets the pixel size of the filter. Large size is blurrier. For advanced usage.  
+     * Can be:
+     * - Point.
+     * - Array[Float]
+     * 
      * Default: `[1,1]`
      */
-    public var pixelSize:EitherType<Point,Array<Float>>;
+    public var pixelSize:Dynamic;
 
     /**
      * The quality of the filter, integer greater than `1`.  

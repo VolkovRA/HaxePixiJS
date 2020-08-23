@@ -21,8 +21,14 @@ extern class PixelateFilter extends Filter
     public function new(?size:EitherType<Point,EitherType<Float,Array<Float>>>);
 
     /**
-     * This a point that describes the size of the blocks. x is the width of the block and y is the height.  
-     * Default: 10
+     * This a point that describes the size of the blocks. x is the width
+     * of the block and y is the height.  
+     * Can be:
+     * - Float.
+     * - Point.
+     * - Array[Float].
+     * 
+     * Default: `10`
      */
-    public var size:EitherType<Point,EitherType<Float,Array<Float>>>;
+    public var size:Dynamic;
 }

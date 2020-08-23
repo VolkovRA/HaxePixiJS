@@ -136,7 +136,7 @@ extern class GraphicsGeometry extends BatchGeometry
      * @param styleA 
      * @param styleB 
      */
-    public function _compareStyles(styleA:EitherType<FillStyle,LineStyle>, styleB:EitherType<FillStyle,LineStyle>):Bool;
+    private function _compareStyles(styleA:EitherType<FillStyle,LineStyle>, styleB:EitherType<FillStyle,LineStyle>):Bool;
 
     /**
      * Add colors.

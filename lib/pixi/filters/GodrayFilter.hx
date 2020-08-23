@@ -1,8 +1,5 @@
 package pixi.filters;
 
-import haxe.extern.EitherType;
-import pixi.geom.Point;
-
 /**
  * GordayFilter, originally by Alain Galvan.
  * 
@@ -35,10 +32,15 @@ extern class GodrayFilter extends Filter
 
     /**
      * The position of the emitting point for light rays only used if
-     * `parallel` is set to `false`.  
+     * `parallel` is set to `false`.
+     * 
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    public var center:EitherType<Point,Array<Float>>;
+    public var center:Dynamic;
 
     /**
      * General intensity of the effect.
@@ -104,8 +106,13 @@ typedef GodrayFilterOptions =
     @:optional var time:Float;
 
     /**
-     * Focal point for non-parallel rays, to use this `parallel` must be set to `false`.  
+     * Focal point for non-parallel rays, to use this `parallel` must be set to `false`.
+     * 
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    @:optional var center:EitherType<Point,Array<Float>>;
+    @:optional var center:Dynamic;
 }

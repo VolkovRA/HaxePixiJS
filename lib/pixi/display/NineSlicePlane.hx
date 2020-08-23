@@ -116,7 +116,7 @@ extern class NineSlicePlane extends SimplePlane
     /**
      * Refreshes NineSlicePlane coords. All of them.
      */
-    public function _refresh():Void;
+    private function _refresh():Void;
 
     /**
      * Updates the horizontal vertices.

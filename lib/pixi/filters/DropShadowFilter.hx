@@ -1,8 +1,5 @@
 package pixi.filters;
 
-import haxe.extern.EitherType;
-import pixi.geom.Point;
-
 /**
  * Drop shadow filter.
  * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.DropShadowFilter.html
@@ -50,9 +47,14 @@ extern class DropShadowFilter extends Filter
 
     /**
      * Sets the pixelSize of the Kawase Blur filter.  
+     * Can be:
+     * - Float.
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `1`
      */
-    public var pixelSize:EitherType<Float, EitherType<Array<Float>, Point>>;
+    public var pixelSize:Dynamic;
 
     /**
      * Sets the quality of the Blur Filter.  
@@ -124,9 +126,14 @@ typedef DropShadowFilterOptions =
 
     /**
      * The pixelSize of the Blur filter.  
+     * Can be:
+     * - Float.
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `1`
      */
-    @:optional var pixelSize:EitherType<Float, EitherType<Array<Float>, Point>>;
+    @:optional var pixelSize:Dynamic;
 
     /**
      * The resolution of the Blur filter.  

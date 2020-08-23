@@ -35,9 +35,12 @@ extern class SimpleLightmapFilter extends Filter
     public var alpha:Float;
 
     /**
-     * An RGBA array of the ambient color or a hex color without alpha.
+     * An RGBA array of the ambient color or a hex color without alpha.  
+     * Can be:
+     * - Int.
+     * - Array[Float].
      */
-    public var color:EitherType<Int,Array<Float>>;
+    public var color:Dynamic;
 
     /**
      * A texture where your lightmap is rendered.

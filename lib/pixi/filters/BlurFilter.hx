@@ -1,7 +1,6 @@
 package pixi.filters;
 
 import pixi.enums.ClearMode;
-import pixi.enums.BlendMode;
 import pixi.textures.RenderTexture;
 import pixi.render.systems.FilterSystem;
 

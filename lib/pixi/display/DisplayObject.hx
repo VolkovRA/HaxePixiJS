@@ -1,6 +1,5 @@
 package pixi.display;
 
-import haxe.extern.EitherType;
 import pixi.events.EventEmitter;
 import pixi.enums.CursorType;
 import pixi.filters.Filter;
@@ -11,7 +10,6 @@ import pixi.geom.ObservablePoint;
 import pixi.geom.Point;
 import pixi.geom.Rectangle;
 import pixi.geom.Transform;
-import pixi.render.MaskData;
 
 /**
  * The base class for all objects that are rendered on the screen.  
@@ -108,9 +106,12 @@ extern class DisplayObject extends EventEmitter
     private var _localBoundsRect:Bounds;
 
     /**
-     * The original, cached mask of the object.
+     * The original, cached mask of the object.  
+     * Can be:
+     * - Container.
+     * - MaskData.
      */
-    private var _mask:EitherType<Container,MaskData>;
+    private var _mask:Dynamic;
 
     private var _tempDisplayObjectParent:Container;
 
@@ -297,8 +298,12 @@ extern class DisplayObject extends EventEmitter
      * var sprite = new Sprite(texture);
      * sprite.mask = graphics;
      * ```
+     * 
+     * Can be:
+     * - Container.
+     * - MaskData.
      */
-    public var mask:EitherType<Container,MaskData>;
+    public var mask:Dynamic;
 
     /**
      * The instance name of the object.

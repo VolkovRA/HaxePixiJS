@@ -2,7 +2,6 @@ package pixi;
 
 import haxe.extern.EitherType;
 import js.html.CanvasElement;
-import js.lib.RegExp;
 import pixi.render.CanvasRenderer;
 import pixi.render.Renderer;
 
@@ -51,8 +50,12 @@ extern class Pixi
      * ```
      * data:image/png;base64
      * ```
+     * 
+     * Can be:
+     * - String.
+     * - js.lib.RegExp.
      */
-    static public var DATA_URI(default, null):EitherType<String, RegExp>;
+    static public var DATA_URI(default, null):Dynamic;
 
     /**
      * Default filter vertex shader.

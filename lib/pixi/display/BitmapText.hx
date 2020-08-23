@@ -1,8 +1,7 @@
 package pixi.display;
 
-import haxe.extern.EitherType;
 import pixi.enums.TextAlign;
-import pixi.geom.Point;
+import pixi.geom.ObservablePoint;
 import pixi.geom.Rectangle;
 
 /**
@@ -88,7 +87,7 @@ extern class BitmapText extends Container
      * Setting the anchor to (1,1) would mean the text's origin point will be
      * the bottom right corner.
      */
-    public var anchor:EitherType<Point, Float>;
+    public var anchor:ObservablePoint;
 
     /**
      * Set to `true` if the BitmapText needs to be redrawn.

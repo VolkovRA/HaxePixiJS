@@ -1,6 +1,5 @@
 package pixi.filters;
 
-import haxe.extern.EitherType;
 import pixi.geom.Point;
 
 /**
@@ -42,9 +41,13 @@ typedef BulgePinchFilterOptions =
 {
     /**
      * The x and y coordinates of the center of the circle of effect.  
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    @:optional var center:EitherType<Point,Array<Float>>;
+    @:optional var center:Dynamic;
 
     /**
      * The radius of the circle of effect.  

@@ -221,9 +221,12 @@ typedef AddOptions =
     @:optional var url:String;
 
     /**
-     * If sound is already preloaded, available.
+     * If sound is already preloaded, available.  
+     * Can be:
+     * - js.lib.ArrayBuffer
+     * - js.html.AudioElement
      */
-    @:optional var source:EitherType<ArrayBuffer, AudioElement>;
+    @:optional var source:Dynamic;
 
     /**
      * `true` to play after loading.  

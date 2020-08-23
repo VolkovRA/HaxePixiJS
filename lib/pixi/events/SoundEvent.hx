@@ -1,5 +1,7 @@
 package pixi.events;
 
+import pixi.events.EventEmitter;
+
 /**
  * The sounds events.  
  * This enum contains of all sounds events of PixiJS sound library.
@@ -7,7 +9,7 @@ package pixi.events;
  * ***
  * Library: **sound** 
  */
-enum abstract SoundEvent(String) to String from String
+enum abstract SoundEvent(EventName) to EventName from EventName
 {
     /**
      * Fired when the sound finishes playing.

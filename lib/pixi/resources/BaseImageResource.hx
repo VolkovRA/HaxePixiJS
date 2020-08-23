@@ -2,6 +2,7 @@ package pixi.resources;
 
 import haxe.extern.EitherType;
 import js.html.CanvasElement;
+import js.html.DOMElement;
 import js.html.ImageElement;
 import js.html.VideoElement;
 import js.html.svg.Element;
@@ -26,9 +27,14 @@ extern class BaseImageResource extends Resource
     public function new(source:EitherType<ImageElement, EitherType<CanvasElement, EitherType<Element, VideoElement>>>);
 
     /**
-     * The source element.
+     * The source element.  
+     * Can be:
+     * - js.html.ImageElement.
+     * - js.html.CanvasElement
+     * - js.html.svg.Element
+     * - js.html.VideoElement.
      */
-    public var source:EitherType<ImageElement, EitherType<CanvasElement, EitherType<Element, VideoElement>>>;
+    public var source:DOMElement;
 
     /**
      * Set cross origin based detecting the url and the crossorigin.

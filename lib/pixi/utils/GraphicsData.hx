@@ -55,9 +55,15 @@ extern class GraphicsData
     public var points:Array<Float>;
 
     /**
-     * The shape object to draw.
+     * The shape object to draw.  
+     * Can be:
+     * - Circle.
+     * - Ellipse.
+     * - Polygon.
+     * - Rectangle.
+     * - RoundedRectangle.
      */
-    public var shape:EitherType<Circle,EitherType<Ellipse,EitherType<Polygon,EitherType<Rectangle,RoundedRectangle>>>>;
+    public var shape:Dynamic;
 
     /**
      * The type of the shape, see the Const.Shapes file for all the existing types.

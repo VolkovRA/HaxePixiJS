@@ -3,13 +3,10 @@ package pixi;
 import haxe.Constraints.Function;
 import haxe.extern.EitherType;
 import js.html.CanvasElement;
-import js.html.Element;
-import js.html.Window;
 import pixi.display.Container;
-import pixi.loader.Loader;
-import pixi.render.CanvasRenderer;
-import pixi.render.Renderer;
 import pixi.geom.Rectangle;
+import pixi.loader.Loader;
+import pixi.render.AbstractRenderer;
 import pixi.utils.Ticker;
 
 /**
@@ -49,14 +46,22 @@ extern class Application
 
     /**
      * WebGL renderer if available, otherwise CanvasRenderer.
+     * 
+     * Can be:
+     * - AbstractRenderer
+     * - CanvasRenderer
      */
-    public var renderer:EitherType<Renderer, CanvasRenderer>;
+    public var renderer:AbstractRenderer;
 
     /**
      * The HTML element or window to automatically resize the renderer's view
      * element to match width and height.
+     * 
+     * Can be:
+     * - js.html.Window
+     * - js.html.Element
      */
-    public var resizeTo:EitherType<Window, Element>;
+    public var resizeTo:Dynamic;
 
     /**
      * Reference to the renderer's screen rectangle.
@@ -231,8 +236,12 @@ typedef ApplicationOptions =
 
     /**
      * Element to automatically resize stage to.
+     * 
+     * Can be:
+     * - js.html.Window
+     * - js.html.Element
      */
-    @:optional var resizeTo:EitherType<Window,Element>;
+    @:optional var resizeTo:Dynamic;
 }
 
 /**

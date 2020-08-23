@@ -1,8 +1,5 @@
 package pixi.filters;
 
-import haxe.extern.EitherType;
-import pixi.geom.Point;
-
 /**
  * The ZoomFilter applies a Zoom blur to an object.
  * @see Documentation: https://pixijs.io/pixi-filters/docs/PIXI.filters.ZoomBlurFilter.html
@@ -21,9 +18,13 @@ extern class ZoomBlurFilter extends Filter
 
     /**
      * Center of the effect.  
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    public var center:EitherType<Point, Array<Float>>;
+    public var center:Dynamic;
 
     /**
      * Radius of the inner region not effected by blur.  
@@ -57,9 +58,13 @@ typedef ZoomBlurFilterOptions =
 
     /**
      * The center of the zoom.  
+     * Can be:
+     * - Point.
+     * - Array[Float].
+     * 
      * Default: `[0,0]`
      */
-    @:optional var center:EitherType<Point, Array<Float>>;
+    @:optional var center:Dynamic;
 
     /**
      * The inner radius of zoom. The part in inner circle won't apply zoom blur effect.  

@@ -3,8 +3,8 @@ package pixi.events;
 import haxe.extern.EitherType;
 import js.html.PointerEvent;
 import js.html.Touch;
-import js.html.TouchEvent;
 import js.html.MouseEvent;
+import js.html.UIEvent;
 import pixi.display.DisplayObject;
 import pixi.display.Sprite;
 import pixi.enums.PointerType;
@@ -308,11 +308,17 @@ extern class InteractionData
 
     /**
      * When passed to an event handler, this will be the original DOM Event that was captured.
+     * 
+     * Can be:
+     * - js.html.MouseEvent
+     * - js.html.TouchEvent
+     * - js.html.PointerEvent
+     * 
      * @see MouseEvent: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
      * @see TouchEvent: https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent
      * @see PointerEvent: https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
      */
-    public var originalEvent:EitherType<MouseEvent, EitherType<TouchEvent, PointerEvent>>;
+    public var originalEvent:UIEvent;
 
     /**
      * The unique identifier of the pointer. It will be the same as `identifier`.

@@ -34,13 +34,21 @@ extern class ColorReplaceFilter extends Filter
 
     /**
      * The resulting color, as a 3 component RGB e.g. [1.0, 0.5, 1.0]  
+     * Can be:
+     * - Int.
+     * - Array[Float].
+     * 
      * Default: `0x000000`
      */
-    public var newColor:EitherType<Int,Array<Float>>;
+    public var newColor:Dynamic;
 
     /**
      * The color that will be changed, as a 3 component RGB e.g. [1.0, 1.0, 1.0]  
+     * Can be:
+     * - Int.
+     * - Array[Float].
+     * 
      * Default: `0xFF0000`
      */
-    public var originalColor:EitherType<Int,Array<Float>>;
+    public var originalColor:Dynamic;
 }

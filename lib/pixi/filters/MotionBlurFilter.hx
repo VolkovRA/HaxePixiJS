@@ -38,7 +38,10 @@ extern class MotionBlurFilter extends Filter
     public var offset:Float;
 
     /**
-     * Sets the velocity of the motion for blur effect.
+     * Sets the velocity of the motion for blur effect.  
+     * Can be:
+     * - Array[Float].
+     * - IPoint.
      */
-    public var velocity:EitherType<Array<Float>,IPoint>;
+    public var velocity:Dynamic;
 }

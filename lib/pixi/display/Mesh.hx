@@ -131,7 +131,7 @@ extern class Mesh extends Container
      * Represents the vertex and fragment shaders that processes the geometry and
      * runs on the GPU. Can be shared between multiple Mesh objects.
      */
-    public var shader:EitherType<Shader, MeshMaterial>;
+    public var shader:Shader;
 
     /**
      * How much of the geometry to draw, by default `0` renders everything.  

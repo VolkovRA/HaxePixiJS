@@ -1,7 +1,6 @@
 package pixi.render.plugins;
 
 import haxe.Constraints.Function;
-import haxe.extern.EitherType;
 
 /**
  * The prepare manager provides functionality to upload
@@ -40,9 +39,12 @@ extern class BasePrepare<T:BasePrepare<T>>
     public function new(renderer:AbstractRenderer);
 
     /**
-     * The limiter to be used to control how quickly items are prepared.
+     * The limiter to be used to control how quickly items are prepared.  
+     * Can be:
+     * - CountLimiter.
+     * - TimeLimiter.
      */
-    public var limiter:EitherType<CountLimiter, TimeLimiter>;
+    public var limiter:Dynamic;
 
     /**
      * Reference to the renderer.

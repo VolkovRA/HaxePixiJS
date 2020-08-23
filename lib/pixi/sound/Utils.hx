@@ -2,8 +2,6 @@ package pixi.sound;
 
 import haxe.Constraints.Function;
 import haxe.extern.EitherType;
-import js.html.CanvasGradient;
-import js.html.CanvasPattern;
 import pixi.loader.LoaderResource;
 import pixi.textures.BaseTexture;
 
@@ -85,9 +83,14 @@ typedef RenderOptions =
 
     /**
      * Fill style for waveform.  
+     * Can be:
+     * - String.
+     * - js.html.CanvasPattern.
+     * - js.html.CanvasGradient.
+     * 
      * Default: `black`
      */
-    var fill:EitherType<String, EitherType<CanvasPattern, CanvasGradient>>;
+    var fill:Dynamic;
 }
 
 /**

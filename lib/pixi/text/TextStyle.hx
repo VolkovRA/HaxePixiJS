@@ -1,8 +1,5 @@
 package pixi.text;
 
-import haxe.extern.EitherType;
-import js.html.CanvasGradient;
-import js.html.CanvasPattern;
 import pixi.enums.BaseLine;
 import pixi.enums.FontStyle;
 import pixi.enums.FontWeight;
@@ -74,9 +71,13 @@ extern class TextStyle
     /**
      * A fill style to be used on the dropshadow e.g `red`, `#00FF00`.
      * 
+     * Can be:
+     * - String.
+     * - Int.
+     * 
      * Default: `black`
      */
-    public var dropShadowColor:EitherType<String,Int>;
+    public var dropShadowColor:Dynamic;
 
     /**
      * Set a distance of the drop shadow.  
@@ -99,7 +100,7 @@ extern class TextStyle
      * 
      * Default: `black`
      */
-    public var fill:EitherType<String, EitherType<Int, EitherType<Array<String>, EitherType<Array<Int>, EitherType<CanvasGradient, CanvasPattern>>>>>;
+    public var fill:Dynamic;
 
     /**
      * If fill is an array of colours to create a gradient, this
@@ -120,18 +121,26 @@ extern class TextStyle
 
     /**
      * The font family.  
+     * Can be:
+     * - String.
+     * - Array[String].
+     * 
      * Default: `Arial`
      */
-    public var fontFamily:EitherType<String, Array<String>>;
+    public var fontFamily:Dynamic;
 
     /**
      * The font size.
      * As a number it converts to px, but as a string, equivalents
      * are: `26px`, `20pt`, `160%` or `1.6em`.
      * 
+     * Can be:
+     * - Float.
+     * - String.
+     * 
      * Default: `26`
      */
-    public var fontSize:EitherType<Float, String>;
+    public var fontSize:Dynamic;
 
     /**
      * The font style.  
@@ -195,10 +204,15 @@ extern class TextStyle
     public var padding:Float;
 
     /**
-     * A canvas fillstyle that will be used on the text stroke e.g `blue`, `#FCFF00`  
+     * A canvas fillstyle that will be used on the text stroke e.g `blue`, `#FCFF00`.
+     * 
+     * Can be:
+     * - Int.
+     * - String.
+     * 
      * Default: `black`
      */
-    public var stroke:EitherType<Int,String>;
+    public var stroke:Dynamic;
 
     /**
      * A number that represents the thickness of the stroke.  
@@ -260,7 +274,7 @@ extern class TextStyle
 }
 
 /**
- * The options of TextStyle.
+ * The default options of TextStyle.
  */
 typedef TextStyleOptions =
 {
@@ -306,9 +320,13 @@ typedef TextStyleOptions =
     /**
      * A fill style to be used on the dropshadow e.g `red`, `#00FF00`.
      * 
+     * Can be:
+     * - String.
+     * - Int.
+     * 
      * Default: `black`
      */
-    @:optional var dropShadowColor:EitherType<String,Int>;
+    @:optional var dropShadowColor:Dynamic;
 
     /**
      * Set a distance of the drop shadow.  
@@ -331,7 +349,7 @@ typedef TextStyleOptions =
      * 
      * Default: `black`
      */
-    @:optional var fill:EitherType<String, EitherType<Int, EitherType<Array<String>, EitherType<Array<Int>, EitherType<CanvasGradient, CanvasPattern>>>>>;
+    @:optional var fill:Dynamic;
 
     /**
      * If fill is an array of colours to create a gradient, this
@@ -352,18 +370,26 @@ typedef TextStyleOptions =
 
     /**
      * The font family.  
+     * Can be:
+     * - String.
+     * - Array[String].
+     * 
      * Default: `Arial`
      */
-    @:optional var fontFamily:EitherType<String, Array<String>>;
+    @:optional var fontFamily:Dynamic;
 
     /**
      * The font size.
      * As a number it converts to px, but as a string, equivalents
      * are: `26px`, `20pt`, `160%` or `1.6em`.
      * 
+     * Can be:
+     * - Float.
+     * - String.
+     * 
      * Default: `26`
      */
-    @:optional var fontSize:EitherType<Float, String>;
+    @:optional var fontSize:Dynamic;
 
     /**
      * The font style.  
@@ -427,10 +453,15 @@ typedef TextStyleOptions =
     @:optional var padding:Float;
 
     /**
-     * A canvas fillstyle that will be used on the text stroke e.g `blue`, `#FCFF00`  
+     * A canvas fillstyle that will be used on the text stroke e.g `blue`, `#FCFF00`.
+     * 
+     * Can be:
+     * - Int.
+     * - String.
+     * 
      * Default: `black`
      */
-    @:optional var stroke:EitherType<Int,String>;
+    @:optional var stroke:Dynamic;
 
     /**
      * A number that represents the thickness of the stroke.  

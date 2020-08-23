@@ -154,9 +154,14 @@ typedef IBitmapFontOptions =
      * For example, `[['a', 'z'], ['A', 'Z'], "!@#$%^&*()~{}[] "]`.
      * Don't forget to include spaces ' ' in your character set!
      * 
+     * Can be:
+     * - String.
+     * - Array[String].
+     * - Array[Array[String]]
+     * 
      * Default: `BitmapFont.ALPHANUMERIC`
      */
-    @:optional var chars:EitherType<String, EitherType<Array<String>, Array<Array<String>>>>;
+    @:optional var chars:Dynamic;
 
     /**
      * Render resolution for glyphs.  

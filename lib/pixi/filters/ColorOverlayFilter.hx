@@ -31,7 +31,11 @@ extern class ColorOverlayFilter extends Filter
 
     /**
      * The resulting color, as a 3 component RGB e.g. [1.0, 0.5, 1.0]  
+     * Can be:
+     * - Int.
+     * - Array[Float].
+     * 
      * Default: `0x000000`
      */
-    public var color:EitherType<Int,Array<Float>>;
+    public var color:Dynamic;
 }
