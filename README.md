@@ -3,20 +3,37 @@
 Описание
 ------------------------------
 
-Это общий репозиторий для всех определений PixiJS и некоторых, отдельных её библиотек.
-Определения для каждой конкретной либы содержатся в отдельной папке.
-При использовании экстернов вы должны подключить соответствующий, скомпилированный js файл.
+Это общий репозиторий для всех определений [PixiJS](https://www.pixijs.com/) и некоторых,
+отдельных её библиотек. Определения перенесены вручную и содержат полную документацию по API
+из официальной справки.
+
+Дизайн апи немного отличается от оригинала в пользу более привычного и понятного для Haxe стиля.  
+Пример:
+
+|Базовое определение|Haxe определение|
+|:-|:-|
+|`PIXI.DisplayObject`|`pixi.display.DisplayObject`|
+|`PIXI.utils`|`pixi.Utils`|
+|`PIXI.filters.BlurFilter`|`pixi.filters.BlurFilter`|
+
+Все енумы, константы и перечисления для удобства вынесен в отдельную папку `pixi.enums`. Вы по прежнему
+можете найти перечисления в их стандартном месте, например: `Pixi.GC_MODES`.
+
+Все события и определение `EventEmitter`'а вынесены в папку `pixi.events`. (Аля Flash стиль)
+
+Классы и определения, назначение которых мне было не очень понятно, вынесены в папку `pixi.utils`.
+
+Каждое определение содержит подпись из какой библиотеки оно используется. Так, для звука и
+большинства графических фильтров классы помечены в описании как: *Library:* **sound** или *Library:* **filters** соответственно. Не забудьте, что при использовании экстернов вы должны подключить скомпилированный js файл из соответствующей библиотеки.
+(Фильтры, звук, ядро)
 
 Определения
 ------------------------------
-||Название|Бинарник|Репо|
-|:-|:-|:-:|:-|
-|1|Ядро PixiJS|[pixi.min.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi.min.js "pixi.min.js")|https://github.com/pixijs/pixi.js|
-|2|Фильтры|[pixi-filters.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-filters.js "pixi-filters.js")|https://github.com/pixijs/pixi-filters|
-|3|Звук|[pixi-sound.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-sound.js "pixi-sound.js")|https://github.com/pixijs/pixi-sound|
-
-- *п.с. Пополняется и обновляется по мере необходимости.*
-- *п.с.2 В core и filters надо провести тотальную ревизию, так как core взят из стороннего репо и содержит ошибки.*
+||Название|Метка|Бинарник|Репо|
+|:-|:-|:-:|:-:|:-|
+|1|Ядро PixiJS|**core**|[pixi.min.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi.min.js "pixi.min.js")|https://github.com/pixijs/pixi.js|
+|2|Фильтры|**filters**|[pixi-filters.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-filters.js "pixi-filters.js")|https://github.com/pixijs/pixi-filters|
+|3|Звук|**sound**|[pixi-sound.js](https://github.com/VolkovRA/HaxePixiJS/tree/master/bin/lib/pixi-sound.js "pixi-sound.js")|https://github.com/pixijs/pixi-sound|
 
 Добавление библиотеки
 ------------------------------
