@@ -132,7 +132,7 @@ extern class Sounds
      * @return The sound instance, this cannot be reused after it is done playing. Returns `null` if the sound has not yet loaded.
      */
     @:overload(function(alias:String, options:EitherType<CompleteCallback,PlayOptions>):EitherType<IMediaInstance,Promise<IMediaInstance>>{})
-    static public function play(alias:String, sprite:String):Null<IMediaInstance>;
+    static public function play(alias:String, ?sprite:String):Null<IMediaInstance>;
 
     /**
      * Removes a sound by alias.

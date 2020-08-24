@@ -78,7 +78,7 @@ extern class Sound
     /**
      * The constructor options.
      */
-    public var options(default, null):Options;
+    public var options(default, null):SoundOptions;
 
     /**
      * Stops all the instances of this sound from playing.
@@ -122,7 +122,7 @@ extern class Sound
      * @param source Either the path or url to the source file. or the object of options to use.
      * @return Created sound instance.
      */
-    static public function from(source:EitherType<String,EitherType<Options,EitherType<ArrayBuffer,AudioElement>>>):Sound;
+    static public function from(source:EitherType<String,EitherType<SoundOptions,EitherType<ArrayBuffer,AudioElement>>>):Sound;
 
     /**
      * Add a sound sprite, which is a saved instance of a longer sound. Similar to an image spritesheet.
@@ -198,7 +198,7 @@ extern class Sound
  * ***
  * Library: **sound** 
  */
-typedef Options = 
+typedef SoundOptions = 
 {
     /**
      * `true` to play after loading.  
@@ -321,4 +321,4 @@ typedef CompleteCallback = Sound->Void;
  * @param sound The instance of new sound.
  * @param instance The instance of auto-played sound.
  */
-typedef LoadedCallback = Error->?Sound->IMediaInstance->Void;
+typedef LoadedCallback = Error->Sound->IMediaInstance->Void;
