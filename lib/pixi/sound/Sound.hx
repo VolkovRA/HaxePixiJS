@@ -78,7 +78,7 @@ extern class Sound
     /**
      * The constructor options.
      */
-    public var options(default, null):SoundOptions;
+    public var options(default, null):Options;
 
     /**
      * Stops all the instances of this sound from playing.
@@ -122,7 +122,7 @@ extern class Sound
      * @param source Either the path or url to the source file. or the object of options to use.
      * @return Created sound instance.
      */
-    static public function from(source:EitherType<String,EitherType<SoundOptions,EitherType<ArrayBuffer,AudioElement>>>):Sound;
+    static public function from(source:EitherType<String,EitherType<Options,EitherType<ArrayBuffer,AudioElement>>>):Sound;
 
     /**
      * Add a sound sprite, which is a saved instance of a longer sound. Similar to an image spritesheet.
@@ -198,7 +198,7 @@ extern class Sound
  * ***
  * Library: **sound** 
  */
-typedef SoundOptions = 
+typedef Options = 
 {
     /**
      * `true` to play after loading.  
@@ -278,16 +278,6 @@ typedef SoundOptions =
 typedef PlayOptions =
 {
     /**
-     * When completed.
-     */
-    @:optional var complete:CompleteCallback;
-
-    /**
-     * If not already preloaded, callback when finishes load.
-     */
-    @:optional var loaded:LoadedCallback;
-
-    /**
      * Start time offset.  
      * Default: `0`
      */
@@ -307,6 +297,32 @@ typedef PlayOptions =
      * Override default loop, default to the Sound's loop setting.
      */
     @:optional var loop:Bool;
+
+    /**
+     * The amount of volume `1` = 100%.  
+     * Default: `1`
+     */
+    @:optional var volume:Float;
+
+    /**
+     * The name of sound sprite.
+     */
+    @:optional var sprite:String;
+
+    /**
+     * Gets and sets the muted flag.
+     */
+    @:optional var muted:Bool;
+
+    /**
+     * When completed.
+     */
+    @:optional var complete:CompleteCallback;
+
+    /**
+     * If not already preloaded, callback when finishes load.
+     */
+    @:optional var loaded:LoadedCallback;
 }
 
 /**
