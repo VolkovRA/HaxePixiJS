@@ -67,9 +67,9 @@ extern class Sounds
      * @param options Either the path or url to the source file. or the object of options to use.
      * @return Instance of the Sound object.
      */
-    @:overload(function(map:DynamicAccess<EitherType<String, EitherType<ArrayBuffer, EitherType<AudioElement, AddOptions>>>>, globalOptions:AddOptions):Sound{})
+    @:overload(function(map:DynamicAccess<EitherType<String, EitherType<ArrayBuffer, EitherType<AudioElement, Options>>>>, globalOptions:Options):Sound{})
     @:overload(function(alias:String, sound:Sound):Sound{})
-    static public function add(alias:String, options:EitherType<String, EitherType<ArrayBuffer, EitherType<AudioElement, AddOptions>>>):Sound;
+    static public function add(alias:String, options:EitherType<String, EitherType<ArrayBuffer, EitherType<AudioElement, Options>>>):Sound;
 
     /**
      * Closes the sound library.  
@@ -206,74 +206,4 @@ extern class Sounds
      * @return The current volume.
      */
     static public function volume(alias:String, ?volume:Float):Float;
-}
-
-/**
- * Options object.
- * ***
- * Library: **sound** 
- */
-typedef AddOptions =
-{
-    /**
-     * If options is an object, the source of file.
-     */
-    @:optional var url:String;
-
-    /**
-     * If sound is already preloaded, available.  
-     * Can be:
-     * - js.lib.ArrayBuffer
-     * - js.html.AudioElement
-     */
-    @:optional var source:Dynamic;
-
-    /**
-     * `true` to play after loading.  
-     * Default: `false`
-     */
-    @:optional var autoPlay:Bool;
-
-    /**
-     * `true` to immediately start preloading.  
-     * Default: `false`
-     */
-    @:optional var preload:Bool;
-
-    /**
-     * `true` to disallow playing multiple layered instances at once.  
-     * Default: `false`
-     */
-    @:optional var singleInstance:Bool;
-
-    /**
-     * The amount of volume `1` = 100%.  
-     * Default: `1`
-     */
-    @:optional var volume:Float;
-
-    /**
-     * The playback rate where `1` is 100% speed.  
-     * Default: `1`
-     */
-    @:optional var speed:Float;
-
-    /**
-     * The map of sprite data.  
-     * Where a sprite is an object with a start and end, which are the times in seconds.
-     * Optionally, can include a speed amount where `1` is 100% speed.
-     */
-    @:optional var sprites:DynamicAccess<SoundSpriteData>;
-
-    /**
-     * Global complete callback when play is finished.  
-     * Default: `null`
-     */
-    @:optional var complete:CompleteCallback;
-
-    /**
-     * Call when finished loading.  
-     * Default: `null`
-     */
-    @:optional var loaded:LoadedCallback;
 }
